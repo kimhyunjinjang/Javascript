@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	#trigger{
+		cursor: pointer;
+	}
+	#detail{
+		width: 500px;
+		height: 100px;
+		border: 1px solid black;
+		border-radius: 5px;
+	}
+</style>
+<script src="../js/jquery-1.12.4.min.js"></script>
+<script>
+	$(document).ready(function(){
+		$("p").click(function(){
+			$("#detail").html("<p>스터디 주제: HTML5, CSS3, Javascript</p>");
+		});
+	});
+</script>
+</head>
+<body>
+	<h1>스터디 회원 모집</h1>
+	<img src="images/click.jpg">
+	<p id="trigger" onclick="addText()">자세한 내용을 보려면 클릭</p>
+	<div id="detail"></div>
+</body>
+</html>

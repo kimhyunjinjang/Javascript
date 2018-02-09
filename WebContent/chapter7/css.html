@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<script src="../js/jquery-1.12.4.min.js"></script>
+<script>
+	$(function(){
+		$("#btn1").click(function(){
+			$("p").css("color","blue");
+		});
+		
+		$("#btn2").click(function(){
+			$("p").css("background-color","pink");
+		});
+		
+		$("#btn3").click(function(){
+			$("p").css("font-size","25px");
+		});
+		
+		$("#btn4").click(function(){
+			$("p").css("color","red");
+			$("p").css("font-style","italic");
+		});
+	});
+</script>
+<body>
+	<button id="btn1">글자색 변경</button>
+	<button id="btn2">배경색 변경</button>
+	<button id="btn3">글자크기 변경</button>
+	<button id="btn4">글자스타일 변경</button>
+	
+	<p>스터디 주제: HTML5, CSS3, Javascript</p>
+	<p>모집대상: 웹 기술에 관심 있는 재학생</p>
+	<p>모집 기한: 4월 중간고사 이전까지</p>
+</body>
+</html>

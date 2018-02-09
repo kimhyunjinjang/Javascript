@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var maxNum = Math.max(1, 77, 89, -5, 21 ,500);
+		var minNum = Math.min(1, 77, 89, -5, 21 ,500);
+		
+		document.write("최대값: " + maxNum + ", 최소값:" + minNum+"<br>");
+		
+		var num = 2.1234;
+		document.write("round: " + Math.round(num) + "<br>");
+		document.write("floor: " + Math.floor(num) + "<br>"); //소수점 이하를 버린다
+		document.write("ceil: " + Math.ceil(num) + "<br>");
+		
+		document.write("random: " + Math.random() + "<br>"); //0.0~0.999999999999
+		document.write("PI: " + Math.PI + "<br>");
+		
+		
+		
+		
+		
+		
+		// 10~100 사이 random 값을 구해서 화면에 표시하기
+		document.write("10~100사이 random값: " + Math.floor((Math.random()*91)+10) + "<br>");
+		// 5~55 사이 random 값을 구해서 화면에 표시하기
+		document.write("5~55사이 random값: " + Math.floor((Math.random()*46)+5) + "<br>");
+		// 1~46 사이 random 값을 구해서 화면에 표시
+		document.write("1~46사이 random값: " + Math.floor((Math.random()*46)+1));
+	</script>
+</body>
+</html>

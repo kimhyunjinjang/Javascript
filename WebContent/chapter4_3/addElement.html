@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function addP(){
+		var newP = document.createElement("p"); //<p></p>
+		var text = document.createTextNode("안녕");
+		
+		//<p>안녕</p>
+		newP.appendChild(text);
+		
+		var div = document.getElementById("wrap");
+		div.appendChild(newP);
+	}
+	
+	function addH3(){
+		var newH = document.createElement("h3");
+		var text = document.createTextNode("Hi");
+		
+		newH.appendChild(text);
+		
+		var div = document.getElementById("wrap");
+		div.appendChild(newH);
+	}
+	
+	function addT(){
+		var newTr = document.createElement("tr"); //<tr></tr>
+		var newTd = document.createElement("td"); //<td></td>
+		var text = document.createTextNode("사과");
+		newTr.appendChild(newTd);
+		newTd.appendChild(text);
+		var t = document.getElementById("t");
+		t.appendChild(newTr);
+	}
+
+	function addImage(){
+		var newImg = document.createElement("img");
+		var newSrc = document.createAttribute("src");
+		var newAlt = document.createAttribute("alt");
+		newSrc.value = "images/5.jpg";
+		newAlt.value = "5.jpg";
+		
+		newImg.setAttributeNode(newSrc);
+		newImg.setAttributeNode(newAlt);
+		var div = document.getElementById("wrap");
+		div.appendChild(newImg);
+	}
+	
+	function addA(){
+		var newA = document.createElement("a");
+		var newHref = document.createAttribute("href");
+		newHref.value ="http://www.naver.com";
+		var text = document.createTextNode("네이버");
+		newA.setAttributeNode(newHref);
+		newA.appendChild(text);
+		var div = document.getElementById("wrap");
+		div.appendChild(newA);
+	}
+</script>
+<style>
+	table,td{
+		border:1px solid black;
+		border-collapse: collapse;
+	}
+</style>
+</head>
+<body>
+	<button onclick="addP()">p 추가</button>
+	<button onclick="addH3()">h3 추가</button>
+	<button onclick="addT()">행 추가</button> <!-- 테이블에 과일 추가 -->
+	<button onclick="addImage()">이미지 추가</button>
+	<button onclick="addA()">a태그추가</button>
+	<hr>
+	<div id="wrap">
+	</div>
+	<table id="t">	
+	</table>
+</body>
+</html>

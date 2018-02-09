@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="css/yShowImg.css">
+<script src="../js/jquery-1.12.4.min.js"></script>
+<script src="js/yShowImg.js"></script>
+<script>
+	$(function(){
+		$("#showImgWrap").showImg();
+		
+		$(document).on("click",".yShowWrapper",function(){
+			$(this).hide();
+		})
+	})
+</script>
+</head>
+<body>
+	<div id="showImgWrap">
+		<a href="#">
+			<img src="images/page1.jpg" alt="page1">
+		</a>
+		<a href="#">
+			<img src="images/page2.jpg" alt="page2">
+		</a>
+		<a href="#">
+			<img src="images/page3.jpg" alt="page3">
+		</a>
+	</div>
+	
+	<!-- <div class="yShowWrapper">
+		<img src="images/page1.jpg">
+	</div> -->
+</body>
+</html>

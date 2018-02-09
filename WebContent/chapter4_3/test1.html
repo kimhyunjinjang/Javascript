@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function btnOn(){
+		var i = document.getElementsByTagName("img");
+		i[0].src = "images/on.jpg";
+	}
+	function btnOff(){
+		var i = document.getElementsByTagName("img");
+		i[0].src = "images/off.jpg";
+	}
+</script>
+</head>
+<body>
+	<div>
+		<button onclick="btnOn()">on</button>
+		<button onclick="btnOff()">off</button>
+	</div>
+	<img src="images/off.jpg">
+</body>
+</html>

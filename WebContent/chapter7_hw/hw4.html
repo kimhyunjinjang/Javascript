@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-1.12.4.min.js"></script>
+<script>
+	$(function(){
+		$("img").click(function(){
+			var src = $("img").prop("src");
+			if(src.indexOf("logo")>0){
+				$("img").prop("src","images/5.jpg")
+			}else{
+				$("img").prop("src","images/logo.png");
+			}
+		})
+	})
+</script>
+</head>
+<body>
+	<h3>스터디 회원 모집</h3>
+	<img src="images/logo.png">
+</body>
+</html>

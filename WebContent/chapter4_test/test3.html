@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var score = prompt("점수 5개를 입력하세요 (예: 90 100 85 75 80)");
+		var arrScore = score.split(" ");
+	
+		var sum=0;
+		var arrInt = [];
+		for(var i=0; i<arrScore.length; i++){
+			arrInt.push(Number(arrScore[i]));
+			sum = sum + arrInt[i];
+		}
+		
+		document.write("총합: " + sum,"<br>");
+		document.write("평균: " + sum/arrScore.length,"<br>");
+		
+		i=1;
+		var max = arrInt[0];
+		while(i<arrInt.length){
+			max =(max>arrInt[i]?max:arrInt[i]);
+			i++;
+		}
+		
+		i=1;
+		var min = arrInt[0];
+		while(i<arrInt.length){
+			min =(min<arrInt[i]?min:arrInt[i]);
+			i++;
+		}
+		
+		document.write("최고 점수: " + max,"<br>");
+		document.write("최저 점수: " + min,"<br>");
+	</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function hide(){
+		var img = document.getElementsByTagName("img");
+		img[0].style.visibility="hidden";
+	}
+	function show(){
+		var img = document.getElementsByTagName("img");
+		img[0].style.visibility="visible";	
+	}
+</script>
+</head>
+<body>
+	<div>
+		<img src="images/flower1.jpg">
+	</div>
+	<button onclick="hide()">감추기</button>
+	<button onclick="show()">보여주기</button>
+</body>
+</html>

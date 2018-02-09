@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function changeImg(){
+		var i = document.getElementById("orange");
+		i.src="images/grape.jpg";
+		
+	}
+	
+	window.onload = function(){
+		var i2 = document.getElementById("peach");
+		i2.onclick=function(){
+			i2.src="images/watermelon.png";
+		}
+		
+		var i3=document.getElementsByTagName("img")[2];
+		i3.addEventListener("click", function(){
+			i3.src="images/orange.png";
+		},false);
+	}
+</script>
+</head>
+<body>
+	<p>인라인-body안 태그 내부에 직접 연결</p>
+	<div>
+		<img src="images/orange.png" onclick="changeImg()" id="orange">
+	</div>
+	
+	<p>body안은 수정 없이 script 영역에서 모두 처리</p>
+	<div>
+		<img src="images/peach.png" id="peach">
+	</div>
+	
+	<p>addEventListener 이용</p>
+	<div>
+		<img src="images/watermelon.png">
+	</div>
+</body>
+</html>

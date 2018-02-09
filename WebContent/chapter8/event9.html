@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-1.12.4.min.js"></script>
+<script>
+	$(function(){
+		$("#key").keydown(function(e){
+			$("#key").css("background-color","yellow");
+			//$("#txt1").text(e.keyCode); //누를때마다 아스키코드값이 나옴. 대소문자 구분 X
+			
+			$("#key").keypress(function(e){ //대소문자 구분 O
+				$("#txt2").text(e.keyCode);
+			})
+		})
+		$("#key").keyup(function(){
+			$("#key").css("background-color","pink");
+		})
+	})
+</script>
+</head>
+<body>
+	<input type="text" id="key"><br><br>
+	
+	<p id="txt1"></p>
+	<p id="txt2"></p>
+</body>
+</html>

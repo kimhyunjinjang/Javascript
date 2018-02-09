@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var array = [ [ '한국', '일본', '미국', '중국', '북한' ], [ 10, 20, 30 ] ];
+
+		document.write(array[0] + "<br>");
+		document.write(array[1] + "<br>");
+		
+		array[0][5] = '프랑스';
+		document.write(array[0][array[0].length-1] + "<br>");
+		document.write(array[array.length-1][array[array.length-1].length-1] + "<br>");
+	</script>
+</body>
+</html>

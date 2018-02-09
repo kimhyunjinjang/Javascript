@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var arr = [ 'white', 'yellow', 'blue', 'purple' ];
+	function changeColor() {
+		var b = document.getElementsByTagName("body")[0];
+		b.style.backgroundColor = arr[Math.floor(Math.random() * 3 + 1)];
+	}
+</script>
+</head>
+<body>
+	<button onclick="changeColor()">배경색 바꾸기</button>
+</body>
+</html>

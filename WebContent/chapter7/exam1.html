@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-1.12.4.min.js"></script>
+<script>
+	var c = ["yellow","cyan","purple","white"];
+	var i =0;
+	$(function(){
+		$("#btn1").click(function(){
+			$("body").css("background-color",c[i]);
+			if(i==c.length-1){
+				i=0;
+			}else{
+				i++;
+			}
+			
+			
+		});
+		
+	});
+</script>
+</head>
+<body>
+	<button id="btn1">배경색 바꾸기</button>
+</body>
+</html>

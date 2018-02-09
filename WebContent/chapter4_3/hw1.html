@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	#wrap{
+		width:500px;
+	}
+	h1{
+		border:5px solid lightgray;
+		width: 500px;
+		height: 100px;
+		line-height: 100px;
+		text-align: center;
+	}
+</style>
+<script type="text/javascript">
+	function fontRed(){
+		var h1 = document.getElementsByTagName("h1");
+		h1[0].style.color = "red";
+	}
+	function fontGreen(){
+		var h1 = document.getElementsByTagName("h1");
+		h1[0].style.color = "green";
+	}
+	function fontBlue(){
+		var h1 = document.getElementsByTagName("h1");
+		h1[0].style.color = "blue";
+	}
+	function backRed(){
+		var h1 = document.getElementsByTagName("h1");
+		h1[0].style.backgroundColor = "red";
+	}
+	function backGreen(){
+		var h1 = document.getElementsByTagName("h1");
+		h1[0].style.backgroundColor = "green";
+	}
+	function backBlue(){
+		var h1 = document.getElementsByTagName("h1");
+		h1[0].style.backgroundColor = "blue";
+	}
+	function width50(){
+		var h1 = document.getElementsByTagName("h1");
+		h1[0].style.width = "50%";
+	}
+	function widthauto(){
+		var h1 = document.getElementsByTagName("h1");
+		h1[0].style.width = "auto";
+	}
+	function border10(){
+		var h1 = document.getElementsByTagName("h1");
+		h1[0].style.border = "10px dotted pink";
+	}
+	function border20(){
+		var h1 = document.getElementsByTagName("h1");
+		h1[0].style.border = "20px dotted orange";
+	}
+</script>
+</head>
+<body>
+	<h1>테스트 영역 입니다.</h1>
+	
+	<div id="wrap">
+		<button onclick="fontRed()">(폰트) red</button>
+		<button onclick="fontGreen()">(폰트) green</button>
+		<button onclick="fontBlue()">(폰트) blue</button>
+		<button onclick="backRed()">(배경) red</button>
+		<button onclick="backGreen()">(배경) green</button>
+		<button onclick="backBlue()">(배경) blue</button>
+		<button onclick="width50()">width=50%</button>
+		<button onclick="widthauto()">width=auto</button>
+		<button onclick="border10()">border 10px solid pink</button>
+		<button onclick="border20()">border 20px dotted orange</button>
+	</div>
+</body>
+</html>

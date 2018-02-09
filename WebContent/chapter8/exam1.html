@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	h3{
+		border: 1px solid blue;
+		border-left: 10px solid blue;
+		padding: 10px;
+	}
+	.p1{
+		font-weight: bold;
+	}
+	#re{
+		width: 500px;
+		height: 100px;
+	}
+	form{
+		border-bottom: 1px solid blue;
+	}
+	#div1 p.add{
+		padding: 20px;
+		border-bottom: 1px dotted gray;
+	}
+	.bold{
+		font-weight: bold;
+	}
+</style>
+<script src="../js/jquery-1.12.4.min.js"></script>
+<script>
+	$(function(){
+		$("input[type='button']").click(function(){
+			var name = $("input:first").val();
+			var date = new Date();
+			var y = date.getFullYear();
+			var m = date.getMonth()+1;
+			var d = date.getDate();
+			var t = date.toLocaleTimeString();
+			var str = y + "." + m + "." + d + ".";
+			
+			var comment = $("input:last").val();
+			
+			
+			$("#div1").append("<p class='add'>"+ "<span>" + name + "</span>" +"님 /"+ str + t + " <button id='del'>삭제하기</button>"
+					+"<br>" + comment + "</p>");
+			$("#div1 span").addClass("bold");
+		})
+		
+		$(document).on("click", "#del", function(){
+			$(this).parent().remove();
+		})
+		
+	})
+</script>
+</head>
+<body>
+	<h3>jQuery Comment</h3>
+	<form>
+		<p class="p1">
+		작성자 <input type="text"> <input type="button" value="저장하기">
+		</p>
+		<p class="p1">
+		덧글 내용 <input type="text" id="re">
+		</p>
+	</form>
+	<div id="div1">
+	</div>
+</body>
+</html>

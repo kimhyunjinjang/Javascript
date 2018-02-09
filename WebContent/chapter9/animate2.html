@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	img{
+		margin-left:100px;
+		height:300px;
+		width:500px;
+	}
+</style>
+<script src="../js/jquery-1.12.4.min.js"></script>
+<script>
+	$(function(){
+		$("button").eq(0).click(function(){
+			$("img").animate({
+				"margin-left" : "+=300px" //기존값에 100을 더해서 움직일 수 있다
+			},1000);
+			$("p").delay(1000).animate({"font-size":"2em",
+										"color":"red"},1000); //"img" 애니 끝나고 시작하도록
+			$("img").delay(1000).animate({ //"p" 애니 끝나고 시작하도록
+				"margin-left" : "-=300px"
+			},1000);
+		})
+		
+		$("button").eq(1).click(function(){
+			$("img").animate({
+				"height":"toggle"
+			},1000);
+		})
+		
+		$("button").eq(2).click(function(){
+			$("img").animate({
+				"width":"toggle"
+			},1000);
+		})
+		$("button").eq(3).click(function(){
+			$("img").animate({
+				"width":"200px", "height":"100px"
+			},1000);
+			
+			$("img").queue(function(){ //img 객체 큐에 밀어넣기. 큐 다음은 모두 취소됨
+				alert("완료");
+				$(this).dequeue(); //큐에 담긴 이후의 애니메이션도 동작하도록
+			})
+			
+			$("img").animate({
+				"width":"400px", "height":"300px"
+			},1000);
+		})
+	})
+</script>
+</head>
+<body>
+	<img src="images/fall.jpg">
+	<p>한국의 봄 화사하게 피어난 분홍</p>
+	<br>
+	<button>좌우 이동</button>
+	<button>이미지 높이 토글</button>
+	<button>이미지 너비 토글</button>
+	<button>큐</button>
+</body>
+</html>

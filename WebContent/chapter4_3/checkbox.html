@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function check1(){
+		//id 접근
+		var check = document.getElementById("c1");
+		
+		if(check.checked == true){
+			check.checked = false;
+		}else{
+			check.checked = true;
+		}
+	}
+	function check2(){
+		//name 접근
+		if(document.f1.c1.checked == true){
+			document.f1.c1.checked = false;
+		}else{
+			document.f1.c1.checked = true;
+		}
+	}
+	function showCheckbox(){
+		var result = "";
+		if(document.f1.c1.checked == true){
+			result += document.f1.c1.value;
+		}
+		if(document.f1.c2.checked == true){
+			result += document.f1.c2.value;
+		}
+		alert(result);
+	}
+</script>
+</head>
+<body>
+	<!-- radio, checkbox 객체안에 checked 변수가 있음 -->
+	<form name="f1">
+		<input type="checkbox" id="c1" name="c1" value="체크">체크박스<br> <!-- name으로 접근하려면 <form>으로 감싸야  -->
+		<input type="checkbox" name="c2" value="딸기"> 딸기
+	</form>
+	<button onclick="check2()">선택</button>
+	<button onclick="showCheckbox()">체크박스 값</button>
+	
+</body>
+</html>

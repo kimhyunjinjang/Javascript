@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form name="fm1" action="">
+		<p>
+			<input type="checkbox" name="fruit"/>수박<br>
+			<input type="checkbox" name="fruit"/>참외<br>
+			<input type="checkbox" name="fruit"/>오렌지<br>
+			<input type="checkbox" name="fruit"/>바나나<br>
+		</p>
+	</form>
+	<button onclick="allCheck()">전체선택</button>
+	<button onclick="allUnCheck()">전체해제</button>
+	
+	<script type="text/javascript">
+		function allCheck(){
+			for(var i=0; i<document.fm1.fruit.length; i++){
+				document.fm1.fruit[i].checked = true;
+			}
+		}
+		function allUnCheck(){
+			for(var i=0; i<document.fm1.fruit.length; i++){
+				document.fm1.fruit[i].checked = false;
+			}
+		}
+	</script>
+</body>
+</html>

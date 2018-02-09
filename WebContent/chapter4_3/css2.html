@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function geth1(){
+		var h1 = document.getElementsByTagName("h1");
+		h1[0].style.color = "green";
+	}
+	function geth2(){
+		var h2 = document.getElementById("subtitle");
+		h2.style.color="red";
+	}
+	function getli(){
+		var li = document.getElementsByClassName("subli");
+		li[1].style.backgroundColor="red";
+		
+		var arr = document.getElementById("food_2").getElementsByTagName("li");
+		arr[2].style.backgroundColor="red";
+	}
+	
+</script>
+</head>
+<body>
+	<h1>선호하는 음식</h1>
+	<h2 id="subtitle">한식</h2>
+	<ol>
+		<li class="subli"><a href="#">김치</a></li>
+		<li class="subli">불고기</li>
+		<li class="subli">비빔밥</li>
+	</ol>
+	
+	<div id="food_2">
+	<h2>양식</h2>
+	<ol>
+		<li>돈까스</li>
+		<li>피자</li>
+		<li>파스타</li>
+	</ol>
+	</div>
+	<button onclick="geth1(),geth2(),getli()">바꾸기</button>
+</body>
+</html>

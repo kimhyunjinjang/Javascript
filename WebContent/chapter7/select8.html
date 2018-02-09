@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-1.12.4.min.js"></script>
+<script>
+	var bbs={
+			"title":"TV 시간표",
+			"date":"2016-11-10",
+			"schedule":[
+				{"title":"공항가는길", "episode":"16회", "channel":"KBS"},
+				{"title":"쇼핑왕루이", "episode":"15회", "channel":"MBC"},
+				{"title":"질투의화신", "episode":"24회", "channel":"SBS"}
+			]
+	};
+	
+	$(function(){
+		
+		
+		var str="";
+		$(bbs.schedule).each(function(i,obj){
+			str+="<li>"+obj.title+"("+ obj.episode+ "," + obj.channel+")"+"</li>";
+		})
+		$("#schedule").html(str);
+		$("h1").html(bbs.title+"("+bbs.date+")");
+	})
+</script>
+</head>
+<body>
+	<h1>빈곳</h1>
+	<ul id="schedule">
+	</ul>
+</body>
+</html>

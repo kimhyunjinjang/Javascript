@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function change(index, path){
+		var imgArr = document.getElementsByTagName("img"); //[img, img, img, img, img]
+		imgArr[index].src = path;
+	}
+</script>
+</head>
+<body>
+	<h1>숫자 4를 클릭하세요</h1>
+	<img src="images/h.jpg" onclick="change(0, 'images/h2.jpg')">
+	<img src="images/t.jpg" onclick="change(1, 'images/t2.jpg')">
+	<img src="images/m.jpg" onclick="change(2, 'images/m2.jpg')">
+	<img src="images/l.jpg" onclick="change(3, 'images/l2.jpg')">
+	<img src="images/4.jpg" onclick="change(4, 'images/5.jpg')">
+</body>
+</html>

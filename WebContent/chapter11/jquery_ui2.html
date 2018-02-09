@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="css/jquery-ui.css">
+<style>
+	#tabs{
+		width: 700px;
+	}
+</style>
+<script src="../js/jquery-1.12.4.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script>
+	$(function(){
+		$("#tabs").tabs();
+	})
+</script>
+</head>
+<body>
+	<div id="tabs">
+		<ul>
+			<li><a href="#tab1">사과</a></li>
+			<li><a href="#tab2">바나나</a></li>
+			<li><a href="#tab3">오렌지</a></li>
+			<li><a href="#tab4">딸기</a></li>
+		</ul>
+		<div id="tab1">
+			<p>사과의 내용입니다.</p>
+		</div>
+		<div id="tab2">
+			<p>바나나의 내용입니다.</p>
+			<img src="images/page1.jpg">
+		</div>
+		<div id="tab3">
+			<p>옿렌지의 내용입니다.</p>
+		</div>
+		<div id="tab4">
+			<p>딸기의 내용입니다.</p>
+		</div>
+	</div>
+</body>
+</html>

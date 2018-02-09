@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	window.onload = function(){
+		var i = document.getElementsByTagName("img")[0];
+		if(window.addEventListener){
+			i.addEventListener("mouseover", function(){
+				i.src = "images/four.jpg";
+			}, false);
+			i.addEventListener("mouseout", function(){
+				i.src = "images/two.jpg";
+			}, false);
+		}else{
+			i.attachEvent("onclick", function(){
+				i.src = "images/four.jpg";
+			});
+			i.attachEvent("onclick", function(){
+				i.src = "images/two.jpg";
+			});
+			
+		}
+	}
+</script>
+</head>
+<body>
+	<img src="images/two.jpg" alt="two">
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	div{
+		background-color:yellow;
+	}
+	.tit{
+		background-color:orange;
+	}
+</style>
+<script src="../js/jquery-1.12.4.min.js"></script>
+<script>
+	$(function(){
+		//1. h1의 정렬을 왼쪽으로
+		$("h1").attr("align","left");
+		//2. 첫번째 li태그의 글자를 "첫번째 리스트"로 변경
+		$("li:first").text("첫 번째 리스트");
+		//3. h2의 자식인 strong의 글자를 빨간색으로
+		$("h2>strong").css("color","red");
+		//4. id:two의 바로 이전 요소의 글자색을 파란색으로
+		$("#two").prev().css("color","blue");
+		//5. id:two의 바로 이후 요소의 글자색을 보라색으로
+		$("#two").next().css("color","purple");
+		//6. id:two의 부모 요소의 border를 2px dashed navy로 변경
+		$("#two").parent().css("border","2px dashed navy");
+		//7. class:myList의 첫번째 자식으로 "<li>Front</li>" 추가
+		//$(".myList>li:first").html("<li>Front</li>");
+		$(".myList").prepend("<li>Front</li>")
+		//8. class:myList의 마지막 자식으로 "<li>back</li>" 추가
+		//$(".myList>li:last").html("<li>back</li>");
+		$(".myList").append("<li>back</li>")
+		//9. class:three 앞에 형제로 "<li>앞에 삽입</li>" 추가
+		$(".three").before("<li>앞에 삽입</li>");
+		//10. class:three 뒤에 형제로 "<li>뒤에 삽입</li>" 추가
+		$(".three").after("<li>뒤에 삽입</li>");
+		//11. h2 중 1번째 인덱스 요소에 div로 감싸기
+		$("h2").eq(1).wrap("<div>");
+		//12. h2 중 strong 태그를 가진 녀석에 tit class 추가
+		$("h2:has('strong')").addClass("tit");
+		//13. 마지막 h2에 tit class 제거
+		$("h2:last").removeClass("tit");
+		//14.
+		$("#add").click(funcion(){
+			var add_str = "<ol id='myList2'>";
+			for(var i=1; i<11; i++){
+				add_str+="<li>번호 리스트" + i + "</li>";
+			}
+			add_str+="</ol>";
+			
+			$("body").append(add_str);
+			$("#myList2 li:odd").css("background-color","aqua");
+		})
+	})
+</script>
+</head>
+<body>
+	<h1 align="center">
+		<strong>내용1</strong>
+	</h1>
+	<h2>
+		<strong>내용2</strong>
+	</h2>
+	<h2>내용3</h2>
+	<h2 class="tit"></h2>
+	<ul class="myList">
+		<li>리스트1</li>
+		<li id="two">리스트2</li>
+		<li class="three">리스트3</li>
+		<li>리스트4</li>
+	</ul>
+	<button id="add">추가</button>
+</body>
+</html>

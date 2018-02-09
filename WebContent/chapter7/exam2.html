@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-1.12.4.min.js"></script>
+<script>
+	$(function(){
+		$("#one").click(function(){
+			$("#wrap").css("backgroundColor","red");
+			$("#wrap").css("color","white");
+			$("h2").text("1학년 공지사항");
+		})
+		$("#two").click(function(){
+			$("#wrap").css("backgroundColor","blue");
+			$("#wrap").css("color","white");
+			$("h2").text("2학년 공지사항");
+		})
+		$("#three").click(function(){
+			$("#wrap").css("backgroundColor","yellow");
+			$("#wrap").css("color","black");
+			$("h2").text("3학년 공지사항");
+		})
+		$("#four").click(function(){
+			$("#wrap").css("backgroundColor","purple");
+			$("#wrap").css("color","white");
+			$("h2").text("4학년 공지사항");
+		})
+	})
+</script>
+<style>
+	#wrap{
+		border:1px solid black;
+		padding: 10px;
+		border-radius: 5px;
+		width:800px;
+	}
+	#btn{
+		width: 300px;
+		height:20px;
+		float: right;
+		border:1px solid white;
+	}
+	h1{
+		clear: both;
+	}
+</style>
+</head>
+<body>
+	<div id="btn">
+		<img src="images/1.png" id="one">
+		<img src="images/2.png" id="two">
+		<img src="images/3.png" id="three">
+		<img src="images/4.png" id="four">
+	</div>
+	<h1>새내기들과 함께하는 학과 전체 MT</h1>
+	<div id="wrap">
+		<h2></h2>
+		<p>안녕하십니까?</p>
+		<p>벌써 학기가 시작된지 한 달이 되어갑니다.
+		올해도 새내기들과 함께 하는 학과 전체 MT를 갑니다.
+		새내기들이 재학생과 교수님들과의 친목을 도모할 수 있는 자리를 마련하고자 합니다.</p>
+		
+		<p>해마다 있는 행사지만 꼭 참석하셔서 사제간에, 선후배간에 돈독한 정을 쌓을 수 있기를 바랍니다.</p>
+		
+		<ul>
+			<li><b>행사명</b>: 컴퓨터공학과 전체 MT</li>
+			<li><b>행사 목적</b>: 선후배간, 사제간의 유대 관계 형성과 친목을 위함</li>
+			<li><b>행사일</b>: 3월 25일(금)~3월 27일(일)</li>
+		</ul>
+	</div>
+</body>
+</html>

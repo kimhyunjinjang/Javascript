@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+	span{
+		color:red;
+	}
+</style>
+<script src="../js/jquery-1.12.4.min.js"></script>
+<script>
+	$(function(){
+		$("#target").before("<li>before로 추가</li>");
+		$("#target").after("<li>after로 추가</li>");
+		$("#target").prepend("<span>prepend</span>");
+		$("#target").append("<span>append</span>")
+	})
+</script>
+<title>Insert title here</title>
+</head>
+<body>
+	<ul>
+		
+		<li id="target">기준</li>
+	</ul>
+</body>
+</html>

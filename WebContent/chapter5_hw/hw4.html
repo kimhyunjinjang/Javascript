@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	
+	function changeImage(){
+		var img = document.getElementById(arguments[0]);
+		var s = img.src;
+		var i = s.indexOf(".");
+		var j = s.lastIndexOf("/");
+		var k = s.substring(j+1,i);
+		
+		switch(arguments[0]){
+		case 'h':
+			if(k==arguments[0]){
+				img.src = "images/h2.jpg";
+			}else{
+				img.src = "images/h.jpg";
+			}
+			break;
+		case 't':
+			if(k==arguments[0]){
+				img.src = "images/t2.jpg";
+			}else{
+				img.src = "images/t.jpg";
+			}
+			break;
+		case 'm':
+			if(k==arguments[0]){
+				img.src = "images/m2.jpg";
+			}else{
+				img.src = "images/m.jpg";
+			}
+			break;
+		case 'l':
+			if(k==arguments[0]){
+				img.src = "images/l2.jpg";
+			}else{
+				img.src = "images/l.jpg";
+			}
+			break;
+		case '5':
+			if(k==arguments[0]){
+				img.src = "images/5-2.jpg";
+			}else{
+				img.src = "images/5.jpg";
+			}
+			break;
+		default:
+			break;
+		}
+	}
+</script>
+</head>
+<body>
+	<h1>웹 표준 기술은?</h1>
+	<p>아래 이미지를 클릭해 보세요</p>
+	<img src="images/h.jpg" onclick="changeImage('h')" id="h">
+	<img src="images/t.jpg" onclick="changeImage('t')" id="t">
+	<img src="images/m.jpg" onclick="changeImage('m')" id="m">
+	<img src="images/l.jpg" onclick="changeImage('l')" id="l">
+	<img src="images/5.jpg" onclick="changeImage('5')" id="5">
+</body>
+</html>

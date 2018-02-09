@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-1.12.4.min.js"></script>
+<script>
+	$(function(){
+		$("button").mouseover(function(){
+			//$("button").css("border","2px solid red");
+			$(this).css("border","2px solid red"); //this 사용 예
+			var index = $("button").index(this); //index() 반환 메서드
+			$("#text").html(index);
+		})
+		$("button").mouseleave(function(){
+			$(this).css("border","none");
+		})
+		
+		/* $("img").mouseover(function(){
+			$(this).attr("src","images/h2.jpg");
+		})
+		$("img").mouseout(function(){
+			$(this).attr("src","images/h.jpg");
+		}) */
+		
+		$("img").click(function(){
+			var src = $("img").attr("src");
+			if(src=="images/h.jpg"){
+				$(this).attr("src","images/h2.jpg");
+			}else{
+				$(this).attr("src","images/h.jpg");
+			}
+		})
+	})
+</script>
+</head>
+<body>
+	<button>마우스 오버1</button>
+	<button>마우스 오버2</button>
+	<button>마우스 오버3</button>
+	<p id="text"></p>
+	
+	<div>
+		<img src="images/h.jpg">
+	</div>
+</body>
+</html>

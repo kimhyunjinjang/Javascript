@@ -1,0 +1,28 @@
+@CHARSET "UTF-8";
+
+#showImgWrap{
+	width: 650px;
+	margin: 70px auto;
+	position: relative;
+}
+
+#showImgWrap img{
+	width: 200px;
+}
+
+.yShowWrapper{
+	width: 90%;
+	height: 700px;
+	margin: 0 auto;
+	background: white;
+	padding: 5px;
+	border-radius: 5px;
+	border: 2px solid black;
+	text-align: center;
+}
+#p1{
+	position: absolute;
+	color: white;
+	top: 700px;
+	left: 700px;
+}

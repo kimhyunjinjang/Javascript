@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-1.12.4.min.js"></script>
+<script>
+	function calculatorCheck(){
+		var res = 0;
+		/* if($("#c1").prop("checked")==true){
+			res+=Number($("#c1").val());
+		}
+		if($("#c2").prop("checked")==true){
+			res+=Number($("#c2").val());
+		}
+		if($("#c3").prop("checked")==true){
+			res+=Number($("#c3").val());
+		} */
+		
+		/* $(".check").each(function(i,obj){
+			if($(obj).prop("checked")==true)
+				res+=Number($(obj).val());
+		}) */
+		
+		$(".check:checked").each(function(i,obj){
+			res+=Number($(obj).val());
+		})
+		$("#result").html(res);
+	}
+	$(function(){
+		$("#c1, #c2, #c3").click(function(){
+			calculatorCheck();
+		})
+		
+		$("#allChk").click(function(){
+			var check = $("#allChk").prop("checked");
+			$("input[type='checkbox']").prop("checked",check);
+			calculatorCheck();
+		})
+	})
+</script>
+</head>
+<body>
+	<fieldset>
+		<legend>check테스트</legend>
+		<p>
+			<input type="checkbox" id="allChk">전체선택<br>
+			<input type="checkbox" id="c1" value="1000" class="check">1000<br>
+			<input type="checkbox" id="c2" value="2000" class="check">2000<br>
+			<input type="checkbox" id="c3" value="3000" class="check">3000<br>
+		</p>
+		<p>결과 값 확인: <span id="result"></span></p>
+	</fieldset>
+</body>
+</html>

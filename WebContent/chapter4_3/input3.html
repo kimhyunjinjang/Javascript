@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	label{
+		width:120px;
+		float:left;
+	}
+</style>
+<script type="text/javascript">
+	function submitJoin(){
+		//이름이 규격에 맞는가
+		var nameReg = /^[가-힣]{2,5}$/;
+		var name = document.fm1.name.value;
+		if(nameReg.test(name) == false){
+			alert("이름을 다시 입력하세요.");
+			document.fm1.name.value="";
+			document.fm1.name.focus(); //input태그 종류일때 focus가 가게됨
+			return false;
+		}
+		//나이
+		var ageReg = /^[1-9][0-9]{0,2}$/;
+		var age = document.fm1.age.value;
+		if(ageReg.test(age) == false || age == ""){
+			alert("나이를 다시 입력하세요.");
+			document.fm1.age.value="";
+			document.fm1.age.focus();
+			return false;
+		}
+		
+		//휴대폰 번호
+		var phoneReg = /^(010|019|011|016|018)-?[0-9]{3,4}-?[0-9]{4}$/;
+		var phone = document.fm1.phone.value;
+		if(phoneReg.test(phone) == false){
+			alert("전화번호를 다시 입력하세요.");
+			document.fm1.phone.value="";
+			document.fm1.phone.focus();
+		}
+		
+		//성별 선택
+		var r1 = document.fm1.gender[0].checked;
+		var r2 = document.fm1.gender[1].checked;
+		if(r1 == false && r2 == false){
+			alert("성별을 선택해주세요");
+			document.fm1.gender[0].focus();
+			return false;
+		}
+		var gender = document.fm1.gender.value;
+		
+		
+		//노래
+		var songValue = document.fm1.song.value;
+		var songIndex = document.fm1.song.selectedIndex;
+		var optionLength = document.fm1.song.length; //옵션의 개수
+		if(songIndex == optionLength-1){
+			alert("노래를 선택해주세요");
+			document.fm1.song.focus();
+			return false;
+		}
+		
+		//정상적으로 값이 입력되면 div#block에 나타남
+		var div = document.getElementById("block");
+		div.innerHTML = "<p> 이름: " + name + "</p>"
+						+ "<p> 나이: " + age + "</p>"
+						+ "<p> 전화번호: " + phone + "</p>"
+						+ "<p> 성별: " + gender + "</p>"
+						+ "<p> 노래: " + songValue + "</p>";
+	}
+</script>
+</head>
+<body>
+	<form name="fm1" onsubmit="submitJoin(); return false;"> <!-- submit이 되기 전에 -->
+		<fieldset>
+			<legend>개인 정보</legend>
+			<p>
+				<label>이름</label>
+				<input type="text" name="name" placeholder="이름 입력(2-5)"> <!--form 태그 안에 input 태그에만 name을 쓸 수 있다-->
+			</p>
+			<p>
+				<label>나이</label>
+				<input type="text" name="age" placeholder="나이 입력(숫자)">
+			</p>
+			<p>
+				<label>전화번호</label>
+				<input type="text" name="phone" placeholder="000-0000-0000">
+			</p>
+			<p>
+				<label>성별</label>
+				<input type="radio" name="gender" value="남자">남자
+				<input type="radio" name="gender" value="여자">여자
+			</p>
+			<p>
+				<label>좋아하는 노래</label>
+				<select name="song">
+					<option value="발라드">발라드</option>
+					<option value="댄스">댄스</option>
+					<option value="Rock">Rock</option>
+					<option value="트로트">트로트</option>
+					<option value="메뉴선택" selected="selected">메뉴를 선택하여 주세요</option>
+				</select>
+			</p>
+			
+			<p id="join">
+				<input type="submit" value="가입">
+			</p>
+		</fieldset>
+	</form>	
+	
+	<hr>
+	
+	<div id="block">
+	
+	</div>
+</body>
+</html>

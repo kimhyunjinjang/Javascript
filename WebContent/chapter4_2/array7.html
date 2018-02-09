@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+table, td {
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+</style>
+</head>
+<body>
+	<script type="text/javascript">
+		function BookInfo(i, t, p) {
+			this.imgSrc = i;
+			this.title = t;
+			this.price = p;
+
+			this.getPrice = function() {
+				return this.price;
+			}
+			this.toString = function(){
+				return this.imgSrc + "<br>" + this.title + "<br>" + this.price;
+			}
+		}
+
+		var arrayBook = [];
+		arrayBook.push(new BookInfo("<img src='image/java.png'>",
+				"어서와 Java는 처음이지!", 50000));
+		arrayBook.push(new BookInfo("<img src='image/html.png'>",
+				"DO it! HTML5 + CSS3 웹 표준의 정석", 45000));
+		arrayBook.push(new BookInfo("<img src='image/js.png'>",
+				"DO it! 자바스크립트 + 제이쿼리 입문", 35000));
+		arrayBook.push(new BookInfo("<img src='image/book1.jpg'>",
+				"안드로이드 프로그래밍 정복", 25000));
+		arrayBook.push(new BookInfo("<img src='image/book2.jpg'>",
+				"그림으로 쉽게 설명하는 안드로이드 프로그래밍", 19000));
+		arrayBook.push(new BookInfo("<img src='image/book3.jpg'>",
+				"Do it! 안드로이드 앱 프로그래밍", 18800));
+
+		//가격 내림차순
+		arrayBook.sort(function(left, right) {
+			return right.getPrice() - left.getPrice();
+		});
+	
+		var cnt = 0;
+		var output = "<table>";
+		for (var i = 0; i < 2; i++) {
+			output += "<tr>";
+			cnt++;
+			if(cnt>1){
+				for (var j = 3; j < 6; j++) {
+					output += "<td>" + arrayBook[j].toString() + "</td>";
+				}
+				output += "</tr>"
+			}else{
+				for (var j = 0; j < 3; j++) {
+					output += "<td>" + arrayBook[j].toString() + "</td>";
+				}
+				output += "</tr>"
+			}	
+		}
+		output += "</table>"
+		
+		document.write(output);
+	</script>
+</body>
+</html>

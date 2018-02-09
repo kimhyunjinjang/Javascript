@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var i=1;
+	function changeColor(){
+		var c=['white','yellow','aqua','purple'];
+		var b = document.getElementsByTagName("body")[0];	
+		b.style.backgroundColor = c[i % c.length];
+		i++;
+		/* if(i==c.length){
+			i=0;
+		} */
+	}
+</script>
+</head>
+<body>
+	<button onclick="changeColor()">배경색 바꾸기</button>
+</body>
+</html>

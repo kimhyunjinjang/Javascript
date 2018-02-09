@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var i = 0;
+	var id = null;
+	
+	function callConsole(){		
+		i++;
+		console.log(i);
+	}
+	
+	function startButton(){
+		id = setInterval(callConsole, 1000) //callConsole()아님 주의
+	}
+	
+	function stopButton(){
+		clearInterval(id);
+	}
+	
+	/*-----------------------------------------------------------*/
+	var id2 = null;
+	function changeTime(){
+		var h1 = document.getElementById("time");
+		//시간
+		var date = new Date();
+		var str = date.toLocaleTimeString(); //내 지역의 시간을 string으로 반환
+		h1.innerHTML = str;
+		
+	}
+	function startTimer(){
+		id2 = setInterval(changeTime, 1000);
+	}
+	
+	function stopTimer(){
+		clearInterval(id2);
+	}
+</script>
+</head>
+<body>
+	<button onclick="startButton()">시작</button><br>
+	<button onclick="stopButton()">멈춤</button>
+	
+	<hr>
+	
+	<h1 id="time">시간이 나타날 공간</h1>
+	<button onclick="startTimer()">Timer Start</button>
+	<button onclick="stopTimer()">Timer Stop</button>
+
+</body>
+</html>
+
+
+
+

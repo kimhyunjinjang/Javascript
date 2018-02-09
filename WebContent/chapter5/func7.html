@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		
+		function pythagoras(width, height){
+			function square(x){
+				return x*x;
+			}
+			
+			var value = Math.sqrt(square(width) + square(height));
+			
+			return value;
+		}
+		
+		alert(pythagoras(3,4));
+		
+		//삼각형이 직각인지 확인을 하는 함수
+		function square(width, height, hypotenuse){
+			if(width*width +height*height == hypotenuse*hypotenuse){
+				return true;
+			}else{
+				return false;
+			}
+		}
+	</script>
+</body>
+</html>

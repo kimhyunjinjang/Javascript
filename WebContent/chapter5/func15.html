@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function sumFunc(){
+		var sum=0;
+		var n = arguments[0];
+		var m = arguments[1];
+		for(var i=n; i<m+1; i++){
+              sum += i;
+        }
+        alert(sum);
+	}
+</script>
+</head>
+<body>
+	<form name="f1">
+		<button onclick="sumFunc(1,10)">10까지 더하기</button>
+		<button onclick="sumFunc(1,50)">50까지 더하기</button>
+		<button onclick="sumFunc(1,100)">100까지 더하기</button>
+	</form>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link href="css/lightbox.css" rel="stylesheet">
+<script src="../js/jquery-1.12.4.min.js"></script>
+<script src="js/lightbox.min.js"></script>
+<style>
+	.example{
+		width: 150px;
+	}
+</style>
+<script>
+	$(function(){
+		lightbox.option({
+			'resizeDuration':200,
+			'wrapAround':true
+		})
+	})
+</script>
+</head>
+<body>
+	<h1>LightBox ImageViewer</h1>
+	<h3>각각 이미지 선택</h3>
+	<div class="example">
+		<!-- <a href="images/page1.jpg" title="도시의 야경" data-lightbox="image-1"><img src="images/page1.jpg"></a> -->
+		<!-- <a href="images/page2.jpg" title="초원의 집" data-lightbox="image-2"><img src="images/page2.jpg"></a> -->
+		<a href="images/page1.jpg" title="도시의 야경" data-lightbox="image-1"></a>
+		<a href="images/page2.jpg" title="초원의 집" data-lightbox="image-2"></a>
+	</div>
+	<hr>
+	
+	<h3>이미지가 set으로 동작함</h3>
+	<div>
+		<a href="images/page1.jpg" title="도시의 야경" data-lightbox="ex-set"><img src="images/page1.jpg"></a>
+		<a href="images/page2.jpg" title="초원의 집" data-lightbox="ex-set"><img src="images/page2.jpg"></a>
+		<a href="images/page3.jpg" title="야경" data-lightbox="ex-set"><img src="images/page3.jpg"></a>
+		<a href="images/image-3.jpg" title="다리" data-lightbox="ex-set"><img src="images/image-3.jpg"></a>
+		<a href="images/image-5.jpg" title="사색" data-lightbox="ex-set"><img src="images/image-5.jpg"></a>
+	</div>
+</body>
+</html>

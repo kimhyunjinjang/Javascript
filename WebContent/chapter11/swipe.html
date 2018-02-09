@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'/>
+<title>Insert title here</title>
+<link href="css/style.css" rel="stylesheet">
+<script src="../js/jquery-1.12.4.min.js"></script>
+<script src="js/swipe.js"></script>
+<style>
+	.swipe {
+ 	 overflow: hidden;
+  	 visibility: hidden;
+  	 position: relative;
+	}
+	.swipe-wrap {
+  	 overflow: hidden;
+ 	 position: relative;
+	}
+	.swipe-wrap > div {
+  	float:left;
+  	width:100%;
+  	position: relative;
+}
+img{
+	width: 100%;
+	max-width: 100%;
+}
+#mySwipe{
+	max-width: 500px;
+	margin: 80px auto;
+}
+.btn_wrap{
+	text-align: center;
+}
+</style>
+<script>
+	$(function(){
+		var mySwipe =$("#mySwipe").Swipe().data("Swipe");
+		$(".prevBtn").click(function(){
+			mySwipe.prev();
+		})
+		$(".nextBtn").click(function(){
+			mySwipe.next();
+		})
+		
+	})
+</script>
+</head>
+<body>
+	<div id="mySwipe" class="swipe">
+		<div class="swipe-wrap">
+			<div>
+				<img src="images/pic_1.jpg" alt="사진1">
+			</div>
+			<div>
+				<img src="images/pic_2.jpg" alt="사진2">
+			</div>
+			<div>
+				<img src="images/pic_3.jpg" alt="사진3">
+			</div>
+			<div>
+				<img src="images/pic_4.jpg" alt="사진4">
+			</div>
+		</div>
+	</div>
+	<div class="btn_wrap">
+		<button class="prevBtn">prev</button>
+		<button class="nextBtn">next</button>
+	</div>
+</body>
+</html>

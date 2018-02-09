@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		/* for(var i=1; i<=10; i++){
+			
+			document.write(i+"<br>");
+			
+			if(i==6){
+				break;
+			}
+		} */
+		
+		var num=1;
+		
+		while(true){
+			alert(num+"번째 반복됩니다.");
+			
+			var result = prompt("취소버튼을 클릭하면, break가 호출됩니다","계속");
+			if(result==null){
+				break;
+			}
+			num++;
+		}
+		
+		document.write("<h2>총"+num+"번 만큼 반복되었습니다.</h2>")
+	</script>
+</body>
+</html>

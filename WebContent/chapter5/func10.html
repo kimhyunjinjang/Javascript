@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script>
+		function test(name){
+			var output='Hello '+name+"...!";
+			
+			return function(){
+				alert(output);
+			}
+		
+		}
+		
+		//alert(output);
+		
+		var funTest = test('HTML');
+		funTest(); //클로져
+		
+		var AATest = test('Javascript');
+		AATest();
+		
+		
+	</script>
+</body>
+</html>

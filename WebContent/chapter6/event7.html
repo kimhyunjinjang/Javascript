@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function changeText(){
+		var p1 = document.getElementById("p1");
+		p1.innerHTML = "남들보다 더 잘하려고 고민하지 마라 <br> 지금의 나보다 잘하려고 애쓰는게 중요하다.";
+	}
+
+
+	window.onload = function(){
+		/* var p1 = document.getElementById("p1");
+		p1.onclick=function(){
+			p1.innerHTML = "남들보다 더 잘하려고 하지마<br>";
+		} */
+		
+		var p1 = document.getElementById("p1");
+		if(window.addEventListener){
+			p1.addEventListener("click", function(){
+				p1.innerHTML = "지금의 나보다 더 잘해<br>";
+			}, false);
+		}else{
+			p1.attachEvent("onclick", function(){
+				p1.innerHTML = "지금의 나보다 더 잘해<br>";
+			});
+		}
+	}
+</script>
+</head>
+<body>
+	<p id="p1">하지 않는 것보다 늦었지만 하는 것이 낫다</p>
+</body>
+</html>

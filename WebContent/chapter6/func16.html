@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+#wrapper {
+	border: 1px solid black;
+	width: 300px;
+	height: 400px;
+}
+button{
+	width: 15%;
+	height: 30px;
+	float: left;
+	margin-left: 3.5%;
+	margin-bottom: 5%;
+}
+</style>
+<script type="text/javascript">
+	var t = "";
+	function calculator(obj) {
+		var result = document.getElementById("win");
+
+		if (obj.innerHTML == "=") {
+			result.value = eval(t); /*단순 string객체를 계산해줌*/
+			return;
+		} else if (obj.innerHTML == "C") {
+			result.value = "";
+			t = "";
+			return;
+		}
+
+		t += obj.innerHTML;
+		result.value = t;
+
+	}
+	
+	window.onload = function(){
+		var p2 = document.getElementById("p2");
+		var arrbtn = p2.getElementsByTagName("button");
+		
+		for(var i=0; i<arrbtn.length; i++){
+			arrbtn[i].onclick=function(){
+				calculator(this);
+			}
+		}
+	}
+</script>
+</head>
+<body>
+	<div id="wrapper">
+		<fieldset>
+			<legend>계산기</legend>
+			<!-- disabled:입력커서도 안되도록함, readonly:읽기만 가능 -->
+			<p id="p1">
+				<input type="text" id="win" readonly="readonly" disabled="disabled">
+			</p>
+			<p id="p2">
+				<button>1</button>
+				<button>2</button>
+				<button>3</button>
+				<button>4</button>
+				<button>5</button>
+				<button>6</button>
+				<button>7</button>
+				<button>8</button>
+				<button>9</button>
+				<button>0</button>
+				<button>/</button>
+				<button>*</button>
+				<button>-</button>
+				<button>+</button>
+				<button>=</button>
+				<button>C</button>
+			</p>
+		</fieldset>
+	</div>
+</body>
+</html>

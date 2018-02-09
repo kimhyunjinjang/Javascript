@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	img{
+		width:500px;
+		height: 300px;
+	}
+</style>
+<script src="../js/jquery-1.12.4.min.js"></script>
+<script>
+	$(function(){
+		$("button").eq(0).click(function(){
+			$("img").animate({"width":"700px"},1000);
+			$("img").animate({"height":"500px"},1000);
+			$("img").animate({"border-radius":"20px"},1000);
+		})
+		$("button").eq(1).click(function(){
+			$("img").animate({"width":"700px",
+							  "height":"500px",
+							  "border-radius":"20px"});
+		})
+		$("button").eq(2).click(function(){
+			$("img").animate({"width":"700px",
+							  "height":"500px",
+							  "border-radius":"20px"},function(){
+								 var tmp = $("img").prop("width");
+								 $("#p1").html(tmp);
+							  });
+		})
+	})
+</script>
+</head>
+<body>
+	<img src="images/fall.jpg">
+	<p><b>한국의 가을</b> 마지막 절정을 향해 치닫는 빨간 얼굴.</p>
+	<button>확대하기</button>
+	<button>확대하기2</button>
+	<button>콜백넣기</button>
+	<p id="p1"></p>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	label{
+		width:120px;
+		float:left;
+	}
+	#introduce{
+		width:400px;
+		height:100px;
+	}
+</style>
+<script type="text/javascript">
+	function submitJoin(){
+		var idReg=/^\w{5,15}$/;
+		var id=document.fm1.id.value;
+		if(idReg.test(id)==false){
+			alert("아이디를 다시 입력하세요.");
+			document.fm1.id.value="";
+			document.fm1.id.focus();
+			return false;
+		}
+	/* 	var pwReg=/^[a-z]+[a-z]*[0-9]*{8,15}$/;
+		var pw=document.fm1.pw.value;
+		if(pwReg.test(pw)==false){
+			alert("비밀번호를 다시 입력하세요.");
+			document.fm1.pw.value="";
+			document.fm1.pw.focus();
+			return false;
+		} */
+		var nameReg = /^[가-힣]{2,5}$/;
+		var name = document.fm1.name.value;
+		if(nameReg.test(name)==false){
+			alert("이름을 다시 입력하세요.");
+			document.fm1.name.value="";
+			document.fm1.name.focus(); //input태그 종류일때 focus가 가게됨
+			return false;
+		}
+		var r1 = document.fm1.gender[0].checked;
+		var r2 = document.fm1.gender[1].checked;
+		if(r1 == false && r2 == false){
+			alert("성별을 선택해주세요");
+			document.fm1.gender[0].focus();
+			return false;
+		}
+		var gender = document.fm1.gender.value;
+		
+		var jobIndex = document.fm1.job.selectedIndex;
+		if(jobIndex == 0){
+			alert("직업을 선택해주세요");
+			document.fm1.job.focus();
+			return false;
+		}
+		
+		var cnt=0;
+		for(var i=0; i<document.fm1.like.length;i++){
+			if(document.fm1.like[i].checked==true){
+				cnt++;
+			}
+		}
+		if(cnt<1){
+			alert("관심 분야를 선택해주세요");
+			document.fm1.like.focus();
+			return false;
+		}
+		
+		var intro = document.fm1.intro.value;
+		var s=intro.split("");
+		if(s.length<10){
+			alert("자기 소개를 10자리 이상 작성해주세요");
+			document.fm1.intro.focus();
+			return false;
+		}
+	}
+</script>
+</head>
+<body>
+	<form name="fm1" onsubmit="submitJoin(); return false;">
+		<fieldset>
+			<p>
+				<label>아이디</label>
+				<input type="text" name="id" placeholder="영어 숫자 가능">
+			</p>
+			<p>
+				<label>패스워드</label>
+				<input type="password" name="pw" placeholder="영어 숫자 가능">
+			</p>
+			<p>
+				<label>패스워드 확인</label>
+				<input type="password" placeholder="영어 숫자 가능">
+			</p>
+			<p>
+				<label>이름</label>
+				<input type="text" name="name">
+			</p>
+			<p>
+				<label>성별</label>
+				<input type="radio" name="gender">남
+				<input type="radio" name="gender">여
+			</p>
+			<p>
+				<label>직업</label>
+				<select name="job">
+					<option value="메뉴선택" selected="selected">직업</option>
+					<option value="사무직">사무직</option>
+					<option value="연구직">연구직</option>
+					<option value="행정직">행정직</option>
+					<option value="경리직">경리직</option>
+				</select>
+			</p>
+			<p>
+				<label>관심분야</label>
+				<input type="checkbox" name="like"/>여행
+				<input type="checkbox" name="like"/>스포츠
+				<input type="checkbox" name="like"/>영화감상
+				<input type="checkbox" name="like"/>게임
+			</p>
+			<p>
+				<label>자기소개</label>
+				<input type="text" id="introduce" name="intro">
+			</p>
+			
+			<p>
+				<input type="submit" value="회원가입">
+				<input type="reset" value="취소">
+			</p>
+		</fieldset>
+	
+	
+	</form>
+</body>
+</html>

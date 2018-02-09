@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var greenLine=["사당", "교대", "방배", "강남"];
+		
+		greenLine.splice(2,1); //2번째 인덱스부터 1개만 제거
+		document.write(greenLine + "<br>");
+		
+		greenLine = ["사당", "교대", "방배", "강남"];
+		greenLine.splice(2,1,"서초","역삼","삼성");
+		document.write(greenLine + "<br>");
+		
+		
+		var yellowLine = ["미금","정자","모란","수서"];
+		var result = yellowLine.slice(1,3); //1번째 인덱스부터 3번째 인덱스 전까지만 잘라서 반환
+		document.write(result + "<br>");
+		
+		var result2 = yellowLine.slice(0,2);
+		document.write(result2 + "<br>");
+		
+		var two = greenLine.concat(yellowLine);
+		document.write(two,"<br>");
+		
+		greenLine.pop(); //배열의 제일 마지막 삭제
+		document.write(greenLine,"<br>");
+		
+		greenLine.push('잠실'); //배열의 제일 마지막 추가
+		document.write(greenLine,"<br>");
+		
+		greenLine.shift(); //배열의 제일 앞에 삭제
+		document.write(greenLine,"<br>");
+		
+		greenLine.unshift('건국대'); //배열의 제일 앞에 추가
+		document.write(greenLine,"<br>");
+	</script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var arrMenu = ['짜장면', '우동', '짬뽕', '볶음밥', '탕수육', '깐풍기', '팔보채'];
+	var cnt=0;
+	
+	function addFunc(){
+		var ul =document.getElementById("wrap1_1");
+		var li = document.getElementsByTagName("li");
+		if(li.length==0){
+			cnt = 0;	
+		}else{
+			cnt = li.length;
+		}
+		if(cnt<arrMenu.length){
+			ul.innerHTML = ul.innerHTML + "<li>" + arrMenu[cnt] + "</li>";
+		}
+	}
+	function removeFunc(){
+		var ul =document.getElementById("wrap1_1");
+		var li = document.getElementsByTagName("li");
+		ul.removeChild(li[li.length-1]);
+	}
+</script>
+<style type="text/css">
+	#wrap1{
+		border:1px solid black;
+		width:300px;
+		height:300px;
+	}
+	#wrap2{
+		margin-left:100px;
+	}
+</style>
+</head>
+<body>
+	<div id="wrap1">
+		<ul id="wrap1_1">
+		</ul>
+	</div>
+	<div id ="wrap2">
+		<button onclick="removeFunc()">remove</button>
+		<button onclick="addFunc()">add</button>
+	</div>
+</body>
+</html>

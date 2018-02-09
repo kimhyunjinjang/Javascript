@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var array = [52, 27, 103, 32];
+		array.sort(function(left, right){ //익명함수
+			//return left - right; //오름차순
+			return right - left; //내림차순
+		});
+		
+		
+		document.write(array + "<br>");
+		
+		
+		var array2 = ['가나바','하늘','바다','abc','바나나'];
+		array2.sort(function(left,right){
+			//return left > right; //오름차순
+			return right > left; //내림차순
+		});
+		
+		document.write(array2 + "<br>");
+	
+	</script>
+</body>
+</html>

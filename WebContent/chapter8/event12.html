@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	body{
+		height: 3000px;
+	}
+	p{
+		position: fixed; //스크롤에 상관없이 고정되게 함
+		left: 0;
+		top: 0;
+	}
+</style>
+<script src="../js/jquery-1.12.4.min.js"></script>
+<script>
+	$(function(){
+		$(window).scroll(function(){
+			var value = $(window).scrollTop();
+			$("#text").html(value); //고정된 p에 화면 위치 찍기
+		})
+	})
+</script>
+</head>
+<body>
+	<p id="text"></p>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-1.12.4.min.js"></script>
+<script src="js/pluginTest1.js"></script>
+<script>
+	$(function(){
+		//$("input, div").greenfy();
+		
+		//$("input").setBgColor("red");
+		
+		$("input").setBgColor2({"color":"yellow"});
+		
+		/* var options = {
+				"bgColor" : "blue",
+				"color" : "yellow",
+				"border" : "5px solid red"
+		}
+		
+		$("input").setBgColor3(options).val("test"); */
+		
+		/* settings.bgColor = "yellow";
+		$(".test2").setBgColor3(); */
+	})
+</script>
+</head>
+<body>
+	<input type="text" class="test1">
+	<br>
+	<br>
+	<br>
+	<input type="date" class="test2">
+	<br>
+	<br>
+	<br>
+	<div>Test3</div>
+</body>
+</html>

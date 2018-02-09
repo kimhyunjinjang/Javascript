@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	body{
+		padding-top:240px;
+		background-color: #eee;
+		padding:0;
+		margin:0;
+	}
+	.page-header{
+		background-color: white;
+		width: 100%;
+		height: 100px;
+		box-shadow: 0 1px 1px rgba(0,0,0,0.25);
+	}
+	.page-header.sticky_header{
+		position: fixed;
+		top:0;
+		background-color: black;
+		height:100px;
+	}
+	.site-logo.sticky_img img{
+		visibility: hidden;	
+	}
+	.primary-nav.sticky_nav a{
+		color:white;
+		font-size: 15px;
+	}
+	.primary-nav.sticky_nav li{
+		padding:0;
+		height:100px;
+		line-height: 100px;
+	}
+	.primary-nav.sticky_nav li ul{
+		margin:0;
+	}
+	.page-header > .inner{
+		width: 960px;
+		margin: 0 auto;
+	}
+	.site-logo{
+		float: left;
+	}
+	.primary-nav{
+		float: right;
+	}
+	.primary-nav ul{
+		list-style: none;
+		padding:0;
+		/* margin-top: 30px; */
+	}
+	.primary-nav ul li{
+		display: inline;
+		/* margin: 0 15px; */
+	}
+	.primary-nav ul li a{
+		text-decoration: none;
+		color: #666;
+		font-size: 25px;
+	}
+	.dummy{
+		clear: both;
+		width: 960px;
+		margin: 0 auto;
+		font-size: 18px;
+	}
+</style>
+<script src="../js/jquery-1.12.4.min.js"></script>
+<script>
+	$(function(){
+		var headerOffsetTop=$(".page-header").offset().top;
+		$(window).on("scroll",function(){
+			if($(window).scrollTop()>headerOffsetTop){
+				$(".page-header").addClass("sticky_header");
+				$(".primary-nav").addClass("sticky_nav");
+				$(".site-logo").addClass("sticky_img");
+			}else{
+				$(".page-header").removeClass("sticky_header");
+				$(".primary-nav").removeClass("sticky_nav");
+				$(".site-logo").removeClass("sticky_img");
+			}
+		});
+		
+	})
+</script>
+</head>
+<body>
+	<header class="page-header">
+		<div class="inner">
+			<h1 class="site-logo">
+				<a href="#"><img src="images/orange.png" height="65" width="200"></a>
+			</h1>
+			<nav class="primary-nav">
+				<ul>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Work</a></li>
+					<li><a href="#">Blog</a></li>
+					<li><a href="#">Recruit</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<div class="dummy">
+		<p>WASHINGTON — President Trump ordered the firing last June of Robert S. Mueller III, 
+		the special counsel overseeing the Russia investigation, according to four people told of the matter, 
+		but ultimately backed down after the White House counsel threatened to resign rather than carry out the directive.
+		The West Wing confrontation marks the first time Mr. Trump is known to have tried to fire the special counsel. 
+		Mr. Mueller learned about the episode in recent months as his investigators interviewed current and former 
+		senior White House officials in his inquiry into whether the president obstructed justice.</p>	
+		<p>WASHINGTON — President Trump ordered the firing last June of Robert S. Mueller III, 
+		the special counsel overseeing the Russia investigation, according to four people told of the matter, 
+		but ultimately backed down after the White House counsel threatened to resign rather than carry out the directive.
+		The West Wing confrontation marks the first time Mr. Trump is known to have tried to fire the special counsel. 
+		Mr. Mueller learned about the episode in recent months as his investigators interviewed current and former 
+		senior White House officials in his inquiry into whether the president obstructed justice.</p>	
+		<p>WASHINGTON — President Trump ordered the firing last June of Robert S. Mueller III, 
+		the special counsel overseeing the Russia investigation, according to four people told of the matter, 
+		but ultimately backed down after the White House counsel threatened to resign rather than carry out the directive.
+		The West Wing confrontation marks the first time Mr. Trump is known to have tried to fire the special counsel. 
+		Mr. Mueller learned about the episode in recent months as his investigators interviewed current and former 
+		senior White House officials in his inquiry into whether the president obstructed justice.</p>	
+		<p>WASHINGTON — President Trump ordered the firing last June of Robert S. Mueller III, 
+		the special counsel overseeing the Russia investigation, according to four people told of the matter, 
+		but ultimately backed down after the White House counsel threatened to resign rather than carry out the directive.
+		The West Wing confrontation marks the first time Mr. Trump is known to have tried to fire the special counsel. 
+		Mr. Mueller learned about the episode in recent months as his investigators interviewed current and former 
+		senior White House officials in his inquiry into whether the president obstructed justice.</p>	
+		<p>WASHINGTON — President Trump ordered the firing last June of Robert S. Mueller III, 
+		the special counsel overseeing the Russia investigation, according to four people told of the matter, 
+		but ultimately backed down after the White House counsel threatened to resign rather than carry out the directive.
+		The West Wing confrontation marks the first time Mr. Trump is known to have tried to fire the special counsel. 
+		Mr. Mueller learned about the episode in recent months as his investigators interviewed current and former 
+		senior White House officials in his inquiry into whether the president obstructed justice.</p>	
+		<p>WASHINGTON — President Trump ordered the firing last June of Robert S. Mueller III, 
+		the special counsel overseeing the Russia investigation, according to four people told of the matter, 
+		but ultimately backed down after the White House counsel threatened to resign rather than carry out the directive.
+		The West Wing confrontation marks the first time Mr. Trump is known to have tried to fire the special counsel. 
+		Mr. Mueller learned about the episode in recent months as his investigators interviewed current and former 
+		senior White House officials in his inquiry into whether the president obstructed justice.</p>	
+		<p>WASHINGTON — President Trump ordered the firing last June of Robert S. Mueller III, 
+		the special counsel overseeing the Russia investigation, according to four people told of the matter, 
+		but ultimately backed down after the White House counsel threatened to resign rather than carry out the directive.
+		The West Wing confrontation marks the first time Mr. Trump is known to have tried to fire the special counsel. 
+		Mr. Mueller learned about the episode in recent months as his investigators interviewed current and former 
+		senior White House officials in his inquiry into whether the president obstructed justice.</p>	
+		<p>WASHINGTON — President Trump ordered the firing last June of Robert S. Mueller III, 
+		the special counsel overseeing the Russia investigation, according to four people told of the matter, 
+		but ultimately backed down after the White House counsel threatened to resign rather than carry out the directive.
+		The West Wing confrontation marks the first time Mr. Trump is known to have tried to fire the special counsel. 
+		Mr. Mueller learned about the episode in recent months as his investigators interviewed current and former 
+		senior White House officials in his inquiry into whether the president obstructed justice.</p>	
+		<p>First, he claimed that a dispute years ago over fees at Trump National Golf Club in Sterling, Va., 
+		had prompted Mr. Mueller, the F.B.I. director at the time, to resign his membership. 
+		The president also said Mr. Mueller could not be impartial because he had most recently worked for the law firm that previously represented the president’s son-in-law, Jared Kushner. Finally, the president said, Mr. Mueller had been interviewed to return as the F.B.I. director the day before he was appointed special counsel in May.
+		After receiving the president’s order to fire Mr. Mueller, the White House counsel, 
+		Donald F. McGahn II, refused to ask the Justice Department to dismiss the special counsel, 
+		saying he would quit instead, the people said. They spoke on the condition of anonymity 
+		because they did not want to be identified discussing a continuing investigation.</p>
+		<p>First, he claimed that a dispute years ago over fees at Trump National Golf Club in Sterling, Va., 
+		had prompted Mr. Mueller, the F.B.I. director at the time, to resign his membership. 
+		The president also said Mr. Mueller could not be impartial because he had most recently worked for the law firm that previously represented the president’s son-in-law, Jared Kushner. Finally, the president said, Mr. Mueller had been interviewed to return as the F.B.I. director the day before he was appointed special counsel in May.
+		After receiving the president’s order to fire Mr. Mueller, the White House counsel, 
+		Donald F. McGahn II, refused to ask the Justice Department to dismiss the special counsel, 
+		saying he would quit instead, the people said. They spoke on the condition of anonymity 
+		because they did not want to be identified discussing a continuing investigation.</p>
+		<p>First, he claimed that a dispute years ago over fees at Trump National Golf Club in Sterling, Va., 
+		had prompted Mr. Mueller, the F.B.I. director at the time, to resign his membership. 
+		The president also said Mr. Mueller could not be impartial because he had most recently worked for the law firm that previously represented the president’s son-in-law, Jared Kushner. Finally, the president said, Mr. Mueller had been interviewed to return as the F.B.I. director the day before he was appointed special counsel in May.
+		After receiving the president’s order to fire Mr. Mueller, the White House counsel, 
+		Donald F. McGahn II, refused to ask the Justice Department to dismiss the special counsel, 
+		saying he would quit instead, the people said. They spoke on the condition of anonymity 
+		because they did not want to be identified discussing a continuing investigation.</p>
+		<p>First, he claimed that a dispute years ago over fees at Trump National Golf Club in Sterling, Va., 
+		had prompted Mr. Mueller, the F.B.I. director at the time, to resign his membership. 
+		The president also said Mr. Mueller could not be impartial because he had most recently worked for the law firm that previously represented the president’s son-in-law, Jared Kushner. Finally, the president said, Mr. Mueller had been interviewed to return as the F.B.I. director the day before he was appointed special counsel in May.
+		After receiving the president’s order to fire Mr. Mueller, the White House counsel, 
+		Donald F. McGahn II, refused to ask the Justice Department to dismiss the special counsel, 
+		saying he would quit instead, the people said. They spoke on the condition of anonymity 
+		because they did not want to be identified discussing a continuing investigation.</p>
+	</div>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	*{
+		margin:0;
+		padding:0;
+	}
+	ul{
+		list-style: none;
+	}
+	a{
+		text-decoration: none;
+	}
+	#gallery{
+		width: 350px;
+		margin: 0 auto;
+		border: 1px solid #999;
+		box-shadow: 0 5px 5px rgba(0,0,0,0.3);
+	}
+	#gallery h1{
+		text-align: center;
+	}
+	#gallery img{
+		border: 1px solid #666;
+	}
+	#photo{
+		text-align: center;
+	}
+	#photo_list{
+		width: 300px;
+		margin: 10px auto;
+		overflow: hidden;
+	}
+	#inner_list{
+		width:800px;
+		margin:0 auto;
+	}
+	#inner_list li{
+		float:left;
+		width:100px;
+		text-align: center;
+	}
+	.btn_wrap{
+		text-align: center;
+	}
+</style>
+<script type="text/javascript">
+	var idx=0;
+	function onClickPrevBtn(){ /* < */
+		if(idx == -5){
+			return;
+		}else{
+			idx--;
+			var ul = document.getElementById("inner_list");
+			ul.style.marginLeft = 100*idx + "px"; /* 이미지를 왼쪽으로 */
+			cnt++;
+		}
+	}
+	function onClickNextBtn(){ /* > */
+		if(idx==0){
+			return;
+		}
+		idx++;
+		var ul = document.getElementById("inner_list");
+		ul.style.marginLeft = 100*idx + "px";
+	}
+	function clkPic(s){
+		var m = document.getElementById("main");
+		m.src="images/"+ s+ ".jpg";
+	}
+</script>
+</head>
+<body>
+	<div id="gallery">
+		<h1>동해안 갤러리</h1>
+		<p id="photo">
+			<img src="images/pic_1.jpg" width="320" alt="" id="main" />
+		</p>
+		
+		<div id="photo_list">
+			<ul id="inner_list">
+				<li onclick="clkPic('pic_1')">
+					<a href="#">
+						<img src="images/pic_t1.jpg" alt="사진1">
+					</a>
+				</li>
+				<li onclick="clkPic('pic_2')">
+					<a href="#">
+						<img src="images/pic_t2.jpg" alt="사진2">
+					</a>
+				</li>
+				<li onclick="clkPic('pic_3')">
+					<a href="#">
+						<img src="images/pic_t3.jpg" alt="사진3">
+					</a>
+				</li>
+				<li onclick="clkPic('pic_4')">
+					<a href="#">
+						<img src="images/pic_t4.jpg" alt="사진4">
+					</a>
+				</li>
+				<li onclick="clkPic('pic_5')">
+					<a href="#">
+						<img src="images/pic_t5.jpg" alt="사진5">
+					</a>
+				</li>
+				<li onclick="clkPic('pic_6')">
+					<a href="#">
+						<img src="images/pic_t6.jpg" alt="사진6">
+					</a>
+				</li>
+				<li onclick="clkPic('pic_7')">
+					<a href="#">
+						<img src="images/pic_t7.jpg" alt="사진7">
+					</a>
+				</li>
+				<li onclick="clkPic('pic_8')">
+					<a href="#">
+						<img src="images/pic_t8.jpg" alt="사진8">
+					</a>
+				</li>
+			</ul>
+		</div>
+		
+		<p class="btn_wrap">
+			<a href="#" onclick="onClickPrevBtn()">&lt;</a> <!-- < -->
+			<a href="#" onclick="onClickNextBtn()">&gt;</a> <!-- > -->
+		</p>
+	</div>
+</body>
+</html>

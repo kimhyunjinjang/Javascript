@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function removeItem(obj){
+		var li = obj.parentNode;
+		var pa = li.parentNode;
+		pa.removeChild(li);
+	}
+
+</script>
+</head>
+<body>
+	<ul>
+		<li>빨강<input type="button" onclick="removeItem(this)"></li>
+		<li>파랑<input type="button" onclick="removeItem(this)"></li>
+		<li>노랑<input type="button" onclick="removeItem(this)"></li>
+		<li>주황<input type="button" onclick="removeItem(this)"></li>
+		<li>초록<input type="button" onclick="removeItem(this)"></li>
+	</ul>
+</body>
+</html>

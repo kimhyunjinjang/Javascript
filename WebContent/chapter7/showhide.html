@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	button{
+		background: #ff8500;
+		margin: 15px 20px;
+		padding: 5px 10px;
+		border: 1px solid black;
+		border-radius: 5px;
+	}
+</style>
+<script src="../js/jquery-1.12.4.min.js"></script>
+<script>
+	function showImg(){
+		$("img").show();
+	}
+	
+	function hideImg(){
+		$("img").hide();
+	}
+</script>
+</head>
+<body>
+	<h1>jQuery 맛보기</h1>
+	<button onclick="showImg()">표시하기</button>
+	<button onclick="hideImg()">감추기</button><br>
+	<img src="images/logo.png">
+</body>
+</html>

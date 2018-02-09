@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var keyword_rank = {
+			"r" : [ {
+				"k" : "HTML5",
+				"s" : "+",
+				"v" : 178
+			}, {
+				"k" : "CSS3",
+				"s" : "new",
+				"v" : 150
+			}, {
+				"k" : "jQuery",
+				"s" : "+",
+				"v" : 135
+			} ]
+		};
+
+		window.onload = function() {
+			var ulTag = document.getElementById("ul1");
+			for (var i = 0; i < keyword_rank.r.length; i++) {
+				ulTag.innerHTML += "<li>" + keyword_rank.r[i].k + "("
+						+ keyword_rank.r[i].s + keyword_rank.r[i].v + ")"
+						+ "</li>";
+			}
+
+		}
+	</script>
+
+	<h1>인기검색어 순위</h1>
+	<ul id="ul1">
+	</ul>
+</body>
+</html>

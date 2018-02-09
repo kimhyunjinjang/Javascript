@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	p{
+		font-size: 2em;
+	}
+</style>
+<script src="../js/jquery-1.12.4.min.js"></script>
+<script>
+	//애니메이션 효과 연습하기
+	$(function(){
+		$("img").click(function(){
+			//$(this).css("display","none");
+			$(this).hide(2000, function(){ //hide() 노출되어 있는 요소를 숨김
+				//alert("hide완료")
+				$("p").css("color","red");
+			}); //2초동안 사라짐
+		})
+		$("p").click(function(){
+			$("img").show(1000,function(){ //show() 숨겨져 있던 요소를 노출
+				$("p").css("color","black");
+			});
+		})
+		
+		$("button").click(function(){
+			$("img").toggle(1000,function(){ //show와 hide가 교대로 호출됨
+				$("p").css("color","red");
+			}); 
+		})
+	})
+</script>
+</head>
+<body>
+	<img src="images/spring.jpg">
+	<p>
+		한국의 봄 화사하게 피어난 분홍 매화꽃
+	</p>
+	<button>toggle</button>
+</body>
+</html>

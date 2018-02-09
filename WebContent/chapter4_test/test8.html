@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var url = prompt("url 주소를 입력하세요 (예:http://www.naver.com)");
+		var reg = /^http:[/]{2}/;
+		
+		if(reg.test(url) == true){
+			document.write("유효한 주소입니다");
+		}else{
+			document.write("유효하지 않은 주소입니다");
+		}
+		
+		//나머지 정규화는 모르겠어요~ㅠㅠㅠ
+		
+		
+	</script>
+</body>
+</html>

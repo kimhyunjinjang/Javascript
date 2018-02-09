@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-1.12.4.min.js"></script>
+<script>
+	$(function(){
+		$("#allCheck").click(function(){
+			$("input[type='checkbox']").prop("checked",true);
+		})
+		$("#allUnCheck").click(function(){
+			$("input[type='checkbox']").prop("checked",false);
+		})
+	})
+</script>
+</head>
+<body>
+	<form>
+		<input type="checkbox">수박<br>
+		<input type="checkbox">참외<br>
+		<input type="checkbox">오렌지<br>
+		<input type="checkbox">바나나<br>
+	</form>
+	<input type="button" value="전체선택" id="allCheck">
+	<input type="button" value="전체해제" id="allUnCheck">
+</body>
+</html>

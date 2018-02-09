@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var userEmail = prompt("당신의 이메일 주소는?");
+		var arrUrl = [ ".co.kr", ".com", ".net", ".or.kr", ".go.kr" ];
+
+		var check1 = false;
+		var check2 = false;
+
+		//@가 들어있는지
+		if (userEmail.indexOf("@") > 0) {
+			check1 = true;
+		}
+
+		//arrUrl 배열의 값으로 끝나는지
+		for (var i = 0; i < arrUrl.length; i++) {
+			if (userEmail.indexOf(arrUrl[i]) > 0) {
+				check2 = true;
+				break;
+			}
+		}
+		
+		if(check1 && check2 == true){
+			document.write(userEmail + "는 사용가능합니다.");
+		}else{
+			document.write("이메일 형식이 잘못되었습니다.")
+		}
+	</script>
+</body>
+</html>

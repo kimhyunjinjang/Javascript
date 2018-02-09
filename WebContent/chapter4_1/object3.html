@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var product = {
+					name:'microphone',
+					price:'50$',
+					made:'US',				
+		};
+		
+		var output ='';
+		
+		for(var key in product){
+			output += key + ":" + product[key] + "<br>";
+		}
+		
+		//document.write(output);
+		//document.write("<hr>");
+		
+		
+		//name, kor, math, eng, total(), avg()
+		var student = {
+					name: 'kim',
+					kor: 90,
+					math: 90,
+					eng: 80,
+					total: function(){
+						return this.kor + this.math + this.eng;
+					},
+					avg: function(){
+						return this.total()/3;
+					}
+				}; 
+		
+		student.toString=function(){
+			return student.name;
+		}
+		
+		document.write(student);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		/* 
+		
+		student.toString = function(){
+			var output="";
+			for(var key in this){
+				output+=key + " : " + this[key] + "<br>";
+			}
+			return output;
+		}
+		
+		//document.write(student);
+		
+		
+		
+		//document.write(student.total()+"<br>");
+		//document.write(student.avg()+"<br>");
+		
+		
+		document.write("<hr>");
+		
+		var person = {
+					name:'Jang',
+					weight:50,
+					height:160,
+					averageWeight: function(){
+						return (this.height-100)*0.9;
+					},
+					diffWeight: function(){
+						return this.averageWeight()-this.weight;
+					},
+					toString : function(){
+						var output = "";
+						
+						output += "이름: " + this.name + "<br>";
+						output += "평균몸무게 " + this.averageWeight() + "<br>";
+						output += "차이: " + (this.weight - this.averageWeight()) + "<br>";
+						
+						return output;
+					}
+				};
+		
+		//document.write(person.averageWeight()+"<br>");
+		//document.write(person.diffWeight()+"<br>");
+		
+		
+		document.write(person); */
+	</script>
+</body>
+</html>

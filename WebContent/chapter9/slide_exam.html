@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	div{
+		border:1px solid black;
+		width:500px;
+		height:100px;
+		padding: 30px;
+		margin:10px;
+	}
+</style>
+<script src="../js/jquery-1.12.4.min.js"></script>
+<script>
+	$(function(){
+		$("a").click(function(){
+			$(this).after("<div>zzzzzzzzzzz</div>");
+			$(this).next().slideToggle(1000);
+		})
+	})
+</script>
+</head>
+<body>
+	<h3>바흐(Johann Sebastian Bach, 1685~1750)</h3>
+	<p>서양 음악의 아버지. 바로크 시대의 대작곡가
+		<a href="#">[상세보기/닫기]</a>
+	</p>
+	<h3>헨델(Georg Friedrich Handel, 1685~1759)</h3>
+	<p>서양 음악의 어머니. 항상 간결 명쾌하며 밝은 표현
+		<a href="#">[상세보기/닫기]</a>
+	</p>
+</body>
+</html>

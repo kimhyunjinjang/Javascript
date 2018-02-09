@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function changeValue(){
+		var result=0;
+		if(document.fm.c1.checked==true){
+			result += Number(document.fm.c1.value);
+		}
+		if(document.fm.c2.checked==true){
+			result += Number(document.fm.c2.value);
+		}
+		if(document.fm.c3.checked==true){
+			result += Number(document.fm.c3.value);
+		}
+		var span = document.getElementById("result");
+		span.innerHTML = result;
+	}
+	
+	function changeAllCheck(){
+		if(document.fm.all.checked==true){
+			document.fm.c1.checked=true;
+			document.fm.c2.checked=true;
+			document.fm.c3.checked=true;
+		}else{
+			document.fm.c1.checked=false;
+			document.fm.c2.checked=false;
+			document.fm.c3.checked=false;
+		}
+		changeValue();
+	}
+	/* var s = document.getElementsByTagName("span");
+	function check1(){
+		var total=0;
+			if(document.fm.all.checked == true){
+				total = 6000;
+			}else if(document.fm.on.checked == true){
+				total = total + Number(document.fm.on.value);
+			}
+			else if(document.fm.tw.checked == true){
+				total = total + Number(document.fm.tw.value);
+			}
+			else if(document.fm.th.checked == true){
+				total = total + Number(document.fm.th.value);
+			}
+		s[0].innerHTML = total;
+	} */
+</script>
+</head>
+<body>
+	<form name="fm">
+		<fieldset>
+			<legend>check테스트</legend>
+				<input type="checkbox" name="all" onclick="changeAllCheck()">전체선택<br>
+				<input type="checkbox" name="c1" value="1000" onclick="changeValue()">1000<br>
+				<input type="checkbox" name="c2" value="2000" onclick="changeValue()">2000<br>
+				<input type="checkbox" name="c3" value="3000" onclick="changeValue()">3000<br>
+		</fieldset>
+	</form>
+	
+	<p>결과값 확인: <span id="result"></span></p>
+</body>
+</html>

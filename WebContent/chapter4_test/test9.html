@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	table, th, td{
+		border: 1px solid black;	
+		border-collapse: collapse;
+	}
+	th,td{
+		padding: 10px;
+	}
+	th:first-child{
+		color: red;
+	}
+	td:first-child{
+		color: red;
+	}
+	th:last-child{
+		color: blue;
+	}
+	td:last-child{
+		color: blue;
+	}
+</style>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		var d = prompt("년도와 월을 입력하세요 (예:2018.1)");
+		var arrDay = d.split(".");
+		
+		document.write("<h1>" + arrDay[0] + "." + arrDay[1] + "</h1>");
+		
+		var y = arrDay[0];
+		var m = arrDay[1]-1;
+		
+		//document.write("년:"+arrDay[0]+"<br>");
+		//document.write("월:"+arrDay[1]+"<br>");
+		
+		var theDate = new Date(y, m, 1);
+		var theDay = theDate.getDay();
+		//document.write(theDay);
+		
+		var last = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+		if (y % 4 == 0 && y % 100 != 0 || y % 400 == 0){
+			last[1] = 29;
+		}
+		
+		var row = Math.ceil((theDay + last[m]) / 7);
+		//document.write(last[m]);
+		var calendar="<table>";
+		calendar += "<tr>";
+		calendar += "<th>일</th>";
+		calendar += "<th>월</th>";
+		calendar += "<th>화</th>";
+		calendar += "<th>수</th>";
+		calendar += "<th>목</th>";
+		calendar += "<th>금</th>";
+		calendar += "<th>토</th>";
+		calendar += "</tr>";
+		
+		var dNum = 1;
+		for(var i=0; i<row; i++){
+			calendar += "<tr>";
+			for(var j=0; j<7; j++){
+				if(i==0 && j < theDay || dNum > last[m]){
+					calendar += "<td></td>";
+				}else{
+					calendar += "<td>" + dNum + "</td>";
+					dNum++;
+				}
+			}
+			calendar += "</tr>";
+		}
+		calendar += "</table>";
+		document.write(calendar);
+		
+	</script>
+</body>
+</html>

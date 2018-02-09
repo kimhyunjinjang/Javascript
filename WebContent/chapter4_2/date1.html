@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var t = new Date(); //현재 device의 시간
+		var year = t.getFullYear();
+		var month = t.getMonth()+1; //0월부터 11월까지 있음 
+		var date = t.getDate();
+		var day = t.getDay();
+		var arrWeek = ['일요일','월요일','화요일','수요일','목요일','금요일','토요일']; 
+			
+			
+		document.write("년: " + year + "<br>");
+		document.write("월: " + month + "<br>");
+		document.write("일: " + date + "<br>");
+		document.write("요일: " + arrWeek[day] + "<br>");
+	
+		var hour = t.getHours();
+		var min = t.getMinutes();
+		
+		document.write("시: " + hour + "<br>");
+		document.write("분: " + min + "<br>");
+		
+		document.write("<hr>");
+		
+		var t2 = new Date(2018, 1, 1); //2018.2.1
+		document.write("2018년 2월 1일은 " + arrWeek[t2.getDay()] + "이다" + "<br>");
+		
+		
+		//년,월,일
+		var t3 = new Date(2019, 0, 1); //2019.1.1
+		document.write("2019년 1월 1일은 " + arrWeek[t3.getDay()]+ "이다");
+	</script>
+</body>
+</html>

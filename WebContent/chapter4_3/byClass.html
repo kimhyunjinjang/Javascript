@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function getAccentCount(){
+		var a = document.getElementsByClassName("accent"); //배열 형식으로 가져옴 [<p>, <span>]
+		alert(a.length);
+	}
+	function getFirstAccentText(){
+		var a = document.getElementsByClassName("accent");
+		alert(a[0].innerHTML);
+	}
+	function getSecondAccentText(){
+		var a = document.getElementsByClassName("accent");
+		alert(a[1].innerHTML);
+	}
+	function setFirstAccentText(){
+		var a = document.getElementsByClassName("accent");
+		a[0].innerHTML="Welcome";
+	}
+	function getTestCount(){
+		var t = document.getElementsByClassName("test");
+		alert(t.length);
+	}
+	function getTestText(){
+		var t = document.getElementsByClassName("test");
+		var str="";
+		for(var i=0; i<t.length; i++){
+			str+=t[i].innerHTML;
+		}
+		alert(str);
+	}
+	function setTest2Text(){
+		var t = document.getElementsByClassName("test2");
+		var arr = ["짜장면","짬뽕","탕수육"];
+		for(var i=0; i<t.length; i++){
+			t[i].innerHTML = arr[i];
+		}
+		 
+	}
+</script>
+</head>
+<body>
+	<h1>스터디 회원 모집</h1>
+	<p class="accent">신입생 대상</p>
+	<p><span class="accent">웹 표준 기술</span>에 대해 같이 공부할 스터디 회원을 모집합니다</p>
+	
+	<button onclick="getAccentCount()">accent class 개수</button>
+	<button onclick="getFirstAccentText()">첫번째 accent의 글자 변경하기</button>
+	<button onclick="getSecondAccentText()">두번째 accent의 글자 변경하기</button>
+	<button onclick="setFirstAccentText()">첫번째 accent의 글자 변경하기</button>
+	
+	<hr>
+	
+	<div class="test">test class 1</div>
+	<h2 class="test">test class 2</h2>
+	<button onclick="getTestCount()">test class 갯수</button>
+	<button onclick="getTestText()">test class가 가진 글자 모두 alert로 나타나게 함</button>
+	
+	<hr>
+	
+	<ul>
+		<li class="test2">사과</li>
+		<li class="test2">바나나</li>
+		<li class="test2">복숭아</li>
+	</ul>
+	<button onclick="setTest2Text()">중화요리로 변경</button>
+</body>
+</html>

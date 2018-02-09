@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	#wrapper{
+		width: 450px;
+		height: 600px;
+		margin: 0 auto;
+	}
+	#div1{
+		width: 100%;
+		height: 50px;
+		border-bottom:1px solid black;
+		margin-bottom: 20px;
+	}
+	#div2{
+		border:1px solid gray;
+		width: 100%;
+		height: 500px;
+	}
+	img{
+		width:150px;
+		height:150px;
+	}
+	#ul1{
+		
+	}
+	#ul1 li{
+		list-style: none;	
+		display: inline;
+		float: left;
+		border:1px solid red;
+	}
+</style>
+<script type="text/javascript">
+	function addFunc() {
+		var d = document.getElementById("div2");
+		var food = document.f1.sel.value;
+		var str = "<input type='checkbox'>"
+		var item = "<li>"+ str + "<img src=images/" + food + ".png>" + "</li>";
+		var arrImg = document.getElementsByTagName("img");
+		d.innerHTML += item;
+	}
+</script>
+</head>
+<body>
+	<div id="wrapper">
+		<div id="div1">
+			<form name="f1">
+				<select name="sel">
+					<option selected="selected">메뉴선택</option>
+					<option value="ramun">라면</option>
+					<option value="gimbam">김밥</option>
+					<option value="dongas">돈까스</option>
+					<option value="denjang">된장국</option>
+					<option value="bibimbam">비빔밥</option>
+				</select>
+				<button type="button" onclick="addFunc()">추가</button>
+			</form>
+		</div>
+		
+		<div id="div2">
+			<ul id="ul1">
+			</ul>
+		</div>
+
+		<button onclick="removeFunc()">삭제</button>
+	</div>
+</body>
+</html>

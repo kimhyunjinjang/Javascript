@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var index = 0;
+	var id = null;
+	
+	function changeFruits(){
+		var arr = ["apple", "banana", "orange", "grape"];
+		var h1 = document.getElementById("fruits");
+		
+		
+		h1.innerHTML = arr[index];
+		index++;
+		if(index == arr.length){ //예외처리
+			index = 0;
+		}
+	}
+	function startTimer(){
+		id = setInterval(changeFruits,1000);
+	}
+	function stopTimer(){
+		clearInterval(id);
+	}
+</script>
+</head>
+<body>
+	<h1 id="fruits">여기에 과일이 나타납니다.</h1>
+	<button onclick="startTimer()">시작</button>
+	<button onclick="stopTimer()">멈춤</button>
+</body>
+</html>

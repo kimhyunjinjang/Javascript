@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-1.12.4.min.js"></script>
+<script>
+	$(function(){
+		$("img").click(function(){
+			$("#gallery").slideUp(1000);
+		})
+		$("p").click(function(){
+			$("#gallery").slideDown(1000);
+		})
+		$("#btn1").click(function(){
+			$("#gallery").slideToggle(1000);
+		})
+	})
+	
+</script>
+</head>
+<body>
+	<div id="gallery">
+		<img src="images/spring.jpg">
+	</div>
+	<p>
+		한국의 봄 화사하게 피어난 분홍 매화꽃
+	</p>
+	<button id="btn1">toggle</button>
+</body>
+</html>

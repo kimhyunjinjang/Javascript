@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	#target{
+		width: 800px;
+		height: 300px;
+		border: 1px solid #eee;
+		margin: 10px;
+		overflow: auto;
+	}
+	ul.elements{
+		padding: 0;
+		margin: 0;
+		list-style: none;
+		width: 1875px;
+	}
+	ul.elements li{
+		width: 200px;
+		height: 100px;
+		border: 1px solid black;
+		font-weight: bold;
+		text-align: center;
+		padding: 50px;
+		margin: 5px;
+		float: left;
+	}
+</style>
+<script src="../js/jquery-1.12.4.min.js"></script>
+<script src="js/jquery.scrollTo.min.js"></script>
+<script>
+	$(function(){
+		$(".btn").eq(0).click(function(){
+			$("#target").scrollTo("li:last-child", 800); //제일 마지막 li로 이동
+		})
+		
+		$("a").click(function(){
+			$("#target").scrollTo({"left" : "0px", "top" : "0px"}, 300);
+		})
+		
+		$(".btn").eq(1).click(function(){
+			$("#target").scrollTo($("li:eq(15)"), 800);
+		})
+		
+		$(".btn").eq(2).click(function(){
+			$("#target").scrollTo({"left" : "800px", "top" : "300px"}, 300);
+		})
+		
+		$(".btn").eq(3).click(function(){
+			$("#target").scrollTo({"left" : "+=100px", "top" : "+=100px"}, 800);
+		})
+	})
+</script>
+</head>
+<body>
+	<h1>scrollTo 사용법</h1>
+	<div>
+		<input type="button" class="btn" value="셀렉터 이용하기" />
+		<input type="button" class="btn" value="jQUery 객체 이용하기" />
+		<input type="button" class="btn" value="절대위치 좌표" />
+		<input type="button" class="btn" value="상대위치 좌표" />
+	</div>
+	
+	<div id="target">
+		<ul class="elements">
+			<li>
+				<p>0</p>
+				<a href="#" class="back">go back</a>
+			</li>
+			<li>
+				<p>1</p>
+				<a href="#" class="back">go back</a>
+			</li>
+			<li>
+				<p>2</p>
+				<a href="#" class="back">go back</a>
+			</li>
+			<li>
+				<p>3</p>
+				<a href="#" class="back">go back</a>
+			</li>
+			<li>
+				<p>4</p>
+				<a href="#" class="back">go back</a>
+			</li>
+			<li>
+				<p>5</p>
+				<a href="#" class="back">go back</a>
+			</li>
+			<li>
+				<p>6</p>
+				<a href="#" class="back">go back</a>
+			</li>
+			<li>
+				<p>7</p>
+				<a href="#" class="back">go back</a>
+			</li>
+			<li>
+				<p>8</p>
+				<a href="#" class="back">go back</a>
+			</li>
+			<li>
+				<p>9</p>
+				<a href="#" class="back">go back</a>
+			</li>
+				<li>
+				<p>10</p>
+				<a href="#" class="back">go back</a>
+			</li>
+			<li>
+				<p>11</p>
+				<a href="#" class="back">go back</a>
+			</li>
+			<li>
+				<p>12</p>
+				<a href="#" class="back">go back</a>
+			</li>
+			<li>
+				<p>13</p>
+				<a href="#" class="back">go back</a>
+			</li>
+			<li>
+				<p>14</p>
+				<a href="#" class="back">go back</a>
+			</li>
+			<li>
+				<p>15</p>
+				<a href="#" class="back">go back</a>
+			</li>
+			<li>
+				<p>16</p>
+				<a href="#" class="back">go back</a>
+			</li>
+			<li>
+				<p>17</p>
+				<a href="#" class="back">go back</a>
+			</li>
+			<li>
+				<p>18</p>
+				<a href="#" class="back">go back</a>
+			</li>
+			<li>
+				<p>19</p>
+				<a href="#" class="back">go back</a>
+			</li>
+				<li>
+				<p>20</p>
+				<a href="#" class="back">go back</a>
+			</li>
+			<li>
+				<p>21</p>
+				<a href="#" class="back">go back</a>
+			</li>
+			<li>
+				<p>22</p>
+				<a href="#" class="back">go back</a>
+			</li>
+			<li>
+				<p>23</p>
+				<a href="#" class="back">go back</a>
+			</li>
+			<li>
+				<p>24</p>
+				<a href="#" class="back">go back</a>
+			</li>
+			<li>
+				<p>25</p>
+				<a href="#" class="back">go back</a>
+			</li>
+			<li>
+				<p>26</p>
+				<a href="#" class="back">go back</a>
+			</li>
+			<li>
+				<p>27</p>
+				<a href="#" class="back">go back</a>
+			</li>
+			<li>
+				<p>28</p>
+				<a href="#" class="back">go back</a>
+			</li>
+			<li>
+				<p>29</p>
+				<a href="#" class="back">go back</a>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>

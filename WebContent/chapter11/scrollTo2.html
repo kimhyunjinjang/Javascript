@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	*{
+		padding: 0;
+		margin: 0;
+	}
+	/* 이미지 크기 100%로 하기 위해 */
+	html, body{
+		width: 100%;
+		height: 100%;
+	}
+	body{
+		white-space: nowrap; /* 줄바꿈 막음 */
+	}
+	#header{
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+	}
+	h1.title{
+		font-size: 18px;
+		border-left: 10px solid #7BAEB5;
+		border-bottom: 1px solid #7BAEB5;
+		padding: 10px;
+		background-color: #fff;
+	}
+	#header ul{
+		position: absolute;
+		right: 7px;
+		top: 7px;
+		list-style: none;
+	}
+	#header ul li{
+		float: left;
+		margin-right: 10px;
+	}
+	#header ul li a:hover{
+		background-color: red;
+		color: white;
+	}
+	.content{
+		padding: 70px;
+	}
+	.page{
+		width: 100%;
+		height: 100%;
+		display: inline-block; /* 인라인으로 인식되지만 블록으로 행동 */
+	}
+	#page1{
+		background: url("images/page1.jpg") center center no-repeat;
+		background-size: cover;
+	}
+	#page2{
+		background: url("images/page2.jpg") center center no-repeat;
+		background-size: cover;
+	}
+	#page3{
+		background: url("images/page3.jpg") center center no-repeat;
+		background-size: cover;
+	}
+</style>
+<script src="../js/jquery-1.12.4.min.js"></script>
+<script src="js/jquery.scrollTo.min.js"></script>
+<script>
+	$(function(){
+		$("#header a").click(function(){
+			var href=$(this).attr("href");
+			$("body").scrollTo($(href), 500);
+			
+			return false;
+		})
+	})
+</script>
+</head>
+<body>
+	<div id="header">
+		<h1 class="title">Content Scroll Example</h1>
+		<ul>
+			<li><a href="#page1">#page1</a></li>
+			<li><a href="#page2">#page2</a></li>
+			<li><a href="#page3">#page3</a></li>
+		</ul>
+	</div>
+	<div class="page" id="page1">
+		<div class="content">page1입니다.</div>
+	</div>
+	<div class="page" id="page2">
+		<div class="content">page2입니다.</div>
+	</div>
+	<div class="page" id="page3">
+		<div class="content">page3입니다.</div>
+	</div>
+</body>
+</html>

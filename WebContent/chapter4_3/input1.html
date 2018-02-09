@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function showText(){
+		var input = document.getElementById("name");
+		alert(input.value);
+	}
+	function changeText(){
+		var input = document.getElementById("name");
+		input.value = "이쁘니";
+	}
+	function calculate(op){
+		var input = document.getElementsByClassName("num");
+		var p = document.getElementById("redText");
+		var res=0;
+		if(op=="+"){
+			res = Number(input[0].value)+Number(input[1].value);
+			p.innerHTML = "두 숫자의 합은: "+ res;
+		}else if(op=="-"){
+			res = Number(input[0].value)-Number(input[1].value);
+			p.innerHTML = "두 숫자의 차는: "+ res;
+		}
+		else if(op=="*"){
+			res = Number(input[0].value)*Number(input[1].value);
+			p.innerHTML = "두 숫자의 곱은: "+ res;
+		}
+		else if(op=="/"){
+			res = Number(input[0].value)/Number(input[1].value);
+			p.innerHTML = "두 숫자의 나눗셈: "+ res;
+		}
+	}
+</script>
+</head>
+<body>
+	<input type="text" id="name" value="홍길동">
+	<button onclick="showText()">보기</button>
+	<button onclick="changeText()">변경</button>
+	
+	<hr>
+	
+	<input type="text" class="num" value="숫자입력">
+	<input type="text" class="num" value="숫자입력">
+	<button onclick="calculate('+')">더하기</button>
+	<button onclick="calculate('-')">빼기</button>
+	<button onclick="calculate('*')">곱하기</button>
+	<button onclick="calculate('/')">나누기</button>
+	<p id="redText"></p>
+</body>
+</html>

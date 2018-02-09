@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function changeColor(obj,color){
+		obj.style.color = color;
+	}
+	window.onload = function(){
+		//this : window 객체
+		var btn2 = document.getElementById("btn2");
+		btn2.onmouseover = function(){
+			//this: button 객체
+			this.style.color = 'green';
+		}
+		
+		btn2.addEventListener("mouseout", function(){
+			this.style.color = 'black';
+		}, false);
+	}
+</script>
+</head>
+<body>
+	<button onmouseover="changeColor(this, 'red')" onmouseout="changeColor(this,'blue')">마우스 아웃</button>
+	<button id="btn2">마우스 아웃2</button>
+</body>
+</html>

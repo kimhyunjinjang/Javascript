@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<script src="../js/jquery-1.12.4.min.js"></script>
+<script>
+	/* $(document).ready(function(){
+		
+	}); */
+	$(function(){
+		$("#hideAll").click(function(){
+			$(".img").hide();
+		});
+		
+		$("#showAll").click(function(){
+			$(".img").show();
+		});
+	});
+</script>
+<body>
+	<input type="button" id="hideAll" value="그림을 감추려면 클릭">
+	<input type="button" id="showAll" value="그림을 보려면 클릭!">
+	
+	<div>
+		<img src="images/sun.jpg" alt="낮을 나타내는 태양" class="img">
+		<img src="images/moon.jpg" alt="밤을 나타내는 달" class="img">
+	</div>
+</body>
+</html>

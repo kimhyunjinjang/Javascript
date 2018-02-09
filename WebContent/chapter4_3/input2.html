@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	label{
+		width:120px;
+		float:left;
+	}
+</style>
+<script type="text/javascript">
+	function displayInputValue(){
+		var idInput = document.getElementById("my_id");
+		var result = "";
+		
+		result += "<p>" + idInput.value + "</p>";
+		
+		var pwInput = document.getElementById("my_pw");
+		result += "<p>" + pwInput.value + "</p>";
+		
+		var div = document.getElementById("wrap_text");
+		div.innerHTML = result;
+	}
+	function displayInputValue2(){
+		var result = "";
+		result += "<p>" + document.f1.user_id.value + "</p>";
+		result += "<p>" + document.f1.user_pw.value + "</p>";
+		
+		var div = document.getElementById("wrap_text");
+		div.innerHTML = result;
+	}
+</script>
+</head>
+<body>
+	<form name="f1" onsubmit="displayInputValue2(); return false;"> <!-- submit이 되기 전에 -->
+		<fieldset>
+			<legend>회원 로그인</legend>
+			<p>
+				<label for="my_id">아이디</label>
+				<input type="text" id="my_id" name="user_id"> <!--form 태그 안에 input 태그에만 name을 쓸 수 있다-->
+			</p>
+			<p>
+				<label for="my_pw">비밀번호</label>
+				<input type="password" id="my_pw" name="user_pw">
+			</p>
+			<input type="submit" value="login">
+		</fieldset>
+	</form>
+	
+	<div id="wrap_text">
+	
+	</div>
+	
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css">
+<style>
+	#wrap{
+		width: 980px;
+		/* border: 1px solid red; */
+	}
+</style>
+<script src="../js/jquery-1.12.4.min.js"></script>
+<script src="js/jquery.bxslider.min.js"></script>
+<script>
+	$(function(){
+		$(".bxslider").bxSlider({
+			maxSlides:3,
+			slideWidth: 320,
+			slideMargin: 10,
+			auto: true,
+			pause: 3000,
+			speed: 1000,
+			autoControls: true,
+			captions: true
+		});
+	})
+</script>
+</head>
+<body>
+	<div id="wrap">
+		<div class="bxslider">
+			<div><img src="images/1.jpg" title="title1"></div>
+			<div><img src="images/2.jpg" title="title2"></div>
+			<div><img src="images/3.jpg" title="title3"></div>
+			<div><img src="images/4.jpg" title="title4"></div>
+			<div><img src="images/5.jpg" title="title5"></div>
+			<div><img src="images/6.jpg" title="title6"></div>
+			<div><img src="images/7.jpg" title="title7"></div>
+			<div><img src="images/8.jpg" title="title8"></div>
+			<div><img src="images/9.jpg" title="title9"></div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-1.12.4.min.js"></script>
+<script>
+	$(function(){
+		var imgArr = ["images/math_img_1.jpg", "images/math_img_2.jpg", "images/math_img_3.jpg"];
+		var i=0;
+		var id=null;
+		function changeImg(){
+			$("img").attr("src",imgArr[i++]);
+			if(i==imgArr.length){
+				i=0;
+			}
+		}
+		
+		$("button").eq(0).click(function(){
+			id=setInterval(changeImg, 500);
+		})
+		
+		$("button").eq(1).click(function(){
+			clearInterval(id);
+		})
+	})
+</script>
+</head>
+<body>
+	<button>시작버튼</button>
+	<button>정지버튼</button>
+	<br>
+	<img>
+</body>
+</html>

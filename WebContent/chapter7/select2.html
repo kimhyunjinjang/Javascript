@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-1.12.4.min.js"></script>
+<script>
+	$(function(){
+		//menu ul에서 첫번째와 마지막 li
+		/* $("#menu li:first").css("color","red");
+		$("#menu li:last").css("color","blue"); */ 
+		
+		//menu ul에서 even은 1,3,5,... odd는 2,4,6...
+		/* $("#menu li:even").css("color","red");
+		$("#menu li:odd").css("color","blue"); */
+		
+		//선택한 요소(li)의 무리 중에서 첫번째 애들을 바꾸는 것임
+		/* $("li:first-of-type").css("background-color","pink");
+		$("li:last-of-type").css("background-color","yellow"); */
+		
+		//$("li:nth-last-of-type(2)").css("background-color","yellow"); //선택한 요소(li)의 무리 중 마지막에서 두번째
+		//$("ul li:only-child").css("background-color","pink"); //ul의 모든 요소 중 li가 혼자 인 애
+		//$("ul li:nth-child(4n)").css("background-color","blue"); //ul의 모든 요소 중 li의 순서가 4번째인 애
+		
+		//$("#menu li").slice(2).css("background-color","pink"); //인덱스 2부터 끝까지 잘랐을 때 해당하는 요소
+		
+		//$("#menu2 li").eq(2).css("background-color","yellow"); //2번째 인덱스 요소
+		$("#menu2 li:lt(2)").css("background-color","pink"); //인덱스 2보다 작은 li
+	})
+</script>
+</head>
+<body>
+	<h1>탐색 선택자</h1>
+	<ul id="menu">
+		<li>내용1</li>
+		<li>내용2</li>
+		<li>내용3</li>
+		<li>내용4</li>
+	</ul>
+	<ul>
+		<li>내용5</li>
+		<li>내용6</li>
+		<li>내용7</li>
+		<li>내용8</li>
+	</ul>
+	<ul>
+		<li>내용9</li>
+	</ul>
+	
+	<ul id="menu2">
+		<li>내용10</li>
+		<li>내용11</li>
+		<li>내용12</li>
+		<li>내용13</li>
+		<li>내용14</li>
+	</ul>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//callback 매개변수: 함수가 온다.
+		function callTenTimes(callback) {
+			for (var i = 0; i < 10; i++) {
+				callback();
+			}
+		}
+
+		function test() {
+			alert("함수 호출");
+		}
+
+		callTenTimes(test);
+	</script>
+</body>
+</html>

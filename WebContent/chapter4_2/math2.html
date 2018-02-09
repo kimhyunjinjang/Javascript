@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		document.write("<h1>컴퓨터 가위, 바위, 보 맞추기 게임</h1>");
+		
+		//user 선택
+		var t = prompt("가위, 바위, 보 중 선택하세요", "가위");
+		var com = Math.floor((Math.random()*3)+1);
+		
+		
+		var userNum = 0;
+		switch(t){
+		case "가위":
+			userNum = 1;
+			break;
+		case "바위":
+			userNum = 2;
+			break;
+		case "보":
+			userNum = 3;
+			break;
+		default:
+			alert("잘못 입력");
+			location.reload(); //새로고침 효과
+			break;
+		}
+		
+		var comStr;
+		switch(com){
+		case 1:
+			comStr = "가위";
+			break;
+		case 2:
+			comStr = "바위";
+			break;
+		case 3:
+			comStr = "보";
+			break;
+		}
+		
+		/* if(userNum == com){
+			document.write("<h3>맞췄습니다.</h3>");
+		}else{
+			document.write("<h3>틀렸습니다.</h3>")
+		} */
+		
+		//유저가 선택한 이미지
+		document.write("user: " + "<img src='image/math_img_" + userNum + ".jpg'>");
+		//컴퓨터가 선택한 랜덤 이미지를 보여준다.
+		document.write("com: " + "<img src='image/math_img_" + com + ".jpg'>");
+		document.write("<br>");
+		
+		if(userNum==1){
+			if(com==1){
+				document.write("user: " + t + "<br>" + "com: " + comStr + "<br>" + "결과: 비겼습니다");
+			}else if(com==2){
+				document.write("user: " + t + "<br>" + "com: " + comStr + "<br>" + "결과: 졌습니다");
+			}else{
+				document.write("user: " + t + "<br>" + "com: " + comStr + "<br>" + "결과: 이겼습니다");
+			}
+		}else if(userNum==2){
+			if(com==1){
+				document.write("user: " + t + "<br>" + "com: " + comStr + "<br>" + "결과: 이겼습니다");
+			}else if(com==2){
+				document.write("user: " + t + "<br>" + "com: " + comStr + "<br>" + "결과: 비겼습니다");
+			}else{
+				document.write("user: " + t + "<br>" + "com: " + comStr + "<br>" + "결과: 졌습니다");
+			}
+		}else if(userNum==3){
+			if(com==1){
+				document.write("user: " + t + "<br>" + "com: " + comStr + "<br>" + "결과: 졌습니다");
+			}else if(com==2){
+				document.write("user: " + t + "<br>" + "com: " + comStr + "<br>" + "결과: 이겼습니다");
+			}else{
+				document.write("user: " + t + "<br>" + "com: " + comStr + "<br>" + "결과: 비겼습니다");
+			}
+		}
+		
+		
+	
+	
+	</script>
+</body>
+</html>

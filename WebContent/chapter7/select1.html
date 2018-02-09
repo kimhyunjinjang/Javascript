@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-1.12.4.min.js"></script>
+<script>
+	$(function(){
+		/* $("*").css("border", "1px solid blue");
+		$("h1,h2").css("color","red"); */
+		
+		//$("#wrap li").css("border", "1px solid red"); //자식, 자손을 포함한 모든 li 
+		//$("#wrap>li").css("border", "1px solid red"); //자식 li만. children과 동일
+		//$("#wrap").children("li").css("border", "1px solid red");
+		//$("#second").prev().css("border","1px solid blue"); //자신 바로 앞에 있는 li
+		//$("#second").next().css("border","1px solid blue"); //자신 바로 뒤에 있는 li
+		//$("#second+li").css("border","1px solid blue"); //next와 동일
+		//$("#wrap").siblings("p").css("color","red"); //wrap 다음 모든 태그
+		$("#wrap").nextAll("p").css("color","red"); //siblings와 동일
+		
+	})
+</script>
+</head>
+<body>
+	<h1>제이쿼리</h1>
+	<h2>직접 선택자 및 관계 선택자</h2>
+	<h3>직접 선택자</h3>
+	<h3>관계 선택자</h3>
+	<ul id="wrap">
+		<li>내용1
+			<ul>
+				<li>내용2</li>
+			</ul>
+		</li>
+		<li id="second">내용3</li>
+		<li>내용4</li>
+	</ul>
+	<p>test p1</p>
+	<p>test p2</p>
+	<p>test p3</p>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+	
+		var t = "Hello Thank you good luck to you";
+		
+		document.write(t.charAt(16),"<br>");
+		document.write(t.indexOf("you"),"<br>"); //못찾으면 -1반환
+		document.write(t.lastIndexOf("you"),"<br>");
+		
+		document.write(t.substr(21,4),"<br>"); //21번째 인덱스부터 4개만 가져오라
+		document.write(t.substring(6,12),"<br>"); //6번째부터 11번째 인덱스까지 
+		t = t.replace("you","me");
+		document.write(t,"<br>");
+		
+		document.write(t.toLowerCase(),"<br>");
+		document.write(t.toUpperCase(),"<br>");
+		document.write(t.length,"<br>");
+		
+		var s = t.split(" "); //문장을 space단위로 잘라서 배열로 만들어준다
+		document.write(s[0],"<br>");
+		document.write(s[4],"<br>");
+	</script>
+</body>
+</html>

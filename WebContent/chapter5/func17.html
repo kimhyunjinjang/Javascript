@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	#wrapper{
+		width: 300px;
+		margin: 0 auto;
+		text-align: center;
+	}
+	#wrapper #img1{
+		width:80px;
+		padding:10px;
+		border:1px solid black;
+	}
+</style>
+<script type="text/javascript">
+	var idx=0;
+	
+	function onClickPrevBtn(){
+		idx--;
+		var img1 = document.getElementById("img1");
+		img1.style.marginLeft = 100*idx + "px"; /* 이미지를 왼쪽으로 */
+	}
+	function onClickNextBtn(){
+		idx++;
+		var img1 = document.getElementById("img1");
+		img1.style.marginLeft = 100*idx + "px";
+	}
+</script>
+</head>
+<body>
+	<div id="wrapper">
+		<img src="images/pic_t1.jpg" alt="사진1" id="img1"/>
+		<p class="btn_wrap">
+			<a href="#" onclick="onClickPrevBtn()">&lt;</a> <!-- < -->
+			<a href="#" onclick="onClickNextBtn()">&gt;</a> <!-- > -->
+		</p>
+	</div>
+</body>
+</html>

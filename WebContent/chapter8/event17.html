@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-1.12.4.min.js"></script>
+<script>
+	$(function(){
+		$("h1 a").bind("mouseover focus", function(){ //bind()는 선택한 요소에 한개 이상의 이벤트를 등록
+			$(this).css("color","red");
+		})
+		$("h1 a").bind("mouseout blur", function(){
+			$(this).css("color","blue");
+		})
+		$("h2").append("<a href='#'>내용</a>");
+		$("h2").delegate("a", "mouseover focus", function(){
+			$(this).css("color","pink");
+		})
+		
+		var num=0;
+		$("button").one("click", function(){ //one은 한번만 이벤트발생. 아무리 눌러도 1만 출력됨 
+			num++; 
+			$("#text").text(num);
+		})
+	})
+</script>
+</head>
+<body>
+	<h1><a href="#">내용</a></h1>
+	<h2></h2>
+	<button>증가버튼</button>
+	<p id="text"></p>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$("p:visible").css("border","1px solid red");
+		$("p:hidden").css("display","block");
+		
+		$("input:text").css("border","1px solid blue");
+		$(":checked").attr("checked",false); //속성이 checked인 것을 false로
+		
+		$("#wrap input[type='text']").css("backgroundColor","yellow");
+		$("#wrap input[type='password']").css("backgroundColor","red");
+	})
+	
+	
+</script>
+</head>
+<body>
+	<h1>탐색 선택자</h1>
+	<p>내용1</p>
+	<p style="display:none;">내용2</p>
+	<div>
+		<p>이름:<input type="text" placeholder="이름"></p>
+		<p>선택1:<input type="checkbox" checked="checked"></p>
+		<p>선택2:<input type="checkbox"></p>
+	</div>
+	<div id="wrap">
+		아이디: <input type="text"><br>
+		비밀번호: <input type="password">
+	</div>
+</body>
+</html>

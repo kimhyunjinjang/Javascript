@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var company = {
+		"name" : "(주)굿모닝컴퍼니",
+		"since" : 2013,
+		"department" : ['기획팀','영업팀','디자인팀','개발팀'],
+		"biz": ['소프트웨어','통신판매업','위치정보서비스']
+	};
+	
+	//브라우저의 모든 body 내용을 다 읽은 후 호출됨
+	window.onload = function(){
+		var h1=document.getElementById("name");
+		h1.innerHTML = company.name;
+		
+		var span = document.getElementById("since");
+		span.innerHTML = company.since;
+		
+		var u = document.getElementById("department");
+		for(var i=0; i<company.department.length; i++){
+			u.innerHTML += "<li>" + company.department[i] + "</li>";
+		}
+		
+		
+		var u2 = document.getElementById("biz");
+		for(var j=0; j<company.biz.length; j++){
+			u2.innerHTML += "<li>" + company.biz[j] + "</li>";
+		}
+	}
+</script>
+</head>
+<body>
+	<h1 id="name"></h1>
+	<p>
+		<strong>설립년도: </strong><span id="since"></span>
+	</p>
+	<h2>주요 사업 부서</h2>
+	<ul id="department"></ul>
+	<h2>주요 사업 분야</h2>
+	<ul id="biz"></ul>
+</body>
+</html>

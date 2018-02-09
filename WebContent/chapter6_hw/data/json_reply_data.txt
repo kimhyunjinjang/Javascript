@@ -1,0 +1,21 @@
+var reply_data = {
+	title : "reply list",
+	total_count : 3,
+	item : [
+		{
+			id : 1,
+			writer: "김영희",
+			content: "안녕하세요~ 오늘 하루도 신나게 놀아요~"
+		},
+		{
+			id : 2,
+			writer: "이광호",
+			content: "자바스크립트는 할 수록 재밌는거 같아요."
+		},
+		{
+			id : 3,
+			writer: "김민지",
+			content: "내일부터 방학이예요~ 아싸!"
+		}
+	]
+};

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-1.12.4.min.js"></script>
+</head>
+<body>
+	<div id="wrap"></div>
+	<iframe src="http://www.daum.net" frameborder="0" width="400" height="300"></iframe>
+	
+	<script>
+		$(document).ready(function(){ //html 페이지가 화면에 뿌려진 후 동작
+			$("#wrap").append("<p>레디완료!</p>");
+		})
+		
+		$("iframe").load(function(){ //iframe이 로드 되면 실행
+			$("#wrap").append("<p>로딩완료!<p>");
+		})
+	</script>
+</body>
+</html>

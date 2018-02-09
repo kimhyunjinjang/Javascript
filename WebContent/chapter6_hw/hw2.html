@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	#p1{
+		font-size: 1.5em;
+		font-weight: bold;
+	}
+</style>
+<script type="text/javascript">
+	function submitCalc() {
+		var p1 = document.getElementById("p1");
+		p1.innerHTML = "";
+		
+		var cm = document.fm.cm.value;
+		var kg = document.fm.kg.value;
+		var avg = (cm - 100) * 0.9;
+		var res = kg - avg;
+
+		p1.innerHTML = "평균 몸무게:" + avg + "kg" + "<br>";
+		var tmp = [ '초과', '미달', '적정' ];
+		if (kg > avg) {
+			p1.innerHTML += "당신의 몸무게는 평균 몸무게보다 " + res + "kg" + tmp[0] + "입니다.";
+		} else if (kg < avg) {
+			p1.innerHTML += "당신의 몸무게는 평균 몸무게보다 " + res + "kg" + tmp[1] + "입니다.";
+		} else {
+			p1.innerHTML += "당신의 몸무게는 평균 몸무게에 " + tmp[2] + "입니다.";
+		}
+	}
+</script>
+</head>
+<body>
+	<form name="fm" onsubmit="submitCalc(); return false;">
+		<input type="text" name="cm" placeholder="키" required="required"> cm<br>
+		<input type="text" name="kg" placeholder="몸무게" required="required"/> kg<br>
+		<input type="submit" value="계산">
+	</form>
+	<br>
+	
+	<p id="p1">평균 몸무게와 본인 몸무게의 차이를 알 수 있습니다.</p>
+</body>
+</html>

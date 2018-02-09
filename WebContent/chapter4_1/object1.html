@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var product = {
+				제품명:'망고',
+				유형:'당절임',
+				성분:'망고,설탕...',
+				원산지:'필리핀'
+		};
+	
+		document.write(product['제품명']+"<br>");
+		document.write(product.유형+"<br>");
+		
+		product.참고사항 = '유통기한이 짧음';
+		document.write(product.참고사항);
+		
+		document.write("<hr>");
+		var product2 = new Object(); //new Object();=={};와 같은 의미
+		product2.제품='TV';
+		product2.가격=130;
+		
+		document.write(product2.제품);
+		
+		
+	</script>
+</body>
+</html>

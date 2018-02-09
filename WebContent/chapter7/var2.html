@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	#p1{
+		color: red;
+	}
+</style>
+<script src="../js/jquery-1.12.4.min.js"></script>
+<script>
+	$(function(){
+		$("button").eq(0).click(function(){
+			var num1= $("input").eq(0).val();
+			var num2= $("input").eq(1).val();
+			var result = 0; 
+			result = Number(num1)+Number(num2);
+			$("#p1").html("두 숫자의 합: "+result);
+			
+		})
+		$("button").eq(1).click(function(){
+			var num1= $("input").eq(0).val();
+			var num2= $("input").eq(1).val();
+			var result = 0; 
+			result = Number(num1)-Number(num2);
+			$("#p1").html("두 숫자의 차: "+result);
+			
+		})
+		$("button").eq(2).click(function(){
+			var num1= $("input").eq(0).val();
+			var num2= $("input").eq(1).val();
+			var result = 0; 
+			result = Number(num1)*Number(num2);
+			$("#p1").html("두 숫자의 곱: "+result);
+			
+		})
+		$("button").eq(3).click(function(){
+			var num1= $("input").eq(0).val();
+			var num2= $("input").eq(1).val();
+			var result = 0; 
+			result = Number(num1)/Number(num2);
+			$("#p1").html("두 숫자의 나눗셈: "+result);
+			
+		})
+		
+	})
+</script>
+</head>
+<body>
+	<p>
+		<input type="text" placeholder="숫자입력">
+	</p>
+	
+	<p>
+		<input type="text" placeholder="숫자입력">
+	</p>
+	
+	<button>숫자 두개 더하기</button>
+	<button>숫자 두개 빼기</button>
+	<button>숫자 두개 곱하기</button>
+	<button>숫자 두개 나누기</button>
+	<p id="p1">
+	</p>
+</body>
+</html>

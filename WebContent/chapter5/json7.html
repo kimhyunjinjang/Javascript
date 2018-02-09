@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var bbs = {
+				"title" : "TV 시간표",
+				"date" : "2016-11-10",
+				"schedule" : [
+					{"title" : "공항가는 길", "episode" : "16회", "channel" : "KBS"},
+					{"title" : "쇼핑왕 루이", "episode" : "15회", "channel" : "MBC"},
+					{"title" : "질투의 화신", "episode" : "24회", "channel" : "SBS"}
+				]
+		};
+		
+		window.onload=function(){
+			var h1 = document.getElementById("title");
+			h1.innerHTML = bbs.title + "(" + bbs.date + ")";
+			
+			var ul = document.getElementById("schedule");
+			for(var i=0; i<bbs.schedule.length; i++){
+				ul.innerHTML += "<li>" + bbs.schedule[i].title + "(" + bbs.schedule[i].episode + "," + bbs.schedule[i].channel + ")" +"</li>"
+			}
+			 
+		}
+	</script>
+	
+	<h1 id="title"></h1>
+	<ul id="schedule">
+	
+	</ul>
+</body>
+</html>

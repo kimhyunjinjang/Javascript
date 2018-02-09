@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function setAnswer(){
+		var a = document.getElementById("answer");
+		a.innerHTML = "HTML5+CSS3";
+	}
+	function getQuestion(){
+		var q = document.getElementById("question");
+		alert(q.innerHTML);
+	}
+</script>
+</head>
+<body>
+	<p id="question">질문: 웹 표준 기술은?</p>
+	<p id="answer">해답: HTML5</p>
+	<button onclick="setAnswer()">해답 바꾸기</button>
+	<button onclick="getQuestion()">질문 alert띄우기</button>
+</body>
+</html>

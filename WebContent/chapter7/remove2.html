@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+div {
+	width: 300px;
+	height: 300px;
+	border: 1px solid black;
+}
+</style>
+<script src="../js/jquery-1.12.4.min.js"></script>
+<script>
+	$(function(){
+		
+		$("button").eq(0).click(function(){
+			$("#area li:last").remove();
+		})
+		$("button").eq(1).click(function(){
+			$("#area").append("<li>찐교스"+"</li>");
+		})
+	})
+</script>
+</head>
+<body>
+	<div>
+		<ul id="area">
+			<li>짜장면</li>
+			<li>탕수육</li>
+			<li>팔보채</li>
+			<li>짬뽕</li>
+			<li>우육탕</li>
+			<li>찐교스</li>
+		</ul>
+	</div>
+
+	<button>remove</button>
+	<button>add</button>
+</body>
+</html>

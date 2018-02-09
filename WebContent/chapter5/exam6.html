@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+	
+		var plus = calculator(1, 2, '+');
+		document.write("+ 결과: "+plus+"<br>");
+		var minus = calculator(1, 2, '-');
+		document.write("- 결과: "+minus+"<br>");
+		var mul = calculator(1, 2, '*');
+		document.write("* 결과: "+mul+"<br>");
+		var devide = calculator(10, 2, '/');
+		document.write("/ 결과: "+devide+"<br>");
+		
+		function calculator(num1, num2, cal){
+			switch(cal){
+			case "+":
+				return num1+num2;
+				break;
+			case "-":
+				return num1-num2;
+				break;
+			case "*":
+				return num1*num2;
+				break;
+			case "/":
+				return num1/num2;
+				break;
+			default:
+				alert("사칙연산이 아닙니다");
+			} 
+		}
+		
+	</script>
+</body>
+</html>

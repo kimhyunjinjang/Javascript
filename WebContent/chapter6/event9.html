@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var arr = ['빨강색','파랑색','노랑색','주황색','초록색'];
+	
+	window.onload = function(){
+		var u = document.getElementById("ul1");
+		for(var i=0; i<arr.length; i++){
+			u.innerHTML += "<li>" + arr[i] + "<button>" + "삭제" + "</button>" + "</li>";
+		}
+		
+		var btn = document.getElementsByTagName("button");
+		for(var j=0; j<btn.length; j++){
+			btn[j].addEventListener("click", function(){
+				var li = this.parentNode;
+				var pa = li.parentNode;
+				pa.removeChild(li);
+			}, false);
+		}
+	}
+</script>
+</head>
+<body>
+	<div id="div1">
+		<ul id="ul1">
+		</ul>
+	</div>
+</body>
+</html>

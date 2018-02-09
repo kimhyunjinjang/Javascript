@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var rank = {
+				"keyword" : [ {"name" : "HTML5", "desc" : "차세대 웹 표준"},
+							  {"name" : "CSS3", "desc" : "다양한 효과의 표현"},
+							  {"name" : "jQuery", "desc" : "손쉬운 javascript 구현"}
+				]
+		};
+		
+		
+		window.onload = function() {
+			var ul = document.getElementsByTagName("ul")[0];
+			for (var i = 0; i < rank.keyword.length; i++) {
+				ul.innerHTML += "<li>" + rank.keyword[i].name+ rank.keyword[i].desc + "</li>";
+			}
+		}
+	</script>
+	
+	<h1>keyword 순위</h1>
+	<ul>
+	</ul>
+</body>
+</html>

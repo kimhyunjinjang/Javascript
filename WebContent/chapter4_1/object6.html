@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//Rectangle 객체
+		//생성자가 있는 객체
+		//width, height를 생성자에서 받도록 한다.
+		//getArea(): 면적값 반환
+
+		function Rectangle(a, b) {
+			var width = a;
+			var height = b;
+			
+			this.getWidth = function() {
+				return width;
+			}
+			
+			this.setWidth = function(w) {
+				if (w < 0) {
+					width = 0;
+				} else {
+					width = w;
+				}
+			}
+			
+			this.getHeigth = function() {
+				return height;
+			}
+			
+			this.setHeigth = function(h) {
+				if (h < 0) {
+					height = 0;
+				} else {
+					height = h;
+				}
+			}
+		}
+
+		Rectangle.prototype.getArea = function() {
+			return this.getWidth() * this.getHeigth();
+		}
+		
+		var rect = new Rectangle(5, 7);
+		document.write(rect.getArea() + "<br>");
+		
+		//rect.width = -2;
+		rect.setWidth(-2);
+		document.write(rect.getArea()+"<br>");
+		
+		
+		//Employee 객체
+		//월급을 생성자를 통해 받는다.
+		//money 변수
+		//name 변수
+		//getConsume,setConsume
+		//getMoney() : 남은 돈을 반환
+		
+		function Employee(n, m){
+			var name = n;
+			var money = m;
+			
+			this.setName = function(n){
+				name = n;
+			}
+			this.getName = function(){
+				return name;
+			}
+			this.setMoney = function(m){
+				money = m;
+			}
+			this.getMoney = function(){
+				return money;
+			}
+		}
+		
+		Employee.prototype.setConsume = function(c){
+			this.setMoney(this.getMoney-c);
+		}
+		
+		var person1 = new Employee("홍길동", 1000000);
+		person1.setConsume(700000);
+		document.write(person1.getMoney());
+		
+	</script>
+</body>
+</html>

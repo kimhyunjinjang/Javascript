@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	window.onload = function() {
+		var btn1 = document.getElementById("btn1");
+
+		if (window.addEventListener) {
+			btn1.addEventListener("click", function() {
+				alert("알림창1");
+			}, false);
+
+			btn1.addEventListener("click", function() {
+				alert("알림창2");
+			}, false);
+		}else{ /* IE8 이하 */
+			btn1.attachEvent("onclick", function(){
+				alert("알림창1");
+			});
+			btn1.attachEvent("onclick", function(){
+				alert("알림창2");
+			});
+		}
+	}
+</script>
+</head>
+<body>
+	<button id="btn1">버튼</button>
+</body>
+</html>

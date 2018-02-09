@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	#wrap{
+		width: 400px;
+		margin: 50px auto;
+	}
+	ul{
+		width: 350px;
+		height: 250px;
+		border: 1px solid black;
+	}
+	ul li:hover{
+		color: red;
+		text-decoration: underline;
+	}
+</style>
+<script src="../js/jquery-1.12.4.min.js"></script>
+<script>
+	$(function(){
+		$('button').on("click",function(){
+			var text = $("#text").val();
+			$("#list").append("<li>" + text + "</li>"); //#list 요소 내 마지막 위치에 새 요소 추가
+		})
+		
+		$(document).on("click", "#list li", function(){
+			var text = $(this).text();
+			$("#result").text(text+"를 선택함");
+		})
+	})
+</script>
+</head>
+<body>
+	<div id="wrap">
+		<input type="text" id="text">
+		<button>추가</button>
+		<ul id="list">
+		</ul>
+		<p id="result">선택한 아이템이 나타납니다.</p>
+	</div>
+</body>
+</html>

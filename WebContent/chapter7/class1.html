@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-1.12.4.min.js"></script>
+<style>
+	.aqua{
+		background-color: aqua;
+	}
+	.red{
+		background-color: red;
+	}
+	.green{
+		background-color: green;
+	}
+</style>
+<script>
+	$(function(){
+		$("button").eq(0).click(function(){
+			$("#p1").addClass("aqua");
+		})
+		$("button").eq(1).click(function(){
+			$("#p2").removeClass("red");
+		})
+		$("button").eq(2).click(function(){
+			$("#p3").toggleClass("green");
+		})
+		$("button").eq(3).click(function(){
+			var b = $("#p3").hasClass("green"); //true or false 반환
+			$("#p4").html(b+"");
+		})
+	})
+</script>
+</head>
+<body>
+	<p id="p1">내용1</p>
+	<p id="p2" class="red">내용2</p>
+	<p id="p3" class="green">내용3</p>
+	<p id="p4"></p>
+	
+	<button>클래스 추가</button>
+	<button>클래스 제거</button>
+	<button>클래스 Toggle</button>
+	<button>클래스 has 여부</button>
+</body>
+</html>

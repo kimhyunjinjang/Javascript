@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-1.12.4.min.js"></script>
+<script>
+	$(function(){
+		$("#btn1").mouseover(function(){ //hover와 같은 기능
+			$("#btn1").css("background-color","blue");
+		})
+		$("#btn1").mouseout(function(){
+			$("#btn1").css("background-color","pink");
+		})
+		
+		$("#btn2").hover(function(){
+			$("#btn2").css("background-color","white");
+		}, function(){
+			$("#btn2").css("background-color","red");
+		})
+	})
+</script>
+</head>
+<body>
+	<button id="btn1">mouseover</button>
+	<button id="btn2">hover</button>
+</body>
+</html>

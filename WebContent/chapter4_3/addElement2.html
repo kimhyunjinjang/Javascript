@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function addP(){
+		var div = document.getElementById("wrap");
+		div.innerHTML += "<p>안녕</p>";
+	}
+	function addImage(){
+		var div = document.getElementById("wrap");
+		div.innerHTML += "<img src='images/5.jpg'>";
+	}
+	function addTable(){
+		var t = document.getElementById("t");
+		t.innerHTML += "<tr><td>안녕</td></tr>"
+	}
+</script>
+<style>
+	table, td{
+		border:1px solid black;
+		border-collapse: collapse;
+	}
+</style>
+</head>
+<body>
+	<button onclick="addP()">p 태그 추가</button>
+	<button onclick="addImage()">img 추가</button>
+	<button onclick="addTable()">테이블 행 추가</button>
+	<br>
+	<div id="wrap">내 뒤에 추가되게 하세요.</div>
+	<table id="t">
+	</table>
+</body>
+</html>

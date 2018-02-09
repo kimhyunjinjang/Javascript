@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	#gallery{
+		width: 890px;
+		height: 190px;
+		background: #808080;
+		text-align: center;
+		position: relative; /* 나오는 위치를 얘를 기준으로 */
+	}
+	ul{
+		list-style: none;
+		overflow: hidden;
+		margin:0;
+		padding:0;
+		margin-top:10px;
+	}
+	ul li{
+		display: inline;
+		float:left;
+		margin:10px;
+	}
+	.bigPic{
+		display: none; /*자리 안차지 하고 넣도록 */
+		position: absolute; /* 이하 절대값으로 위치잡기 */
+		top:200px;
+		left:50px;
+	}
+</style>
+<script src="../js/jquery-1.12.4.min.js"></script>
+<script>
+	$(function(){
+		$("img").click(function(){
+			var tmp = $(this).attr("class");
+			if(tmp=="smallPic"){
+				$(this).next().fadeIn(500);
+			}else{
+				$(this).fadeOut(500);
+			}
+		})
+	})
+</script>
+</head>
+<body>
+	<h1>사용법</h1>
+	<ol>
+		<li>작은 이미지를 클릭하면 큰 이미지가 됩니다.</li>
+		<li>큰 이미지를 클릭하면 큰 이미지가 사라집니다. </li>
+	</ol>
+	
+	<div id="gallery">
+		<ul>
+			<li>
+				<img src="images/spring-s.jpg" id="small1" class="smallPic">
+				<img src="images/spring.jpg" id="big1" class="bigPic" alt="한국의 봄">
+			</li>
+			<li>
+				<img src="images/summer-s.jpg" id="small2" class="smallPic">
+				<img src="images/summer.jpg" id="big2" class="bigPic" alt="한국의 여름">
+			</li>
+			<li>
+				<img src="images/fall-s.jpg" id="small3" class="smallPic">
+				<img src="images/fall.jpg" id="big3" class="bigPic" alt="한국의 가을">
+			</li>
+			<li>
+				<img src="images/winter-s.jpg" id="small4" class="smallPic">
+				<img src="images/winter.jpg" id="big4" class="bigPic" alt="한국의 겨울">
+			</li>
+		</ul>
+	</div>
+</body>
+</html>

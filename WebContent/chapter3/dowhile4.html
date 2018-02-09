@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var num=1;
+		var sum=0;
+		var cnt=0;
+		//var str="";
+		
+		do{
+			if(num%5==0){
+				//str=num+",";
+				sum=sum+num;
+				cnt++;
+			}
+			num++;
+		}while(num<101)
+	
+		//document.write(str);
+		document.write("5의 배수 합: "+sum+"<br>");
+		document.write("5의 배수 개수: "+cnt);
+	</script>
+</body>
+</html>

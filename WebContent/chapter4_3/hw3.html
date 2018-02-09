@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function changeImg(){
+		var i = document.getElementsByTagName("img");
+		if(i[0].src=="file:///D:/workplace/workplace_web/Javascript/WebContent/chapter4_3/images/two.jpg"){
+			i[0].src="images/four.jpg";	
+		}else{
+			i[0].src="images/two.jpg";	
+		}
+	}
+</script>
+</head>
+<body>
+	<img src="images/two.jpg" onmouseover="changeImg()" onmouseleave="changeImg()">
+</body>
+</html>

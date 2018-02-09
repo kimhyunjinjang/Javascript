@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-1.12.4.min.js"></script>
+<script>
+	$(function(){
+		$("h1 a").on("mouseover focus", function(){
+			$(this).css("background-color", "red");
+		})
+		$("h1 a").on("mouseout blur", function(){
+			$(this).css("background-color", "yellow");
+		})
+		$("button").click(function(){
+			$("h1 a").off(); //이벤트를 모두 지움
+		})
+	})
+</script>
+</head>
+<body>
+	<h1><a href="#">내용</a></h1>
+	<button>이벤트 삭제</button>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//789만 나타나게 하자
+		var num = "1234567890";
+		num = num.substr(6,3);
+		document.write(num,"<br>");
+		
+		//S의 인덱스가 몇번째인가
+		var txt = "This is Sunny";
+		var idxtxt = txt.indexOf("S");
+		document.write(idxtxt,"<br>");
+		
+		//찾은 인덱스부터 끝까지 글자가 나타나게 하자
+		document.write(txt.substr(idxtxt,txt.length),"<br>");
+		
+		//'mmc/app/index.html' 문장에서 파일명만 나타나게 하자
+		var file = "mmc/app/index.html";
+		var s = file.split("/");
+		s=s[s.length-1];
+		var idx = s.indexOf(".");
+		document.write(s.substr(0,idx),"<br>");
+		
+	</script>
+</body>
+</html>

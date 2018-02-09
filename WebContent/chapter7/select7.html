@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-1.12.4.min.js"></script>
+<script>
+	var imgArr = ["h.jpg","t.jpg","m.jpg","l.jpg","5.jpg"];
+	var jsonData = {
+			"r" : [
+				{"k":"HTML5"},
+				{"k":"CSS3"},
+				{"k":"jQuery"}
+			]};
+	$(function(){
+		$("#btn1").click(function(){
+			$("#menu li").each(function(i, obj){ //each는 for문과 같은 기능을 함
+				console.log("index: "+ i);
+				console.log(obj);
+				
+				$(obj).html(i); //html()은 제이쿼리 함수이므로 객체도 제이쿼리 형식이어야 함
+			})
+		})
+		
+		$("#btn2").click(function(){
+			var str = "";
+			
+			/* str += "<img src='images/"+ imgArr[0]+"'>";
+			str += "<img src='images/"+ imgArr[1]+"'>";
+			str += "<img src='images/"+ imgArr[2]+"'>";
+			str += "<img src='images/"+ imgArr[3]+"'>";
+			str += "<img src='images/"+ imgArr[4]+"'>"; */
+			
+			/* for(var i=0; i<imgArr.length;i++){
+				str +=  "<img src='images/"+ imgArr[i]+"'>";
+			} */
+			
+			$(imgArr).each(function(i,obj){
+				str+="<img src='images/"+ obj+"'>";
+			})
+			$("#imgwrap").html(str);
+		})
+		
+		$("#btn3").click(function(){
+			
+			/* for(var i=0; i<imgArr.length; i++){
+				$("#pWrap p").eq(i).html(imgArr[i]);
+			} */
+			
+			$("#pWrap p").each(function(i, obj){
+				$(obj).html(imgArr[i]); //obj는 <p>태그들
+			})
+		})
+		
+		$("#btn4").click(function(){
+			var str="";
+			$(jsonData.r).each(function(i,obj){
+				str+="<li>"+obj.k+"</li>";
+			})
+			$("#menu2").html(str);
+		})
+	})
+</script>
+</head>
+<body>
+	<ul id="menu">
+		<li>내용1</li>
+		<li>내용2</li>
+		<li>내용3</li>
+		<li>내용4</li>
+	</ul>
+	<button id="btn1">each시작</button>
+	
+	<hr>
+	
+	<div id="imgwrap">
+	</div>
+	<button id="btn2">이미지 보기</button>
+	
+	<hr>
+	
+	<div id="pWrap">
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+	</div>
+	<button id="btn3">경로 보기</button>
+	
+	<hr>
+	
+	<ul id="menu2"></ul>
+	<button id="btn4">json보기</button>
+</body>
+</html>

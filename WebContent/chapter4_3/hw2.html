@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function changeImg(){
+		var i = document.getElementsByTagName("img");
+		if(i[0].src=="file:///D:/workplace/workplace_web/Javascript/WebContent/chapter4_3/images/logo.png"){
+			i[0].src="images/5-2.jpg";	
+		}else{
+			i[0].src="images/logo.png";
+		}
+	}
+
+</script>
+</head>
+<body>
+	<p>스터디 회원 모집</p>
+	<img src="images/logo.png" onclick="changeImg()">
+</body>
+</html>

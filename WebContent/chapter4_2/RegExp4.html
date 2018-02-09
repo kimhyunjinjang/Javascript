@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//이메일 형식 검사하기
+		var userEmail = prompt("당신의 이메일은?");
+		var reg = /^\w{3,20}@[a-z]+\.[a-z]{2,3}\.?[a-z]{0,2}$/;
+		
+		if(reg.test(userEmail) == true){
+			document.write("사용 가능한 이메일입니다","<br>");
+		}else{
+			document.write("이메일이 형식에 맞지 않습니다","<br>");
+		}
+		
+	</script>
+</body>
+</html>

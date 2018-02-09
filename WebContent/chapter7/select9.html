@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-1.12.4.min.js"></script>
+<script>
+	//map은 배열 값을 바꾸고 싶을 때 쓴다..
+	var arrName=["갑","을","병","정"];
+	$(function(){
+		var arr = arrName.map(function(i,k){ //i:value, k:index
+			return i+k; //갑0을1병2정3 으로 출력됨
+		})
+		$("#wrap").html(arr);
+	})
+</script>
+</head>
+<body>
+	<div id="wrap">
+	
+	</div>
+</body>
+</html>

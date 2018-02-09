@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var src = prompt("이미지 파일명을 입력하세요 (예: ***.bmp)");
+		var i = src.indexOf(".");
+		var ext = src.substr(i,src.length);
+		document.write("입력한 이미지 파일명: " + src,"<br>");
+		
+		var reg = /^.(bmp|jpg|jpeg|gif|png)$/;
+		if(reg.test(ext)==true){
+			document.write("파일명의 확장자가 유효합니다");
+		}else{
+			document.write("파일명의 확장자가 유효하지 않습니다");
+		}
+	
+	</script>
+</body>
+</html>

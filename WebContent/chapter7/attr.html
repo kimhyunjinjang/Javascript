@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-1.12.4.min.js"></script>
+<script>
+	$(function(){
+		$("#btn1").click(function(){
+			var src = $("img").attr("src"); //img태그의 속성값을 가져옴
+			alert(src);
+		})
+		$("#btn2").click(function(){
+			$("img").attr("width","200");
+		})
+		$("#btn3").click(function(){
+			var str = $("img").attr("src");
+			$("#path").html(str); //img태그의 속성값을 가져와서 p태그에 쓰기
+		})
+		$("#btn4").click(function(){
+			$("img").attr("src","images/h.jpg");
+		})
+	})
+</script>
+</head>
+<body>
+	<h1>attr()함수 사용</h1>
+	<p>
+		<img src="images/5.jpg" width="100">
+	</p>
+	<p id="path">
+	
+	</p>
+	<button id="btn1">attr() get</button>
+	<button id="btn2">attr() set</button>
+	<button id="btn3">img 경로보기</button>
+	<button id="btn4">img변경</button>
+</body>
+</html>

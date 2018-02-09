@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	table,td{
+		border:1px solid black;
+		border-collapse: collapse;
+	}
+</style>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		var row=prompt("행을 입력하세요");
+		var col=prompt("열을 입력하세요");
+		displayTable(row,col);
+		
+		function displayTable(row, col) {
+			var table = "<table>";
+			for (var i = 0; i < row; i++) {
+				table += "<tr>";
+				for (var j = 0; j < col; j++) {
+					table += "<td>" + i+ "행" +j+ "열" + "</td>";
+				}
+				table += "</tr>";
+			}
+			table += "</table>";
+			document.write(table);
+		}
+
+		
+	</script>
+</body>
+</html>

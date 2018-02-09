@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-1.12.4.min.js"></script>
+<script>
+	$(function(){
+		$("button").eq(0).click(function(){
+			$("img").prop("src","images/on.jpg");
+		})
+		$("button").eq(1).click(function(){
+			$("img").prop("src","images/off.jpg");
+		})
+	})
+</script>
+</head>
+<body>
+	<div>
+		<button>On</button>
+		<button>Off</button>
+	</div>
+	<br>
+	<img src="images/off.jpg">
+</body>
+</html>

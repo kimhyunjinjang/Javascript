@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	span{
+		display: block;
+		color: blue;
+	}
+</style>
+<script src="../js/jquery-1.12.4.min.js"></script>
+<script>
+	$(function(){
+		$("button").click(function(){
+			$("li:first").append("<span>서양 음악의 아버지. 바로크 시대의 대작곡가</span>");
+			$("li").eq(1).append("<span>서양 음악의 어머니, 항상 간결 명쾌하며 밝게 표현</span>");
+		})
+	})
+</script>
+</head>
+<body>
+	<button>소제목 추가</button>
+	<br>
+	<h1>바로크 시대의 작곡가</h1>
+	<ul>
+		<li><h3>바흐(Johann Sebastian Bach, 1685~1750)</h3></li>
+		<li><h3>헨델(Johann Sebastian Bach, 1685~1750)</h3></li>
+		<li><h3>비발디(Johann Sebastian Bach, 1685~1750)</h3></li>
+	</ul>
+</body>
+</html>

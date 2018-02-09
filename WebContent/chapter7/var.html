@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-1.12.4.min.js"></script>
+<script>
+	$(function(){
+		$("button").eq(0).click(function(){
+			var value = $("#name1").val();
+			alert(value);
+		})
+		$("button").eq(1).click(function(){
+			var value2=$("#name1").val();
+			var value3=$("#name2").val();
+			$("#name2").val(value2+value3);
+		})
+	})
+</script>
+</head>
+<body>
+	<p>
+		<input type="text" id="name1" value="홍길동">
+	</p>
+	
+	<p>
+		<input type="text" id="name2">
+	</p>
+	
+	<button>값 보기</button>
+	<button>값 변경하기</button>
+</body>
+</html>

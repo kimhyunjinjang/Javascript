@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var array = [ '안녕', '나는', 'IT야' ];
+		document.write(array[0] + "<br>");
+		document.write(array[2] + "<br>");
+
+		array[2] = '반가워';
+		document.write(array[2] + "<br>");
+
+		document.write("<hr>");
+
+		for (var i = 0; i < 3; i++) {
+			document.write(array[i] + "<br>");
+		}
+
+		document.write("<hr>");
+		
+		array[3] = "추가";
+		for (var i = 0; i < array.length; i++) {
+			document.write(array[i] + "<br>");
+		}
+		
+		document.write("<hr>");
+		
+		for(var i in array){
+			document.write(array[i] + "<br>");
+		}
+		
+		document.write("<hr>");
+		var array2 = ['안녕', true, 1, null, new Date()];
+		for(var i in array2){
+			document.write(array2[i] + "<br>");
+		}
+		
+		
+		
+		
+	</script>
+</body>
+</html>

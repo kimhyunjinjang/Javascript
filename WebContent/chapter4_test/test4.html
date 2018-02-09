@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var num = prompt("숫자를 입력하세요");
+		var arrNum = num.split("");
+
+		var b = true;
+		do{
+			for(var i=0; i<arrNum.length; i++) {
+				if (!(48<=arrNum[i].charCodeAt(0) && arrNum[i].charCodeAt(0)<=57)) {
+					num = prompt("숫자가 아닌 다른 글자가 섞여있습니다. 숫자를 입력하세요");
+					arrNum = num.split("");
+					b = false;
+					break;
+				}else{
+					b = true;
+				}
+			}
+		}while(b==false);
+		
+		var sum = 0;
+		var str = "";
+		for (i=0; i<arrNum.length; i++) {
+			if (i == arrNum.length-1) {
+				str += arrNum[i];
+			} else {
+				str += arrNum[i] + "+";
+			}
+			sum += Number(arrNum[i]);
+		}
+
+		document.write(str + "=" + sum);
+	</script>
+</body>
+</html>

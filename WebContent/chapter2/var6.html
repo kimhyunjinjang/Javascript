@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var num=11;
+		
+		var str = (num%2==0) ? "짝수" : "홀수";
+		
+		document.write(str);
+		
+		document.write("<hr>");
+		
+		var ch ='a';
+		//소문자이면 "소문자", 아니면 "소문자가 아닙니다"
+		document.write(typeof(ch)+"<br>"); //string
+		var str = ("a"<=ch)&&(ch<="z")? "소문자" : "소문자가 아닙니다";
+		document.write(str);
+		
+		
+		var ch2 ='A';
+		var str2 = ("A"<=ch2)&&(ch2<="Z")? "대문자" : "대문자가 아닙니다";
+		document.write(str2);
+	</script>
+</body>
+</html>

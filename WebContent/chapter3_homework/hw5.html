@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	table,td{
+		border:1px solid black;
+		border-collapse: collapse;
+	}
+</style>
+</head>
+<body>
+	<script type="text/javascript">
+		var num = prompt("총 수강생은 몇 명입니까?");
+		var line = prompt("한 줄에 몇명씩 앉습니까?");
+
+		document.write("<h1>" + "컴퓨터공학과 자리배치도" + "</h1>");
+		document.write("<br>" + "<br>");
+
+		var cnt=0;
+		
+		var table = "<table>";
+		for (var i = 1; i <= line; i++) {
+			table += "<tr>";
+			if(num%line!=0){
+				for (var j = 1; j <= num/line+1; j++) {
+					cnt++;
+					if(cnt>num){
+						continue;
+					}
+					table += "<td>" + "컴공 "+ cnt + "번" + "</td>";
+				}
+			}else if(num%line==0){
+				for (var j = 1; j <= num/line; j++) {
+					cnt++;
+					table += "<td>" + "컴공 "+ cnt + "번" + "</td>";
+				}
+			}
+			table += "</tr>";
+		}
+		
+		table += "</table>";
+
+		document.write(table);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</script>
+</body>
+</html>

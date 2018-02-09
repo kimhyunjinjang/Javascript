@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function sumAll(){
+			//alert(typeof(arguments)+": "+arguments.length);
+			var sum = 0;
+			//for(var i=0; i<arguments.length;i++){
+			//	sum += arguments[i];
+			//}
+			
+		
+			//for-in
+			for(var i in arguments){
+				if(typeof(arguments[i]) != 'number'){
+					alert("잘못된 매개변수를 사용하였습니다.");
+					return;
+				}
+				sum += arguments[i];
+			}
+			alert(sum);
+		}
+	
+		sumAll(1,2,3,4,5,6);
+		//sumAll(100);
+		sumAll(1,2,3,4,5,6,"테스트",boolean,null);
+		
+		
+		//1~ 매개변수까지 더하는 함수
+		function test(){
+			var sum = 0;
+			
+			if(arguments.length==0){
+				return;
+			}
+			if(typeof(arguments[0]) != 'number'){
+				return;
+			}
+			
+			for(var i=1; i<=arguments[0]; i++){
+				sum+=i;
+			}
+			alert(sum);
+		}
+		/* test(100);
+		test();
+		test(""); */
+		
+	</script>
+</body>
+</html>

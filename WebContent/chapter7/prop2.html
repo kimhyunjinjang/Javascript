@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-1.12.4.min.js"></script>
+<script>
+	$(function(){
+		$("#c1").click(function(){
+			var attr_checked = $("#c1").attr("checked"); //속성값
+			var prop_checked = $("#c1").prop("checked"); //속성이 가지고 있는 값
+			$("#p1").text(attr_checked);
+			$("#p2").text(prop_checked);
+		})
+		$("#btn1").click(function(){
+			var attr_checked2 = $("#text").attr("href"); 
+			var prop_checked2 = $("#text").prop("href"); 
+			$("#p3").text(attr_checked2);
+			$("#p4").text(prop_checked2);
+		})
+		$("#btn2").click(function(){
+			var attr_checked3=$("#img").attr("src");
+			var prop_checked3=$("#img").prop("src");
+			$("#p5").text(attr_checked3);
+			$("#p6").text(prop_checked3);
+		})
+	})
+</script>
+</head>
+<body>
+	<h1>attr()과 prop()의 차이는?</h1>
+	<input type="checkbox" id="c1" checked="checked">체크테스트
+	<p id="p1"></p>
+	<p id="p2"></p>
+	<hr>
+	
+	<a href="prop.html" id="text">a href 테스트</a>
+	<button id="btn1">클릭</button>
+	<p id="p3"></p>
+	<p id="p4"></p>
+	<hr>
+	
+	<img src="images/5.jpg" id="img">
+	<button id="btn2">클릭</button>
+	<p id="p5"></p>
+	<p id="p6"></p>
+</body>
+</html>

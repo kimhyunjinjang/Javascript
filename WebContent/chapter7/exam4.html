@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-1.12.4.min.js"></script>
+<script>
+	$(function(){
+		$("img").click(function(){
+			/* 
+			//attr 이용
+			var attr=$("img").attr("src");
+			//document.write(attr);
+			if(attr=="images/two.jpg"){
+				$("img").attr("src","images/four.jpg");
+			}else{
+				$("img").attr("src","images/two.jpg");
+			}
+			*/
+			
+			//prop 이용
+			var prop=$("img").prop("src");
+			//document.write(src);
+			if(prop.indexOf("two")>0){
+				$("img").prop("src","images/four.jpg");
+			}else{
+				$("img").prop("src","images/two.jpg");
+			}
+		})
+	})
+</script>
+</head>
+<body>
+	<img src="images/two.jpg">
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-1.12.4.min.js"></script>
+<style>
+	#img1{ /* img1에 스타일 줘야 이벤트가 적용됨 */
+		position: absolute;
+		left: 100px;
+		top: 150px;
+	}
+</style>
+<script>
+	$(function(){
+		$(document).mousemove(function(e){
+			var x = e.pageX;
+			var y = e.pageY;
+			
+			/* $("#img1").css("left", x+"px");
+			$("#img1").css("top",y+"px"); */
+			
+			$("#img1").css({"left": x+"px", "top":y+"px"}) //json객체로 한번에 적용
+		})
+	})
+</script>
+</head>
+<body>
+	<img src="images/icon_72_1.png" id="img1">
+</body>
+</html>

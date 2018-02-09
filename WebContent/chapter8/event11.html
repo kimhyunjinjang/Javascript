@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-1.12.4.min.js"></script>
+<script>
+	$(function(){
+		$("input[type='text']").change(function(){
+			$("#p1").text("이름이 변경되었습니다");
+		})
+		
+		$("input[type='checkbox']").change(function(){
+			$("#p1").text("취미가 변경되었습니다");
+		})
+		
+		$("input[type='radio']").change(function(){
+			$("#p1").text("성별이 변경되었습니다");
+		})
+		
+		$("select").change(function(){
+			$("#p1").text("직업이 변경되었습니다");
+		})
+	})
+</script>
+</head>
+<body>
+	<h1>Change 이벤트 확인하기</h1>
+	<form>
+		<p>
+			이름 <input type="text">
+		</p>
+		<p>
+			취미
+		</p>
+		<p>
+			<input type="checkbox" name="like">축구
+			<input type="checkbox" name="like">농구
+			<input type="checkbox" name="like">야구
+		</p>
+			
+		<p>
+			성별
+		</p>
+		<input type="radio" name="gender">남자
+		<input type="radio" name="gender">여자
+		
+		<p>직업</p>
+		<select>
+			<option>프로그래머</option>
+			<option>퍼블리셔</option>
+			<option>디자이너</option>
+			<option>기획</option>
+		</select>
+		
+		<h1>결과</h1>
+		<p id="p1"></p>
+	</form>
+</body>
+</html>

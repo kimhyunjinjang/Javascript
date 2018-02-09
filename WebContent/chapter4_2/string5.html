@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+	
+		//유효한 비밀번호인지 알려준다
+		//비밀번호로 적합합니다 or 잘못 입력하였습니다.
+		var pw = prompt("비밀번호를 입력하세요 (8자리 이상, 영어/숫자만 포함)");
+		var c = [];
+		var i = 0;
+		var result1 = true;
+		var result2 = true;
+		
+		if(pw.length<8){
+			result1 = false;
+		}else{
+			
+		}
+		
+		for(i=0; i<pw.length; i++){
+			c.push(pw.charAt(i));
+		}
+		
+		i=0;
+		while(i<c.length){
+			if(65<=c[i].charCodeAt(0) && c[i].charCodeAt(0)<=90){
+				
+			}else if(97<=c[i].charCodeAt(0) && c[i].charCodeAt(0)<=122){
+				
+			}else if(48<=c[i].charCodeAt(0) && c[i].charCodeAt(0)<=57){
+				
+			}else{
+				result2 = false;
+				break;
+			}
+			i++;
+		}
+		
+		if((result1&&result2)==true){
+			document.write("비밀번호로 적합합니다.");
+		}else{
+			document.write("잘못 입력하였습니다.");
+		}
+	</script>
+</body>
+</html>

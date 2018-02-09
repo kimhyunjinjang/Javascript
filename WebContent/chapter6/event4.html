@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	window.onload = function(){
+		var r1 = document.getElementById("r1");
+		r1.addEventListener("click", function(){
+			alert("파랑색을 선택하였습니다");
+			var body = document.getElementsByTagName("body")[0];
+			body.style.backgroundColor = "blue";
+		}, false);
+		
+		var r2 = document.getElementById("r2");
+		r2.addEventListener("click", function(){
+			alert("노랑색을 선택하였습니다");
+			var body = document.getElementsByTagName("body")[0];
+			body.style.backgroundColor = "yellow";
+		}, false);
+	}
+</script>
+</head>
+<body>
+	<p>
+		<input type="radio" id="r1">파랑색
+		<input type="radio" id="r2">노랑색
+	</p>
+</body>
+</html>

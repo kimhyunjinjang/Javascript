@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var arr = ['white','yellow','aqua','purple'];
+	function changeBg(idx){
+		var body = document.getElementsByTagName("body")[0];
+		body.style.backgroundColor = arr[idx];
+	}
+	
+	window.onload = function(){
+		var btn = document.getElementById("btn2");
+		btn.onclick=function(){
+			changeBg(1);
+		}
+		
+		var btn3 = document.getElementById("btn3");
+		btn3.onmouseover =  btn3.onfocus =  function(){ /* onfocus: 마우스가 안될경우 키보드 대응 이벤트 */
+			changeBg(2);
+		}
+		
+		var btn4 = document.getElementById("btn4");
+		btn4.onmouseout = btn4.onblur = function(){ /* onblur: 마우스가 안될경우 키보드 대응 이벤트 */
+			changeBg(3);
+		}
+	}
+	
+</script>
+</head>
+<body>
+	<h1 id="dis">버튼을 선택하세요</h1>
+	<p><button onclick="changeBg(0)">버튼1(흰색)</button>
+	<p><button id="btn2">버튼2(노랑)</button>
+	<p><button id="btn3">버튼3(아쿠아)</button>
+	<p><button id="btn4">버튼4(보라)</button>
+</body>
+</html>

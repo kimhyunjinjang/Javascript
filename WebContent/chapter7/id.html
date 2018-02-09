@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	#imgArea{
+		width: 350px;
+		height: 360px;
+		border: 1px solid black;
+	}
+</style>
+<script src="../js/jquery-1.12.4.min.js"></script>
+<script>
+	$(document).ready(function(){ //window.onload와 같은 기능?
+		$("#day").click(function(){
+			$("#imgArea").html("<img src='images/sun.jpg'>");
+		});
+		
+		$("#night").click(function(){
+			$("#imgArea").html("<img src='images/moon.jpg'>");
+		});
+	});
+</script>
+</head>
+<body>
+	<input type="button" id="day" value="낮이라면 클릭!">
+	<input type="button" id="night" value="밤이라면 클릭!">
+	<div id="imgArea"></div>
+	<hr>
+	<h2 id="title">하지 않는 것보다 늦었지만 하는 것이 낫다</h2>
+	<h2 id="title2">하지 않는 것보다 늦었지만 하는 것이 낫다</h2>
+	
+	<!-- 1. javascript로 내용 바꿈
+		2. jquery로 내용 바꿈 -->
+
+	<script type="text/javascript">
+		var t = document.getElementById("title");
+		t.onclick = function() {
+			this.innerHTML = "남들보다 더 잘하려고 고민하지 마라. <br> 지금의 나보다 잘하려고 애쓰는게 더 중요하다.";
+		}
+		
+		$(document).ready(function(){
+			$("#title2").click(function(){
+				$("#title2").html("남들보다....");
+			});
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	div{
+		background: #ccc;
+		padding: 50px;
+		margin: 30px;
+	}
+	p{
+		background-color: #999;
+		height: 80px;
+	}
+</style>
+<script src="../js/jquery-1.12.4.min.js"></script>
+<script>
+	$(function(){
+		$("#wrap").mouseout(function(){
+			$("#wrap p").css("border","5px solid red");
+		})
+		
+		$("#wrap2").mouseleave(function(){
+			$("#wrap2 p").css("border","5px solid red");
+		})
+		
+		$(document).mousemove(function(e){
+			var x = e.pageX;
+			var y = e.pageY;
+			
+			$("#page").text("x: " + x+", y:" +y);
+		})
+	})
+</script>
+</head>
+<body>
+	<div id="wrap">
+		<p>내용1</p>
+	</div>
+	
+	<div id="wrap2">
+		<p>내용2</p>
+	</div>
+	
+	<p id="page"></p>
+</body>
+</html>

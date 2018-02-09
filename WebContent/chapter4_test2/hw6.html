@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	table,td{
+		border:1px solid black;
+		border-collapse: collapse;
+		text-align: center;
+	}
+	tr:first-child{
+		background-color: black;
+		color: white;
+	}
+	tr:last-child td#total{
+		background-color: black;
+		color: white;
+	}
+	tr:last-child td#total_price{
+		font-weight: bold;
+	}
+	table{
+		width:450px;
+	}
+</style>
+<script type="text/javascript">
+	
+	function changePrice() {
+		var result = 0;
+		if (document.f1.c1.checked == true) {
+			result += Number(document.f1.c1.value);
+		}
+		if (document.f2.c2.checked == true) {
+			result += Number(document.f2.c2.value);
+		}
+		if (document.f3.c3.checked == true) {
+			result += Number(document.f3.c3.value);
+		}
+		var t = document.getElementById("total_price");
+		t.innerHTML = 13450000 + result;
+	}
+</script>
+</head>
+<body>
+	<h3>자동차 견적</h3>
+	<img src="images/car1.jpg">
+	<table>
+		<tr>
+			<th>옵션</th>
+			<th>추가 가격</th>
+			<th>선택</th>
+		</tr>
+		<tr>
+			<td>인조가죽시트</td>
+			<td>250000</td>
+			<td>
+				<form name="f1">
+					<input type="checkbox" name="c1" value="250000" onclick="changePrice()">
+				</form>
+			</td>
+		</tr>
+		<tr>
+			<td>내비게이션</td>
+			<td>250000</td>
+			<td>
+				<form name="f2">
+					<input type="checkbox" name="c2" value="250000" onclick="changePrice()">
+				</form>
+			</td>
+		</tr>
+		<tr>
+			<td>선루프</td>
+			<td>440000</td>
+			<td>
+				<form name="f3">
+					<input type="checkbox" name="c3" value="440000" onclick="changePrice()">
+				</form>
+			</td>
+		</tr>
+		<tr>
+			<td id="total">(기본)차량가격</td>
+			<td colspan="2" id="total_price">13450000</td>
+		</tr>
+	</table>
+</body>
+</html>

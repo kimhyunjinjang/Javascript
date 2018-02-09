@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	table,tr,td{
+		border:1px solid black;
+		border-collapse: collapse;
+	}
+</style>
+</head>
+<body>
+	<script type="text/javascript">
+	
+		var num = [];
+		for(var i=0; i<9; i++){
+			num.push(Math.floor(Math.random()*15)+1);
+			for(var j=0; j<i; j++){
+				if(num[j]==num[i]){
+					num.splice(i,1);
+					i--;
+				}
+			}
+		}
+
+		var cnt=0;
+		var str = "<table>";
+		for(i=0; i<3; i++){
+			str += "<tr>";
+			for(j=0; j<3; j++){
+				str += "<td>"+ num[cnt] + "</td>";
+				cnt++;
+			}
+			str += "</tr>";
+		}
+		str += "</table>";
+		
+		document.write(str);
+	</script>
+</body>
+</html>

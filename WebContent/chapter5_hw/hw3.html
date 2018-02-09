@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function changeColor(){
+		var b = document.getElementsByTagName("body")[0];
+		if(document.fm.color[0].checked==true){
+			b.style.backgroundColor = "blue";
+		}else{
+			b.style.backgroundColor="green";
+		}
+		
+	}
+</script>
+</head>
+<body>
+	<form name="fm">
+		<fieldset>
+			<legend>배경색 바꾸기</legend>
+				<input type="radio" onclick="changeColor()" name="color">파랑색 
+				<input type="radio" onclick="changeColor()" name="color">녹색
+		</fieldset>
+	</form>
+</body>
+</html>

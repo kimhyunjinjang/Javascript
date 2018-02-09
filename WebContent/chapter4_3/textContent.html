@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function changeInnerHTML(){
+		var div = document.getElementById("wrap");
+		div.innerHTML = "<h1>테스트중입니다.</h1>"; //innerHTML: 태그를 인식
+	}
+	
+	function changeTextContent(){
+		var div = document.getElementById("wrap");
+		div.textContent = "<h1>테스트중입니다.</h1>"; //textContent: 무조건 글자로 처리
+	}
+</script>
+</head>
+<body>
+	<div id="wrap">
+	</div>
+	
+	<br>
+	
+	<button onclick="changeInnerHTML()">innerHTML로 변경</button>
+	<button onclick="changeTextContent()">textContent로 변경</button>
+</body>
+</html>

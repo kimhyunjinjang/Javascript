@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-1.12.4.min.js"></script>
+<script>
+	$(function(){
+		$("button").eq(0).click(function(){
+			$("#p1").prop("title","단락 태그"); //p1의 title속성에 "단락 태그"넣기
+		})
+		$("button").eq(1).click(function(){
+			var title=$("#p1").prop("title");
+			alert(title);
+		})
+		$("button").eq(2).click(function(){
+			var index=$("#sel").prop("selectedIndex");
+			alert(index);
+		})
+	})
+</script>
+</head>
+<body>
+	<p id="p1">내용1</p>
+	<select id="sel">
+		<option>네이버1</option>
+		<option>네이버2</option>
+		<option>네이버3</option>
+	</select>
+	
+	<button>p1의 title 넣기</button>
+	<button>p1의 title 보기</button>
+	<button>select의 선택 index값 보기</button>
+</body>
+</html>

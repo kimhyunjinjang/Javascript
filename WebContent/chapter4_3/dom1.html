@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div id="wrap">
+		<p>내용1</p>
+		<p>내용2</p>
+		<p>내용3</p>
+		<p>내용4</p>
+	</div>
+	
+	<!-- script가 body 안에 있으므로 바로 적용함-->
+	<script type="text/javascript">
+		//#wrap 아래의 첫번째 p 태그의 글자색을 빨간색으로 변경
+		var div = document.getElementById("wrap");
+		//div.firstChild.style.color="red"; //nodeType IE8에서만 동작한다 
+		div.children[0].style.color="red";
+		
+		//두번째 p태그의 동생인 p태그에게 배경색 노란색으로 변경
+		var p2 = document.getElementsByTagName("p")[1];
+		//p2.nextSibling.style.backgroundColor="yellow"; //nodeType IE8에서만 동작한다 
+		var next = p2.nextSibling;
+		while(next.nodeType != 1){
+			next = next.nextSibling;
+		}
+		next.style.backgroundColor="yellow";
+	</script>
+</body>
+</html>

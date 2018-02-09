@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var i=0;
+	var id=null;
+	function call(){
+		var img = document.getElementsByTagName("img");
+		var arr = ["images/math_img_1.jpg","images/math_img_2.jpg","images/math_img_3.jpg"];
+		img[0].src = arr[i++];
+		if(i==3){
+			i=0;
+		}
+		
+	}
+	function startBtn(){
+		id = setInterval(call, 1000);
+	}
+	function stopBtn(){
+		clearInterval(id);
+	}
+</script>
+</head>
+<body>
+	<div>
+		<button onclick="startBtn()">시작 버튼</button>
+		<button onclick="stopBtn()">정지버튼</button>
+	</div>
+	<img src="images/math_img_1.jpg">
+</body>
+</html>

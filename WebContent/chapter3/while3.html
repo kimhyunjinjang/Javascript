@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	*{
+		color:red;
+	}
+	span{
+		color:blue;
+	}
+</style>
+</head>
+<body>
+	<script type="text/javascript">
+		//while문을 이용해서 20에서 10으로 작아지는데 짝수일 경우에는 파란색으로, 홀수일 경우에는 빨간색으로 출력되게 하시오.
+		
+		var num=20;
+		while(num>9){
+			if(num%2==0){
+				document.write("<span>"+num+"</span>");
+			}else{
+				document.write("<p>"+num+"</p>");
+			}
+			num--;
+		}
+	
+	</script>
+</body>
+</html>

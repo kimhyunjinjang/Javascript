@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var t = new Date();
+		var arrWeek = ['일','월','화','수','목','금','토']; 
+		
+		// 1주일 후의 날짜를 구해봅시다.
+		t.setDate(t.getDate() + 7);
+		document.write(t.getMonth()+1 + "월" + t.getDate() + "일" + arrWeek[t.getDay()] + "요일" + "<br>");
+	
+		
+		
+		// 1주일 전의 날짜를 구해봅시다.
+		var t2 = new Date();
+		
+		t2.setDate(t2.getDate() - 7);
+		document.write(t2.getFullYear() + "년" + (t2.getMonth()+1) + "월" + t2.getDate() + "일");
+	</script>
+</body>
+</html>

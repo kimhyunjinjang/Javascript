@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	//var index = 0;
+	var id = null;
+	
+	function changeProgram(){
+		var arr = ["html", "css", "javascript", "java", "db"];
+		var h1 = document.getElementById("program");
+		
+		h1.innerHTML = arr[(Math.floor(Math.random()*(arr.length)))];
+		//index++;
+		/* if(index == arr.length){
+			index = 0;
+		} */
+	}
+	function startTimer(){
+		id = setInterval(changeProgram,500);
+	}
+	function stopTimer(){
+		clearInterval(id);
+	}
+</script>
+</head>
+<body>
+	<h1 id="program">여기에 프로그램 종류가 나타납니다.</h1>
+	<button onclick="startTimer()">시작</button>
+	<button onclick="stopTimer()">멈춤</button>
+</body>
+</html>

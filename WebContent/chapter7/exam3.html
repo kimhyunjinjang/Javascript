@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	.blue{
+		color : blue;
+	}
+	.pink{
+		background-color: pink;
+	}
+	.bgImg{
+		background: url("images/sun.jpg");
+	}
+</style>
+<script src="../js/jquery-1.12.4.min.js"></script>
+<script>
+	$(function(){
+		$("button").eq(0).click(function(){
+			$("article:first p").addClass("blue");
+		})
+		$("button").eq(1).click(function(){
+			$("ol li:even").addClass("pink");
+			$("body").addClass("bgImg");
+		})
+		$("button").eq(2).click(function(){
+			$("article:first p").removeClass("blue");
+		})
+		$("button").eq(3).click(function(){
+			
+		})
+	})
+</script>
+
+</head>
+<body>
+	<button id="btn">첫 단락을 파란색으로</button>
+	<button>과제1</button>
+	<button>첫 단락에서 파란색 빼기</button>
+	<button>배경색과 글자색 전환하기</button>
+	
+	<nav>
+		<ul id="ul1">
+			<li><a href="#">학과 소개</a></li>
+			<li><a href="#">교수진 소개</a></li>
+			<li><a href="#">교과과정</a></li>
+		</ul>
+	</nav>
+	
+	<hr>
+	
+	<header>
+		<h1>컴퓨터 공학과</h1>
+		<h3>지식기반 사회에서 요구하는 인재 양성</h3>
+	</header>
+	
+	<section>
+		<h2>학과 소개</h2>
+		<article>
+			<h3>우리 학과는</h3>
+			<p id="p1">컴퓨터 공학전공에서는 정보산업에서 가장 핵심이 되는 소프트웨어개발 분야, 임베디드시스템 sw분야,
+			네트워크 분야, 멀티미디어 분야 등의 교육을 추구하고 있다. 프로그래밍 능력을 증진시키는 프로그래밍언어 교육은
+			매우 중요하고도 기본적이어서 이론 및 실습을 통해 철저히 교육하고 있다.</p>
+			<p><a href="#">[교재 확인하기]</a></p>
+		</article>
+		<article>
+			<h3>교육목표</h3>
+			<ol class="ol1">
+				<li>컴퓨터공학 전문지식 습득과 정보화 사회에 대한 이해</li>
+				<li>지식기반 사회에서 요구되는 창의적 능력 배양</li>
+				<li>당면문제를 체계적으로 해결할 수 있는 능력 배양</li>
+				<li>공학적 윤리의식을 갖추고 미래 가치를 창출할 수 있는 능력 배양</li>
+			</ol>
+		</article>
+		<article>
+			<h3>졸업 후 진로</h3>
+			<p>향후 정보화 사회가 본격적으로 도래할 것으로 예측됨에 따라 컴퓨터공학 전공자의 수요가  폭발적으로 증가될 것으로 에상되며, 
+			창의력과 전문성을 가진 컴퓨터공학 전공자들이 국가경쟁력 재고에 큰 역할을 할 것으로 기대된다.</p>
+		</article>
+	</section>
+</body>
+</html>

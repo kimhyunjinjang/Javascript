@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-1.12.4.min.js"></script>
+<script>
+	$(function(){
+		//on() 메서드는 선택한 요소에 한개 이상의 이벤트를 등록할 수 있다
+		$("h1 a").on("mouseover focus", function(){
+			$(this).css("color","red");
+		})
+		$("h1 a").on("mouseout blur", function(){ //blur: 포커스를 잃었을 때
+			$(this).css("color","blue");
+		})
+		
+		//json객체{} 이용해서 이벤트 한번에 등록하기
+		$("h2 a").on({
+			"mouseover focus":function(){
+				$(this).css("color","purple");
+			},
+			"mouseout blur":function(){
+				$(this).css("color","yellow");
+			}
+		});
+		
+		//동적으로 생성된 객체의 이벤트가 동작하지 않는 예..
+		//그래서 해야하는게 $(document).on
+		/* $("#wrap h3").on("click", function(){
+			$(this).html("너 글자 바꿨지롱");
+		})*/ 
+		$(document).on("click","#wrap h3",function(){
+			$(this).html("너 글자 바꿨지롱");
+		})
+		$("#wrap").html("<h3>동적으로 추가됨</h3>");
+		
+		$("button").eq(0).on("click",function(){
+			$("#test").html("<img src='images/5.jpg'>");
+		})
+		
+		//동적으로 추가 될 이미지에 마우스 오버되면 border, box-shadow 변경.
+		$(document).on("mouseover", "img", function(){
+			$(this).css("border", "2px dotted yellow");
+			$(this).css("box-shadow", "2px 2px 2px black");
+		})
+		$(document).on("mouseout", "img", function(){
+			$(this).css("border", "none");
+			$(this).css("box-shadow", "none");
+		})
+		
+		$("button").eq(1).on("click", function(){
+			$("#div2").html("<input type='text' value='안녕하세요'>");
+		})		
+		$(document).on("mouseover", "input", function(){
+			$(this).css("border", "2px solid red");
+			$(this).val("");
+		})
+	})
+</script>
+</head>
+<body>
+	<h1><a href="#">버튼</a></h1>
+	<h2><a href="#">버튼</a></h2>
+	<div id="wrap"></div>
+	<hr>
+	
+	<button>이미지 추가</button>
+	<div id="test"></div>
+	<button>textarea 추가</button>
+	<div id="div2"></div>
+</body>
+</html>

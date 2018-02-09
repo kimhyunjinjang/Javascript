@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function Student(name, k, e, m) {
+			this.name = name;
+			this.kor = k;
+			this.eng = e;
+			this.math = m;
+
+			//getSum() : 총합
+			this.getSum = function() {
+				return this.kor + this.eng + this.math;
+			}
+			//getAverage() : 평균
+			this.getAverage = function() {
+				return this.getSum() / 3;
+			}
+			this.toString = function() {
+				return this.name + " " + this.getSum() + " "
+						+ this.getAverage() + "<br>";
+			}
+		}
+		
+		var arrayStudent = [];
+		arrayStudent.push(new Student("문ㅇㅇ", 90, 88, 89));
+		arrayStudent.push(new Student("김ㅇㅇ", 77, 67, 90));
+		arrayStudent.push(new Student("이ㅇㅇ", 100, 88, 89));
+		arrayStudent.push(new Student("박ㅇㅇ", 50, 67, 90));
+		arrayStudent.push(new Student("구ㅇㅇ", 75, 88, 89));
+		arrayStudent.push(new Student("윤ㅇㅇ", 60, 79, 90));
+		arrayStudent.push(new Student("강ㅇㅇ", 88, 88, 50));
+		arrayStudent.push(new Student("서ㅇㅇ", 82, 45, 90));
+		arrayStudent.push(new Student("지ㅇㅇ", 92, 88, 89));
+		arrayStudent.push(new Student("나ㅇㅇ", 70, 65, 90));
+
+		arrayStudent.sort(function(left, right) {
+			return right.getSum() - left.getSum();
+		}); //총합 내림차순
+
+		var output = "이름 총점 평균 <br>";
+		for ( var i in arrayStudent) {
+			output += arrayStudent[i].toString();
+		}
+
+		document.write(output);
+		document.write("<hr>");
+		
+		//1~3등만 나타나게함
+		var result = arrayStudent.slice(0,3);
+		for(var i in result){
+			document.write(result[i].toString());
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var reply = {
+		"line" : [{"title" : "안녕하세요~ 오늘 하루도 신나게 놀아요~", "name" : "/김영희"},
+				  {"title" : "자바스크립트는 할 수록 재밌는 거 같아요.", "name": "/이광호"},
+				  {"title" : "내일부터는 방학이예요~ 아싸!", "name": "/김민지"}]
+	};
+	
+	var i=0;
+	/* window.onload =  */function controlLine(){
+		var o = document.getElementById("ol1");
+		if(arguments[0]=="show"){
+			if(i>2){
+				return false;
+			}
+			o.innerHTML += "<li id=" + i +">" + reply.line[i].title + reply.line[i].name + "</li>";
+			i++;
+		}else{
+			var l = document.getElementsByTagName("li");
+			if(l.length==0){
+				return false;
+			}
+			var l1 = document.getElementById(l.length-1);
+			l1.innerHTML = "";
+		}
+	}
+</script>
+</head>
+<body>
+	reply list(3)
+	<button onclick="controlLine('show')">보기</button>
+	<button onclick="controlLine('disappear')">숨기기</button>
+	<ol id="ol1">
+	</ol>
+</body>
+</html>

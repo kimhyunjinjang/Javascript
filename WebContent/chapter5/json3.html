@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<p id="seoul"></p>
+	<p id="jaeju"></p>
+
+	<script type="text/javascript">
+		var korea = {
+				"seoul" : {"name" : "제주", "desc" : "한국의 수도"},
+				"jaeju" : {"name" : "서울", "desc" : "자연이 아름다운 섬"}
+		};
+		var p1 = document.getElementById("seoul");
+		p1.innerHTML =korea.seoul.name + "," + korea.seoul.desc;
+		
+		var p2 = document.getElementById("jaeju");
+		p2.innerHTML = korea.jaeju.name + "," + korea.jaeju.desc;
+	
+		/* document.write("<p>" + korea.seoul.name + korea.seoul.desc + "</p>");
+		document.write("<p>" + korea.jaeju.name + korea.jaeju.desc + "</p>"); */
+	</script>
+</body>
+</html>

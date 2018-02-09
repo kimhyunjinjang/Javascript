@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	button{
+		background-color: red;
+		color: white;
+	}
+	#p2{
+		color:red;
+		font-size: 1.5em;
+		font-weight: bold;
+	}
+</style>
+<script type="text/javascript">
+	window.onload=function(){
+		var btn = document.getElementsByTagName("button")[0];
+		var arr=[];
+		var p2 = document.getElementById("p2");
+		btn.addEventListener("click", function(){
+			p2.innerHTML="";
+			var inp = document.f1.num.value;
+			if(inp==0){
+				alert("1보다 큰 수를 입력하세요");
+				document.f1.num.value="";
+				document.f1.num.focus();
+				return false;
+			}
+			for(var i=0; i<inp; i++){
+				arr[i]=i+1;
+			}
+			var txt = document.createTextNode("당첨번호: " + arr[Math.floor(Math.random()*inp)] + "번");
+			p2.appendChild(txt);
+		},false);
+		
+		
+	}
+</script>
+</head>
+<body>
+	<img src="images/dice.jpg" alt="dice">
+	<form name="f1">
+		<p>
+			<input type="text" name="num" placeholder="전체 응모자 수">
+			<button type="button">추첨 시작</button>
+		</p>
+		<p id="p2">
+		</p>
+	</form>
+</body>
+</html>

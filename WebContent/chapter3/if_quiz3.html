@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script>
+		var ch = prompt("현재 몇월인지 입력하세요");
+		
+		if((ch==1)||(ch==2)||(ch==12)){
+			document.write("스키의 계절 겨울이네요");
+		}else if((ch>=9)&&(ch<=11)){
+			document.write("독서의 계절 가을이네요");
+		}else if((ch>=6)&&(ch<=8)){
+			document.write("여행 가기 좋은 여름이네요");
+		}else if((ch>=3)&&(ch<=5)){
+			document.write("햇살 가득한 봄이네요");
+		}else{
+			document.write("잘못 입력하셨습니다");
+		}
+	</script>
+</body>
+</html>

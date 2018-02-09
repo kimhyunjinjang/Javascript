@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-1.12.4.min.js"></script>
+<script>
+	$(function(){
+		$("button").eq(0).click(function(){
+			$("img").attr("src","images/ball1.jpg");
+		})
+		$("button").eq(1).click(function(){
+			$("img").attr("src","images/ball2.jpg");
+		})
+		$("button").eq(2).click(function(){
+			$("img").attr("src","images/ball3.jpg");
+		})
+		$("h1").click(function(){
+			$("h1").css("width","410px");
+			$("h1").css("backgroundColor","blue");
+			$("h1").css("color","white");
+			$("h1").css("text-shadow","1px 1px 1px yellow");
+		})
+	})
+</script>
+</head>
+<body>
+	<h1>당신이 좋아하는 스포츠는?</h1>
+	<button>프로축구</button>
+	<button>프로야구</button>
+	<button>프로농구</button>
+	<br>
+	<img>
+</body>
+</html>

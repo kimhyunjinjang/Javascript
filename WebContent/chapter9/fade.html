@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-1.12.4.min.js"></script>
+<script>
+	$(function(){
+		$("img").click(function(){
+			$(this).fadeOut(1000,function(){ //fadeOut() 점점 희미하게 사라짐
+				$("p").css("color","red");
+			});
+		})
+		
+		$("p").click(function(){
+			$("img").fadeIn(1000,function(){ //fadeIn() 서서히 노출
+				$("p").css("color","black");
+			});
+		})
+		
+		$("#btn1").click(function(){
+			$("img").fadeToggle(1000,function(){
+				var color=$("p").css("color");
+				if(color== "rgb(0, 0, 0)"){
+					$("p").css("color","red");
+				}else{
+					$("p").css("color","black");
+				}
+			});
+		})
+		
+		$("#btn2").click(function(){
+			/* $("img").fadeOut(1000);
+			$("img").fadeIn(1000);
+			$("img").fadeOut(1000); */
+			$("img").fadeOut(1000).fadeIn(1000).fadeOut(1000);
+		})
+	})
+</script>
+</head>
+<body>
+	<img src="images/spring.jpg">
+	<p>
+		한국의 봄 화사하게 피어난 분홍 매화꽃
+	</p>
+	<button id="btn1">toggle</button>
+	<button id="btn2">fadeOut, fadeIn, fadeOut</button>
+</body>
+</html>

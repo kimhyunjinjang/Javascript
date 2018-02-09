@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-1.12.4.min.js"></script>
+<script>
+	$(function(){
+		$("#id").focus(function(){
+			$("#id").val("아이디");
+		})
+		$("#id").blur(function(){
+			$("#id").val("");
+		})
+		
+		$("#id").focus(); //focus 함수 실행
+		
+		$("#name").focus(function(){
+			$("#name").val("김현진");
+		})
+		$("#name").blur(function(){
+			$("#name").val("");
+		})
+		/* $("#a1").focus(function(){
+			$("#a1").css("background-color","pink");
+		})
+		$("#a1").mouseover(function(){
+			$("#a1").css("background-color","pink");
+		}) */
+		//이벤트 여러개 달기
+		$("#a1").on("focus mouseover", function(){
+			$("#a1").css("background-color","pink");
+		})
+		$("#a1").on("blur mouseout", function(){
+			$("#a1").css("background-color","white");
+		})
+	})
+</script>
+</head>
+<body>
+	<p>
+		<input type="text" id="id">
+	</p>
+	<p>
+		<input type="text" id="name">
+	</p>
+	<p>
+		<a href="#" id="a1">대구 아이티 교육원</a>
+	</p>
+</body>
+</html>

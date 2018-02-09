@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-1.12.4.min.js"></script>
+<script>
+	$(function(){
+		var size=16;
+		$("button:first").on("click", function(){
+			++size;
+			$("body").css("font-size",size);
+		})
+		$("button").eq(1).on("click", function(){
+			var size=16;
+			$("body").css("font-size","16px");
+		})
+		$("button").eq(2).on("click", function(){
+			--size;
+			$("body").css("font-size",size);
+		})
+		
+		$("select").change(function(){
+			$("body").css("font-family",$("select").val());
+		})
+	})
+</script>
+</head>
+<body>
+	<p>글자크기</p>
+	<button>+</button>
+	<button>0</button>
+	<button>-</button>
+	
+	<p>글자모양</p>
+	<select>
+		<option>돋움</option>
+		<option>굴림</option>
+		<option>맑은고딕</option>
+		<option>궁서</option>
+	</select>
+	
+	<p>
+	그러나 사고 불과 한달여 전인 지난해 12월 세종병원이 대행업체를 통해 한 전기설비 점검에선 부적합한 전기설비는 없었던 것으로 나타나 부실점검 의혹이 제기된다.
+	세종병원 총무과가 관리한 전기설비점검기록표를 살펴보면 세종병원은 지난해 12월 17일 전기관련 대행업체를 통해 병원 전기설비를 점검했다.
+	전기사업법에 따라 전기안전점검은 월 1회 이뤄져야 한다.
+	해당 대행업체는 배선, 배·분전반, 배선용 차단기, 개폐기, 조명설비 등 각종 전기설비를 점검하고 '적합' 판정을 내렸다.
+	점검직원은 '적합'을 뜻하는 동그라미를 점검 기록표에 표시했다. 
+	발전기, 축전장치 등 발전설비도 적합한 것으로 판정했다.
+	종합의견란에도 '적합'이라고 최종 의견을 냈다.
+	다만, 본관 6층 식당 콘센트에 물기가 스며들어 누전 현상이 보인다며 물기를 제거했다는 내용을 담았다.
+	대행업체는 2015·2016년 전기점검 때에도 세종병원 전기설비에 큰 문제는 없다는 점검 의견을 낸 것으로 알려졌다.</p>
+	<p id="test"></p>
+</body>
+</html>

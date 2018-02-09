@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-1.12.4.min.js"></script>
+<script>
+	$(function(){
+		var v = $("#menu li:first").is(":hidden");
+		//alert(v);
+		var c = $("p").is(":checked");
+		alert(c);
+	})
+</script>
+</head>
+<body>
+	<ul id="menu">
+		<li style="display:none;">내용1</li>
+		<li>내용2</li>
+	</ul>
+	
+	<p>
+		체크1<input type="checkbox" checked="checked" id="checkbox1">
+	</p>
+</body>
+</html>

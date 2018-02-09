@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var num=1;
+		var oddSum=0;
+		var evenSum=0;
+		
+		//while문 
+		/* while(num<101){
+			if(num%2==0){
+				evenSum=evenSum+num;
+			}else{
+				oddSum=oddSum+num;
+			}
+			num++;
+		}
+		document.write("짝수들의 합은 "+evenSum+"입니다"+"<br>");
+		document.write("홀수들의 합은 "+oddSum+"입니다"); */
+		
+		
+		//do-while문
+		/* do{
+			if(num%2==0){
+				evenSum=evenSum+num;
+			}else{
+				oddSum=oddSum+num;
+			}
+			num++;
+		}while(num<101)
+		document.write("짝수들의 합은 "+evenSum+"입니다"+"<br>");
+		document.write("홀수들의 합은 "+oddSum+"입니다"); */
+		
+		
+		//for문
+		for(num;num<101;num++){
+			if(num%2==0){
+				evenSum=evenSum+num;
+			}else{
+				oddSum=oddSum+num;
+			}
+		}
+		document.write("짝수들의 합은 "+evenSum+"입니다"+"<br>");
+		document.write("홀수들의 합은 "+oddSum+"입니다");
+	</script>
+</body>
+</html>

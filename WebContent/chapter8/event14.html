@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-1.12.4.min.js"></script>
+<script>
+	$(function(){
+		
+		var imgPath1=["images/h.jpg","images/t.jpg","images/m.jpg","images/l.jpg","images/5.jpg"];
+		var imgPath2=["images/h2.jpg","images/t2.jpg","images/m2.jpg","images/l2.jpg","images/5-2.jpg"];
+		
+		$("img").click(function(){
+			var idx = $("img").index(this);
+			if($(this).attr("src")==imgPath1[idx]){
+				$(this).attr("src",imgPath2[idx]);
+			}else{
+				$(this).attr("src",imgPath1[idx]);
+			}
+		})
+	})
+</script>
+</head>
+<body>
+	<h1>index()를 이용하여 이미지를 변경해 보자.</h1>
+	<img src="images/h.jpg">
+	<img src="images/t.jpg">
+	<img src="images/m.jpg">
+	<img src="images/l.jpg">
+	<img src="images/5.jpg">
+</body>
+</html>

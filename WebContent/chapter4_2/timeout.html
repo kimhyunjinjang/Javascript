@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var id = null;
+	
+	function changeTime(){
+		var h1 = document.getElementById("time");
+		var date = new Date();
+		h1.innerHTML = date.toLocaleTimeString();
+	}
+	function startTimer(){
+		id = setTimeout(changeTime ,2000);
+	}
+	function stopTimer(){
+		clearTimeout(id);
+	}
+</script>
+
+</head>
+<body>
+	<h1 id="time">timer값</h1>
+	<button onclick="startTimer()">시작</button>
+	<button onclick="stopTimer()">멈춤</button>
+</body>
+</html>

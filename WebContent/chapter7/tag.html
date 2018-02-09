@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	p{
+		color: blue;
+		line-height: 30px;
+	}
+	input{
+		background: white;
+		padding: 5px;
+		border: 1px solid black;
+	}
+</style>
+<script src="../js/jquery-1.12.4.min.js"></script>
+<script>
+	$(function(){
+		$("#hidetxt").click(function(){
+			$("p").hide();
+		});
+		
+		$("#showtxt").click(function(){
+			$("p").show();
+		});
+	});
+</script>
+</head>
+<body>
+	<h1>스터디 회원 모집</h1>
+	<input type="button" value="텍스트 감추기" id="hidetxt">
+	<input type="button" value="텍스트 표시하기" id="showtxt">
+	
+	<p>스터디 주제: HTML5, CSS3, Javascript</p>
+	<p>모집대상: 웹 기술에 관심 있는 재학생</p>
+	<p>모집 기한: 4월 중간고사 이전까지</p>
+</body>
+</html>

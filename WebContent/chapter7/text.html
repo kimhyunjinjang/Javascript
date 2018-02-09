@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-1.12.4.min.js"></script>
+<script>
+	$(function(){
+		$("#btn1").click(function(){
+			var str = $("h1").text(); //글자만 가져옴
+			alert(str);
+		})
+		$("#btn2").click(function(){
+			$("h1").html("<span>나는 변경되었다</span>"); //태그기능 살려줌
+			//$("h1").text("<span>나는 변경되었다</span>");
+		})
+		
+	})
+</script>
+</head>
+<body>
+	<h1><strong>객체 조작 및 생성</strong></h1>
+	<button id="btn1">text을 이용하여 값을 가져오기</button>
+	<button id="btn2">text을 이용하여 값을 변경하기</button>
+</body>
+</html>
