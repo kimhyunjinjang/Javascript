@@ -1,0 +1,216 @@
+@CHARSET "UTF-8";
+
+#visual{
+	height: 263px;
+	position: relative;
+}
+.touch_bullet{
+	position: absolute;
+	top: 230px;
+	left: 50%;
+	margin-left: -27px;
+}
+.touch_bullet li{
+	float: left;
+}
+.touch_left_btn{
+	position: absolute;
+	top: 50%;
+	left: 30px;
+	margin-top: -25px;
+}
+.touch_right_btn{
+	position: absolute;
+	top: 50%;
+	right: 30px;
+	margin-top: -25px;
+}
+.swipe{
+	overflow: hidden;
+	visibility: hidden;
+	position: relative;
+}
+.swipe-wrap{
+	overflow: hidden;
+	position: relative;
+}
+.swipe-wrap>li{
+	float: left;
+	width: 100%;
+	position: relative;
+}
+#mySwipe img{
+	width: 100%;
+	max-width: 100%;
+}
+
+#roll_banner_wrap{
+	width: 320px;
+	height: 144px;
+	overflow: hidden;
+	position: relative;
+	float: left;
+	margin-right: 20px;
+}
+#roll_banner_wrap h3{
+	margin-bottom: 8px;
+}
+.roll_btn1, .roll_btn2, .roll_btn3, .roll_btn4{
+	position: absolute;
+	top: 0;
+	left: 55px;
+}
+.roll_btn2{
+	left: 73px;
+}
+.roll_btn3{
+	left: 91px;
+}
+.roll_btn4{
+	left: 109px;
+}
+#roll_banner_wrap .ctl_btn{
+	position: absolute;
+	top: 1px;
+	right: 2px;
+}
+#tabmenu{
+	width: 363px;
+	position: relative;
+	background: url("../images/tab_line_bg.gif") 0 0 repeat-x;
+	float: left;
+}
+#tabmenu dt.tab_btn1{
+	margin-bottom: 8px;
+}
+#tabmenu dt.tab_btn2{
+	position: absolute;
+	top: 0;
+	left: 104px;
+}
+#tabmenu dt.tab_btn3{
+	position: absolute;
+	top: 0;
+	left: 208px;
+}
+#tabmenu li{
+	line-height: 21px;
+	position: relative;
+	padding-left: 15px;
+	background: url("../images/main_bullet.png") 7px 8px no-repeat;
+}
+#tabmenu span{
+	position: absolute;
+	top: 0;
+	right: 5px;
+}
+#tabmenu p{
+	position: absolute;
+	top: 8px;
+	right: 3px;
+}
+#tabmenu dd{
+	display: none;
+}
+#tabmenu dt:FIRST-CHILD+dd {
+	display: block;
+}
+
+#consult_wrap{
+	float: right;
+}
+
+#bestbook_zone{
+	clear: right;
+	margin-bottom: 40px;
+	/* overflow: hidden; */
+}
+#bestbook_zone h3{
+	margin-bottom: 10px;
+}
+#best_bg{
+	width: 963px;
+	height: 220px;
+	padding-top: 18px;
+	background: url("../images/bestbook_bg.gif") no-repeat;
+	position: relative;
+	overflow: hidden;
+}
+#best_bg ul{
+	width: 750px;
+	position: absolute;
+	left: 130px;
+}
+#best_bg li{
+	float: left;
+	margin-right: 20px;
+}
+#best_bg span, #best_bg span strong{
+	display: block;
+	text-align: center;
+}
+#best_bg span strong{
+	color: #88332e;
+	font-weight: bold;
+}
+#best_bg span{
+	padding-top: 18px;
+}
+#best_bg .prev_btn{
+	position: absolute;
+	top: 98px;
+	left: 50px;
+}
+#best_bg .next_btn{
+	position: absolute;
+	top: 98px;
+	right: 50px;
+}
+
+#facebook_wrap{
+	display: inline-block;
+	width: 300px;
+	float: left;
+}
+
+#marketing_wrap{
+	float: left;
+}
+#marketing_wrap dl{
+	width: 363px;
+	overflow: hidden;
+}
+#marketing_wrap dl.first{
+	margin-bottom: 20px;
+}
+#marketing_wrap dt, #marketing_wrap dd{
+	width: 230px;
+	float: right;
+}
+#marketing_wrap dt a{
+	color: #88332e;
+	font-weight: bold;
+}
+#marketing_wrap dt{
+	margin-bottom: 15px;
+}
+#marketing_wrap dd.img_wrap{
+	width: auto;
+	float: left;
+}
+
+
+#online_wrap{
+	float: right;
+}
+#online_wrap li{
+	float: left;
+	height: 69px;
+}
+#online_wrap li.fl_r{
+	float: rigth;
+}
+#online_wrap ul{
+	width: 250px;
+	overflow: hidden;
+}

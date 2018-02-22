@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	header{
+		background: white;
+	}
+	header h1{
+		width: 1000px;
+		height: 80px;
+		margin: 0 auto;
+		padding-left: 10px;
+		font-size: 25px;
+		font-weight: normal;
+		line-height: 80px;
+		letter-spacing: 0.1em;
+	}
+	section{
+		background: #ebc000;
+		height: 500px;
+	}
+	section > div{
+		width: 1000px;
+		margin: 0 auto;
+		padding: 50px 0 100px;
+	}
+	#main h2{
+		color: white;
+		text-align: center;
+		margin-bottom : 50px;
+		font-weight: normal;
+		letter-spacing: 0.15em;
+	}
+	#main button{
+		float: left;
+		width: 224px;
+		height: 80px;
+		background: white;
+		margin: 0 10px 20px;
+		padding: 0;
+		font-size: 16px;
+		letter-spacing: 0.15em;
+		color:#ebc000;
+		border-radius: 20px;
+		position: relative;
+	}
+	#main button span{
+		display: block;
+		width: 0; /* 나중에 224px */
+		height: 80px;
+		line-height: 80px;
+		background-color: #ae5396;
+		color: white;
+		border-radius: 20px;
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+	footer{
+		background: #656565;
+	}
+	footer small{
+		width: 1000px;
+		margin: 0 auto;
+		display: block;
+		height: 120px;
+		color: white;
+		font-size: 11px;
+		text-align: right;
+		line-height: 120px;
+		letter-spacing: 0.15em;
+	}
+	footer a{
+		color: white;
+		text-decoration: none;
+	}
+</style>
+<script type="text/javascript" src="../js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="../js/jquery-ui.min.js"></script>
+<script>
+	$(function(){
+		$("button").each(function(i,obj){
+			if(i>=0 && i<4){
+				$(obj).hover(function(){
+					$(this).stop().animate({"background-color":"#ae5e9b","color":"#fff"},500);
+				}, function(){
+					$(this).stop().animate({"background-color":"#fff","color":"#ebc000"},500);
+				})
+			}else if(i>=4 && i<8){
+				$(this).css("border","0px solid purple");
+				$(obj).hover(function(){
+					$(this).stop().animate({"border-width":"12px", "color":"#ae5e9b"},500);
+				},function(){
+					$(this).stop().animate({"border-width":"0px", "color":"#ebc000"},500);
+				})
+			}else{
+				$(obj).hover(function(){
+					$(this).find("span").stop().animate({width:"224px"},500);
+				},function(){
+					$(this).find("span").stop().animate({width:"0"},500);
+				})
+			}
+		})
+	})
+</script>
+</head>
+<body>
+	<header>
+		<h1>Creative jQuery Sample</h1>
+	</header>
+	<section>
+		<div id="main">
+			<h2>BUTTONS</h2>
+			<div class="inner">
+				<button>Albatross</button>
+				<button>Bishop</button>
+				<button>Canary</button>
+				<button>Duck</button>
+				<button>Eagle</button>
+				<button>Falcon</button>
+				<button>Goose</button>
+				<button>Hawk</button>
+				<button>Ibis<span class="bg">Ibis</span></button>
+				<button>Jaeger<span class="bg">Jaeger</span></button>
+				<button>Kingfisher<span class="bg">Kingfisher</span></button>
+				<button>Lark<span class="bg">Lark</span></button>
+			</div>
+		</div>
+	</section>
+	<footer>
+		<small class="copyright">COPYRIGHT &copy;
+			<a href="http://www.shiftbrain.co.jp" target="_black">
+				SHIFTBRAIN Inc.</a>
+		</small>
+	</footer>
+</body>
+</html>

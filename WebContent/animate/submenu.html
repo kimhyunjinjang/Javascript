@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	ul{
+		padding: 0;
+		margin: 0;
+		list-style: none;
+	}
+	#menu{
+		background: pink;
+		margin-top:150px;
+		height: 40px;
+	}
+	#menu > ul{
+		width: 60%;
+		min-width: 800px;
+		margin: 0 auto;
+	}
+	#menu > ul > li{
+		float: left;
+		display: inline;
+		width: 25%;
+		height: 40px;
+		line-height: 40px;
+		text-align: center;
+		position: relative;
+	}
+	#menu > ul > li a{
+		color: black;
+		text-decoration: none;
+		border:1px solid white;
+		display: block;
+	}
+	#menu > ul > li a:hover{
+		background: black;
+		color: white;
+	}
+	#menu ul.submenu{
+		position: absolute;
+		left: 0;
+		top: 40;
+		width: 100%;
+		background: pink;
+		display: none;
+	}
+</style>
+<script type="text/javascript" src="../js/jquery-1.12.4.min.js"></script>
+<script>
+	$(function(){
+		$("#menu>ul>li").hover(function(){
+			$(this).find(".submenu").stop().slideDown(500);
+		}, function(){
+			$(this).find(".submenu").stop().slideUp(100);
+		});
+	})
+</script>
+</head>
+<body>
+	<div id="menu">
+		<ul><!-- 서브메뉴는 보통 ul로 만든다 -->
+			<li><a href="#">메뉴1</a></li>
+			<li><a href="#">메뉴2</a>
+				<ul class="submenu">
+					<li><a href="#">서브메뉴2-1</a></li>
+					<li><a href="#">서브메뉴2-2</a></li>
+					<li><a href="#">서브메뉴2-3</a></li>
+				</ul>
+			</li>
+			<li><a href="#">메뉴3</a>
+				<ul class="submenu">
+					<li><a href="#">서브메뉴3-1</a></li>
+					<li><a href="#">서브메뉴3-2</a></li>
+					<li><a href="#">서브메뉴3-3</a></li>
+				</ul>
+			</li>
+			<li><a href="#">메뉴4</a></li>
+		</ul>
+	</div>
+	<div id="test">
+		<img src="images/01_aside.png">
+	</div>
+</body>
+</html>

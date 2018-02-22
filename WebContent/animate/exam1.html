@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="../js/jquery-ui.min.js"></script>
+<style>
+	header{
+		position: relative;
+	}
+	header h1{
+		font-size: 25px;
+		font-weight: normal;
+		letter-spacing: 0.1em;
+		height: 80px;
+		line-height: 80px;
+	}
+	section>div{
+		width: 960px;
+		height: 600px;
+		margin: 0 auto;
+	/* 	border:1px solid blue; */
+	}
+	#main h2{
+		font-weight: normal;
+		letter-spacing: 0.15em;
+		text-align: center;
+		/* border:1px solid red; */
+	}
+	#main img{
+		margin-left: 150px;
+	}
+	footer{
+		background: #656565;
+	}
+	footer small{
+		width: 960px;
+		margin: 0 auto;
+		display: block;
+		height: 120px;
+		color: white;
+		font-size: 11px;
+		text-align: right;
+		line-height: 120px;
+		letter-spacing: 0.15em;
+	}
+	footer a{
+		color: white;
+		text-decoration: none;
+	}
+	/* #left img{
+		margin-top: 20px;
+		margin-left: 20px;
+	} */
+	#left{
+		width: 50px;
+		height: 120px;
+		background: rgba(0,0,0,0.5) url("images/btn_open.png");
+		position: absolute;
+		top: 170px;
+		left: 0;
+		display: inline;
+		float: left;
+	}
+	#left_bar{
+		width: 200px;
+		height: 700px;
+		background: rgba(0,0,0,0.5);
+		display: inline;
+		position: absolute;
+		top: 170px;
+		left: 0;
+		float: left;
+	}
+</style>
+<script>
+	$(function(){
+		$("#left").hover(function(){
+			$(this).before("<div id='left_bar'></div>")
+			$(this).css("left","200px");
+			/* $(this).stop().animate({width:"300px"},500);
+			$(this).append("<img src='images/01_aside.png'>");
+			$(this).append("<img src='images/02_aside.png'>");
+			$(this).append("<img src='images/03_aside.png'>"); */
+		}, function(){
+			$(this).css("left","0");
+			/* $(this).stop().animate({width:"30px"},500); */
+			/* $(this).children().remove(); */
+		})
+	})
+</script>
+</head>
+<body>
+	<header>
+		<h1>Creative jQuery Sample</h1>
+	</header>
+	<section>
+		<div id="main">
+			<h2>content 영역</h2>
+			<img src="images/photo8.jpg">
+		</div>
+		<div id="left">
+		</div>
+	</section>
+	<footer>
+		<small class="copyright">COPYRIGHT &copy;
+			<a href="http://www.shiftbrain.co.jp" target="_black">
+				SHIFTBRAIN Inc.</a>
+		</small>
+	</footer>
+</body>
+</html>

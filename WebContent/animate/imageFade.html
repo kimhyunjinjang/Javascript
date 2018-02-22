@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	header{
+		background: white;
+	}
+	header h1{
+		width: 960px;
+		height: 80px;
+		margin: 0 auto;
+		padding-left: 10px;
+		font-size: 25px;
+		font-weight: normal;
+		line-height: 80px;
+		letter-spacing: 0.1em;
+	}
+	section{
+		background: #ff8873;
+	}
+	section > div{
+		width: 960px;
+		margin: 0 auto;
+		padding: 50px 0 100px;
+	}
+	#main p{
+		width: 580px;
+		height: 380px;
+		margin: 0 auto 80;
+		position: relative;
+	}
+	#main h2{
+		color: white;
+		text-align: center;
+		margin-bottom : 50px;
+		font-weight: normal;
+		letter-spacing: 0.15em;
+	}
+	#main p strong{
+		background: rgba(0,0,0,0.5);
+		width: 540px;
+		height: 30px;
+		display: block;
+		padding: 20px;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		color: white;
+		font-size: 20px;
+		opacity: 0;
+	}
+	footer{
+		background: #656565;
+	}
+	footer small{
+		width: 960px;
+		margin: 0 auto;
+		display: block;
+		height: 120px;
+		color: white;
+		font-size: 11px;
+		text-align: right;
+		line-height: 120px;
+		letter-spacing: 0.15em;
+	}
+	footer a{
+		color: white;
+		text-decoration: none;
+	}
+</style>
+<script type="text/javascript" src="../js/jquery-1.12.4.min.js"></script>
+<script>
+	$(function(){
+		$("#main p").hover(function(){
+			$(this).find("strong").stop().animate({opacity:"1"}, 300);
+		},function(){
+			$(this).find("strong").stop().animate({opacity:"0"},300);
+		})
+	})
+</script>
+</head>
+<body>
+	<header>
+		<h1>Creative jQuery Sample</h1>
+	</header>
+	<section>
+		<div id="main">
+			<h2>IMAGES</h2>
+			<div class="inner">
+				<p>
+					<img src="images/01_img.jpg">
+					<strong>Hummingbird</strong>
+				</p>
+				<p>
+					<img src="images/02_img.jpg">
+					<strong>Sitta</strong>
+				</p>
+				<p>
+					<img src="images/03_img.jpg">
+					<strong>Bee-eater</strong>
+				</p>
+			</div>
+		</div>
+	</section>
+	<footer>
+		<small class="copyright">COPYRIGHT &copy;
+			<a href="http://www.shiftbrain.co.jp" target="_black">
+				SHIFTBRAIN Inc.</a>
+		</small>
+	</footer>
+</body>
+</html>
