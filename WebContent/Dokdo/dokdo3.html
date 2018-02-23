@@ -2,67 +2,21 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Insert title here</title>
-<style>
-	*{
-		padding: 0;
-		margin: 0;
-	}
-	body{
-		width: 960px;
-		margin:0 auto;
-	}
-	header{
-		width: 100%;
-		height: 100px;
-	}
-	#h_div1{
-		height: 60px;
-	}
-	#h_div1 img{
-		width: 80px;
-		margin-left: 20px;
-		margin-top: 20px;
-		display: inline;
-		float: left;
-	}
-	#h_div1 p{
-		font-weight: bold;
-		float: left;
-		line-height: 100px;
-		font-size: 2em;
-		margin-left: 20px;
-	}
-	#menu{
-		background: #004080;
-		height: 40px;
-		clear: both;
-	}
-	#menu>li{
-		float: left;
-		display: inline;
-		width: 20%;
-		height: 40px;
-		line-height: 40px;
-		text-align: center;
-	}
-	#menu>li a{
-		color: white;
-		text-decoration: none;
-		font-weight: bold;
-	}
-	nav{
-		clear: both;
-		margin-top: 80px;
-		height: 100px;
-	}
-	.video-container{
-		margin-bottom: 30px;
-	}
-	#div_wrap{
-		margin-top: 30px;
-	}
-</style>
+<link rel="stylesheet" type="text/css" href="css/Dokdo_style3.css">
+<script src="../js/jquery-1.12.4.min.js"></script>
+<script>
+	$(function(){
+		var size = window.innerWidth;
+		if(size<769){
+			$("header").remove();
+			$("nav").prepend("<div id='close'></div>");
+			$("#close").append("<a href='dokdo1.html'></a>");
+			$("#close a").append("<img src='images/close_button.png'>");
+		}
+	})
+</script>
 </head>
 <body>
 	<header>
@@ -86,12 +40,15 @@
 		<div id="div_wrap">
 			<h4>외교부 독도 소개 동영상</h4>
 			<div class="video-container">
-				<iframe type="text/html" src="https://www.youtube.com/embed/muB4_LNZ2Rk" style="border: 0px; display: block; margin: 0px; width: 448px; height: 252px;">
+				<!-- <iframe type="text/html" src="https://www.youtube.com/embed/muB4_LNZ2Rk" style="border: 0px; display: block; margin: 0px; width: 448px; height: 252px;">
+				 </iframe> -->
+				 <iframe type="text/html" src="https://www.youtube.com/embed/muB4_LNZ2Rk" style="border: 0px; display: block; margin: 0px;">
 				 </iframe>
 			</div>
 			<h4>플래시몹(서울역광장) 동영상</h4>
 			<div class="video-container">
-				<video src="video/mop.mp4" controls="controls" style="border: 0px; display: block; margin: 0px; width: 448px; height: 252px;"></video>
+				<!-- <video src="video/mop.mp4" controls="controls" style="border: 0px; display: block; margin: 0px; width: 448px; height: 252px;"></video> -->
+				<video src="video/mop.mp4" controls="controls" style="border: 0px; display: block; margin: 0px;"></video>
 			</div>
 		</div>
 	</nav>
