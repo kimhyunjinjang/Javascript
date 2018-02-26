@@ -4,7 +4,6 @@
 	padding: 0;
 }
 /* 모바일화면 */
-/* @media screen and (max-width : 1024px){ */
 @media screen and (min-width:0px )and (max-width : 768px){
 	body{
 		width: 90%;
@@ -17,7 +16,7 @@
 		width: 60px;
 		margin-left: 10px;
 		margin-top: 10px;
-		display: inline;
+		/* display: inline; */
 		float: left;
 	}
 	#h_div1 p{
@@ -26,34 +25,60 @@
 		line-height: 70px;
 		font-size: 1.2em;
 		margin-left: 20px;
-		/* border: 1px solid blue; */
 	}
 	#menu{
-		font-size: 1em;
-	}
-	#menu li{
-		list-style: none;
-		height: 50px;
 		background: #004080;
-		border: 1px solid white;
+		height: 40px;
+		clear: both;
 	}
-	#menu li:FIRST-CHILD{
-		display: none;
+	#menu>li{
+		float: left;
+		display: inline;
+		width: 20%;
+		height: 40px;
+		line-height: 40px;
+		text-align: center;
 	}
-	#menu a{
-		text-decoration: none;
-		display: block;
+	#menu>li a{
 		color: white;
-		line-height: 50px;
+		text-decoration: none;
+		font-weight: bold;
+	}
+	nav{
+		clear: both;
+		margin-top: 10px;
 	}
 	nav h3{
-		visibility: hidden;
+		display: none;
 	}
-	#div_wrap img{
+	#div_wrap h4{
+		font-size: 0.8em;
+	}
+	#div_wrap #showImgWrap{
 		width: 100%;
+		margin-left: 10px;
+		margin-top: 10px;
+		/* border: 1px solid blue; */
+		position: relative;
+	}
+	#showImgWrap img{
+		float: left;
+		width: 140px;
+		height: 100px;
+		margin-left: 10px;
+		margin-bottom: 10px;
+	}
+	.bigPic{
+		display: none;
+		position: absolute;
+		top: 100px;
+		left: 10px;
+	}
+	#showImgWrap img.bigPic{
+		width: 270px;
+		height: 250px;
 	}
 }
-/* @media screen and (min-width:1025px){ */
 @media screen and (min-width:769px){
 	body{
 		width: 960px;
@@ -69,9 +94,11 @@
 	}
 	#h_div1 img{
 		width: 80px;
+		/* max-width: 50%;
+		height: 50%; */
 		margin-left: 20px;
 		margin-top: 20px;
-		display: inline;
+		/* display: inline; */
 		float: left;
 	}
 	#h_div1 p{
@@ -109,6 +136,29 @@
 	#div_wrap{
 		margin-top: 30px;
 	}
+	#div_wrap #showImgWrap{
+		width: 100%;
+		height: 500px;
+		margin-left: 10px;
+		margin-top: 10px;
+		/* border: 1px solid blue; */
+		position: relative;
+	}
+	#showImgWrap img{
+		float: left;
+		width: 220px;
+		height: 180px;
+		margin-left: 10px;
+		margin-bottom: 10px;
+	}
+	.bigPic{
+		display: none;
+		position: absolute;
+		top: 80px;
+		left: 200px;
+	}
+	#showImgWrap img.bigPic{
+		width: 500px;
+		height: 400px;
+	}
 }
-
-
